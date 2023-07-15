@@ -1,0 +1,55 @@
+:root {
+    --off-white: rgb(248, 248, 248);
+    --dark-mode: rgb(28, 28, 28);
+    --dark-mode-light: rgb(38, 38, 38);
+    --blue-nav: #4073ff;
+    --blue-nav-hover: #4070F4;
+    --jensen-color: rgb(233, 0, 0);
+    --rolls-color: rgb(47, 1, 1);
+    --tiger-color: rgb(7, 38, 56);
+    --mustang-color: rgb(226, 0, 26);
+    --bumblebee-color: rgb(239, 214, 84);
+    --oldsmobile-color: rgb(195, 173, 131);
+    --mgb-color: rgb(216, 45, 60);
+    --trans-am-color: rgb(1, 120, 220);
+    --oldsmobile-white-color: rgb(16, 18, 19);
+    --corvette-color: rgb(234, 231, 150);
+}
+
+@font-face { 
+    font-family: 'Poppins'; 
+    src: url("/fonts/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face { 
+    font-family: 'Poppins Bold'; 
+    src: url("/fonts/Poppins/Poppins-Bold.ttf");
+}
+
+* {
+    font-family: 'Poppins', Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /*scroll-behavior: smooth;*/
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--off-white);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+img {
+    user-select: none;
+}

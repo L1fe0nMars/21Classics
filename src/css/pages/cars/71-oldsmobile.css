@@ -1,0 +1,22 @@
+.background-color {
+    background-color: var(--oldsmobile-white-color);
+}
+
+.color {
+    color: var(--oldsmobile-white-color);
+}
+
+.bottomSwiper .swiper-slide-thumb-active {
+    border: solid 8px var(--oldsmobile-white-color);
+}
+
+#info-container {
+    border: solid 5px var(--oldsmobile-white-color);
+}
+
+/* MOBILE */
+@media screen and (max-width: 480px) {
+    .section-2 h1 {
+        font-size: 1.71em;
+    }
+}
