@@ -1,3 +1,3 @@
 # 21Classics
 
-The source code for https://21classics.com
+The source code for [21classics.com](https://21classics.com)
