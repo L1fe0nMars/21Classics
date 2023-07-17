@@ -186,6 +186,9 @@ footer hr:not(.divider) {
 
 .gg-mail {
     min-width: 1.15em;
+}
+
+footer .gg-mail {
     bottom: -4px;
 }
 
