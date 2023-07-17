@@ -5,13 +5,17 @@
     height: 75%;
 }
 
-#background {
+#background,
+#video-background {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 110%;
     height: 75%;
+}
+
+#background {
+    width: 110%;
 }
 
 .swiper,
@@ -44,7 +48,10 @@
     width: 90%;
     height: 100%;
     object-fit: cover;
-    object-position: 0% 30%;
+    object-position: 50% 30%;
+}
+
+.swiperContainer .swiper-slide img {
     cursor: pointer;
 }
 
@@ -53,12 +60,73 @@
     width: 90%;
 }
 
+.bottomSwiper .swiper-slide {
+    height: 7em;
+}
+
 .bottomSwiper .swiper-slide img {
     width: 100%;
 }
 
-.bottomSwiper .swiper-slide {
-    height: 7em;
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: rgb(0, 0, 0, 0.5);
+    color: var(--off-white) !important;
+    height: 120% !important;
+    top: 0 !important;
+    padding-top: 1.5em !important;
+}
+
+.swiper-button-next {
+    right: 0 !important;
+    padding-right: 1em !important;
+    padding-left: 1.5em !important;
+}
+
+.swiper-button-prev {
+    left: 0 !important;
+    padding-right: 1.5em !important;
+    padding-left: 1em !important;
+}
+
+.swiper-button-next-active,
+.swiper-button-prev-active {
+    color: black;
+    background-color: rgb(0, 0, 0, 0.5);
+    height: 100%;
+}
+
+#modal {
+    display: none !important;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 10;
+    background-color: black;
+}
+
+.modalSwiper {
+    height: 100%;
+    width: 100%;
+}
+
+.modalSwiper .swiper-wrapper .swiper-slide img {
+    object-fit: contain;
+}
+
+#close {
+    cursor: pointer;
+    position: absolute;
+    color: var(--off-white);
+    padding: 0 0.2em;
+    right: 1%;
+    font-size: 4em;
+    z-index: 11;
+}
+
+#close:hover {
+    color: #999;
 }
 
 /* SECTION 2 */
@@ -72,15 +140,47 @@
     padding: 0 1em;
     font-size: 2em;
     font-family: 'Poppins Bold', Verdana, sans-serif;
+    color: var(--dark-mode);
 }
 
 #info-container {
     margin: 0 auto;
     margin-bottom: 2em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 75em;
+    overflow-x: hidden;
+}
+
+#video-section {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    width: 100%;
+    height: 50vw;
+}
+
+#video-background {
+    width: 101%;
+}
+
+#video {
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+}
+
+#video iframe {
+    width: 100%;
+    height: 50vw;
+}
+
+#info-section {
+    margin: 0 auto;
     padding: 2em;
     border-radius: 30px;
     width: 90%;
-    max-width: 70em;
 }
 
 .section-2 p {
@@ -88,21 +188,94 @@
     color: var(--dark-mode);
     font-size: 18px;
     text-align: justify;
-    max-width: 75em;
+}
+
+.section-2 hr {
+    margin: 2em auto;
+    height: 2px;
+    border: none;
+}
+
+#car-contact-section {
+    color: var(--dark-mode);
+}
+
+#car-contact-section h2 {
+    margin-bottom: 1em;
+    font-family: 'Poppins Bold', Verdana, sans-serif;
+}
+
+#car-contact-section button {
+    padding: 0.5em 1em;
+    border-radius: 2em;
+    font-size: 18px;
+    transition: 0.25s ease-out;
+}
+
+#car-contact-section button:hover {
+    color: var(--off-white);
+}
+
+#car-contact-info {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 50em;
+}
+
+.contact-info {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-info p {
+    text-align: center;
+    width: 100%;
+    transition: 0.25s ease-out;
+}
+
+.contact-info .gg-mail,
+.contact-info .gg-phone {
+    margin-right: 1em;
+}
+
+.contact-info p:hover {
+    opacity: 0.6;
 }
 
 /* SECTION 3 */
 
 
 
+/* MOBILE */
+@media screen and (max-width: 480px) {
+    .contact-info {
+        width: 100%;
+    }
+
+    .contact-info:not(:first-child) {
+        margin-top: 1em;
+    }
+}
+
 /* PC + TABLETS */
 @media screen and (min-width: 481px) {
+    .section-2 p {
+        font-size: 20px;
+    }
+
     #info-container {
+        width: 90%;
         border-radius: 60px;
     }
 
-    .section-2 p {
-        font-size: 20px;
+    #video-section {
+        width: 90%;
+        margin-top: 2em;
     }
 }
 
@@ -122,5 +295,10 @@
     .bottomSwiper,
     .bottomSwiper .swiper-slide {
         height: 9em;
+    }
+
+    #video-section,
+    #video iframe {
+        height: 30vw;
     }
 }

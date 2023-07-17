@@ -1,4 +1,5 @@
-.background-color {
+.background-color,
+#car-contact-section button:hover {
     background-color: var(--oldsmobile-white-color);
 }
 
@@ -10,8 +11,13 @@
     border: solid 8px var(--oldsmobile-white-color);
 }
 
-#info-container {
-    border: solid 5px var(--oldsmobile-white-color);
+#car-contact-section button {
+    border: solid 2px var(--oldsmobile-white-color);
+}
+
+#video-section,
+#car-contact-info {
+    display: none;
 }
 
 /* MOBILE */
@@ -19,4 +25,24 @@
     .section-2 h1 {
         font-size: 1.71em;
     }
+
+    #info-section {
+        border: solid 5px var(--oldsmobile-white-color);
+    }
+
+    #car-contact-section h2 {
+        font-size: 1.3em;
+    }
+}
+
+/* PC + TABLETS */
+@media screen and (min-width: 481px) {
+    #info-container {
+        border: solid 5px var(--oldsmobile-white-color);
+    }
+}
+
+/* PC */
+@media screen and (min-width: 1025px) {
+    
 }
