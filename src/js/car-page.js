@@ -1,5 +1,4 @@
 const MAIN_IMG = document.getElementsByClassName("main-img")
-const SWIPER_CONTAINER = document.getElementsByClassName("swiperContainter")
 const MODAL = document.getElementById("modal")
 const CLOSE_BUTTON = document.getElementById("close")
 
@@ -81,7 +80,6 @@ function closeModal() {
 function isModalOpen() {
     return (MODAL.style.display == "block" ? true : false)
 }
-
 
 for (let i = 0; i < MAIN_IMG.length; i++) {
     MAIN_IMG[i].addEventListener("click", () => {
