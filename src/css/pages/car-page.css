@@ -42,7 +42,7 @@
     margin-bottom: 0.5em;
 }
 
-.swiper-slide img {
+.swiperContainer .swiper-slide img {
     position: relative;
     margin: 0 auto;
     width: 90%;
@@ -68,8 +68,8 @@
     width: 100%;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
+.bottomSwiper .swiper-button-next,
+.bottomSwiper .swiper-button-prev {
     background-color: rgb(0, 0, 0, 0.5);
     color: var(--off-white) !important;
     height: 120% !important;
@@ -77,20 +77,20 @@
     padding-top: 1.5em !important;
 }
 
-.swiper-button-next {
+.bottomSwiper .swiper-button-next {
     right: 0 !important;
     padding-right: 1em !important;
     padding-left: 1.5em !important;
 }
 
-.swiper-button-prev {
+.bottomSwiper .swiper-button-prev {
     left: 0 !important;
     padding-right: 1.5em !important;
     padding-left: 1em !important;
 }
 
-.swiper-button-next-active,
-.swiper-button-prev-active {
+.bottomSwiper .swiper-button-next-active,
+.bottomSwiper .swiper-button-prev-active {
     color: black;
     background-color: rgb(0, 0, 0, 0.5);
     height: 100%;
@@ -112,6 +112,8 @@
 }
 
 .modalSwiper .swiper-wrapper .swiper-slide img {
+    width: 90%;
+    height: 100%;
     object-fit: contain;
 }
 
@@ -255,7 +257,21 @@
 
 /* SECTION 3 */
 
+.section-3 {
+    padding-bottom: 2em;
+    text-align: center;
+    color: var(--dark-mode);
+}
 
+.section-3 h1 {
+    padding-bottom: 1em;
+    font-size: 2em;
+    font-family: 'Poppins Bold', Verdana, sans-serif;
+}
+
+.swiper-pagination {
+    display: none;
+}
 
 /* MOBILE */
 @media screen and (max-width: 480px) {
@@ -288,7 +304,8 @@
 /* TABLETS */
 @media screen and (min-width: 481px) and (max-width: 1024px) {
     .section-2 h1,
-    #sold {
+    #sold,
+    .section-3 h1 {
         font-size: 2.5em;
     }
 }
@@ -296,7 +313,8 @@
 /* PC */
 @media screen and (min-width: 1025px) {
     .section-2 h1,
-    #sold {
+    #sold,
+    .section-3 h1 {
         font-size: 3em;
     }
 
