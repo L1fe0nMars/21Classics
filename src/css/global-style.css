@@ -14,6 +14,14 @@
     --trans-am-color: rgb(1, 120, 220);
     --oldsmobile-white-color: rgb(16, 18, 19);
     --corvette-color: rgb(234, 231, 150);
+    --cadillac-color: rgb(195, 30, 41);
+    --crown-victoria-color: rgb(214, 0, 0);
+    --camaro-color: rgb(8, 82, 148);
+    --nova-color: rgb(188, 142, 21);
+    --jaguar-targa-color: rgb(159, 181, 200);
+    --shelby-color: rgb(13, 40, 105);
+    --mga-color: rgb(0, 136, 72);
+    --rolls-royce-spur-color: rgb(100, 116, 126);
 }
 
 @font-face { 
