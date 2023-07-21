@@ -82,7 +82,7 @@
         rgba(0, 0, 0, 0.75),
         rgba(0, 0, 0, 0.75)
     ),
-        url(/images/collection2.jpg);
+        url(/images/collections/collection4.jpg);
     background-size: cover;
     background-position: center;
     color: var(--off-white);
@@ -97,8 +97,9 @@
 
 .section-4 button {
     color: var(--off-white);
-    border: solid 2px rgb(226, 169, 46);
+    border: solid 2px var(--golden-color);
     margin: 2em auto;
+    margin-bottom: 3em;
     padding: 0.5em 1em;
     border-radius: 2em;
     font-size: 18px;
@@ -106,7 +107,7 @@
 }
 
 .section-4 button:hover {
-    background-color: rgb(226, 169, 46);
+    background-color: var(--golden-color);
     color: var(--off-white);
 }
 
@@ -207,11 +208,6 @@
     color: var(--off-white);
 }
 
-/* MOBILE */
-@media screen and (max-width: 480px) {
-    
-}
-
 /* PC + TABLETS */
 @media screen and (min-width: 481px) {
     .section-2 p {
@@ -291,11 +287,7 @@
     .name {
         font-size: 26px;
     }
-
-    .section-4 {
-        background-position: 50% 65%;
-    }
-
+    
     .section-2 h1,
     .section-4 h1,
     .section-5 h1 {

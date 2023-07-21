@@ -273,8 +273,45 @@
     display: none;
 }
 
+#bottom-buttons {
+    margin: 0 auto;
+    margin-top: 2em;
+    max-width: 40em;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#bottom-buttons button {
+    padding: 0.5em 1em;
+    border-radius: 2em;
+    font-size: 18px;
+    transition: 0.25s ease-out;
+}
+
+#collection-button {
+    border: solid 2px var(--blue-nav);
+}
+
+#collection-button:hover {
+    background-color: var(--blue-nav);
+    color: var(--off-white);
+}
+
+#add-your-car {
+    border: solid 2px var(--golden-color);
+}
+
+#add-your-car:hover {
+    background-color: var(--golden-color);
+    color: var(--off-white);
+}
+
 /* MOBILE */
 @media screen and (max-width: 480px) {
+    .modalSwiper .swiper-wrapper .swiper-slide img {
+        width: 100%;
+    }
+    
     .contact-info {
         width: 100%;
     }

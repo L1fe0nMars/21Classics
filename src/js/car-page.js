@@ -66,6 +66,10 @@ let modalSwiper = new Swiper(".modalSwiper", {
     },
 })
 
+if (modalSwiper.slides.length == 1) {
+    modalSwiper.unsetGrabCursor()
+}
+
 function openModal(slideIndex) {
     MODAL.setAttribute("style", "display:block !important")
     modalSwiper.slideToLoop(slideIndex)

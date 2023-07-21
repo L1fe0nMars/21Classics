@@ -47,8 +47,3 @@
         border: solid 5px var(--oldsmobile-white-color);
     }
 }
-
-/* PC */
-@media screen and (min-width: 1025px) {
-    
-}

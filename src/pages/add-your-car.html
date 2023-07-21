@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/src/css/header-footer.css">
+        <link rel="stylesheet" href="/src/css/pages/car-page.css">
+        <link rel="stylesheet" href="/src/css/pages/add-your-car.css">
+        <link rel="stylesheet" href="/src/css/main-swiper.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/css.gg@2.0.0/icons/css/mail.css">
+        <link rel="stylesheet" href="https://unpkg.com/css.gg@2.0.0/icons/css/phone.css">
+        <title>Add Your Car to 21 Classics</title>
+        <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    </head>
+    <body>
+        <header>
+            <a href="/index.html">
+                <img src="/images/logo.png" alt="21 Classics logo">
+                <h1>21 Classics</h1>
+            </a>
+            <div id="mobile-menu">
+                <div id="mobile-container">
+                    <div id="bar1"></div>
+                    <div id="bar2"></div>
+                    <div id="bar3"></div>
+                </div>
+            </div>
+            <div id="mobile-menu-open">
+                <ul>
+                    <a href="/index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="/src/pages/the-collection.html">
+                        <li>The Collection</li>
+                    </a>
+                    <a href="/src/pages/contact.html">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+            <nav id="desktop-nav">
+                <ul>
+                    <a class="active" href="/index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="/src/pages/the-collection.html">
+                        <li>The Collection</li>
+                    </a>
+                    <a href="/src/pages/contact.html">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="section-1">
+                <div class="container">
+                    <div class="swiper swiperContainer">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div id="background" class="background-color"></div>
+                                <img class="main-img" src="/images/collections/collection5.jpg" alt="Classic cars lined up" />
+                            </div>
+                        </div>
+                        <div thumbsSlider="" class="swiper bottomSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="/images/collections/collection5.jpg" alt="Classic cars lined up" />
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                    <div id="modal">
+                        <span id="close">&times;</span>
+                        <div class="swiper modalSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="/images/collections/collection5.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-2">
+                <div class="container">
+                    <h1>Add Your Car to 21 Classics</h1>
+                    <div id="info-container">
+                        <div id="video-section">
+                            <div id="video-background" class="background-color"></div>
+                            <div id="video">
+                                <iframe src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div id="info-section">
+                            <p>At 21 Classics, we believe .</p>
+                            <div id="car-contact-section">
+                                <hr class="background-color">
+                                <div id="divider-section">
+                                    <h2>Pricing: <span>$50 per car</span></h2>
+                                    <button id="contact-button"><a href="/src/pages/contact.html">Get In Touch</a></button>
+                                    <div id="car-contact-info">
+                                        <a class="contact-info" href="mailto:747kam@gmail.com" target="_blank" rel="noopener noreferrer">
+                                            <i class="gg-mail color"></i><p>747kam@gmail.com</p>
+                                        </a>
+                                        <a class="contact-info" href="tel:3052056165">
+                                            <i class="gg-phone color"></i><p>(305) 205-6165</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <hr class="divider">
+            <a href="/index.html">
+                <img src="/images/logo.png" alt="21 Classics logo">
+            </a>
+            <hr>
+            <div class="contact">
+                <a class="info" href="mailto:747kam@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <i class="gg-mail"></i><p>747kam@gmail.com</p>
+                </a>
+                <a class="info" href="tel:3052056165">
+                    <i class="gg-phone"></i><p>(305) 205-6165</p>
+                </a>
+            </div>
+            <hr>
+            <div class="bottom-text">
+                <p class="copyright">©2023 All Rights Reserved</p>
+                <p>Designed and developed by <a class="hover" href="mailto:jkama005@gmail.com" target="_blank" rel="noopener noreferrer">Jamal Kamareddine</a></p>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script src="/src/js/header-footer.js"></script>
+        <script src="/src/js/car-page.js"></script>
+        <script src="/src/js/main-swiper.js"></script>
+    </body>
+</html>

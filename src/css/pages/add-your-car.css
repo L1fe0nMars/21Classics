@@ -1,0 +1,57 @@
+.background-color,
+#car-contact-section button:hover {
+    background-color: var(--golden-color);
+}
+
+.color {
+    color: var(--golden-color);
+}
+
+.bottomSwiper .swiper-slide-thumb-active {
+    border: solid 8px var(--golden-color);
+}
+
+#car-contact-section button {
+    border: solid 2px var(--golden-color);
+}
+
+.bottomSwiper {
+    display: none !important;
+}
+
+#divider-section h2 span {
+    color: green;
+    font-family: 'Poppins Bold', Verdana, sans-serif;
+}
+
+#video-section,
+#car-contact-info {
+    display: none;
+}
+
+.swiper-navBtn,
+.swiper-navBtn:hover {
+    color: var(--golden-color) !important;
+}
+
+.swiperContainer .swiper-slide img {
+    object-position: center;
+}
+
+.section-2 {
+    margin-bottom: 4em;
+}
+
+/* MOBILE */
+@media screen and (max-width: 480px) {
+    #info-section {
+        border: solid 5px var(--golden-color);
+    }
+}
+
+/* PC + TABLETS */
+@media screen and (min-width: 481px) {
+    #info-container {
+        border: solid 5px var(--golden-color);
+    }
+}
