@@ -1,0 +1,57 @@
+.background-color,
+#car-contact-section button:hover {
+    background-color: var(--tiger-color);
+}
+
+.color {
+    color: var(--tiger-color);
+}
+
+.section-2 li {
+    padding: 0.25em;
+    color: var(--tiger-color);
+}
+
+.section-5 li span {
+    color: var(--dark-mode);
+}
+
+.bottomSwiper .swiper-slide-thumb-active {
+    border: solid 8px var(--tiger-color);
+}
+
+#car-contact-section button {
+    border: solid 2px var(--tiger-color);
+}
+
+#sold,
+#car-contact-info {
+    display: none;
+}
+
+.swiper-navBtn,
+.swiper-navBtn:hover {
+    color: var(--tiger-color) !important;
+}
+
+/* MOBILE */
+@media screen and (max-width: 480px) {
+    .section-2 h1 {
+        font-size: 1.71em;
+    }
+
+    #info-section {
+        border: solid 5px var(--tiger-color);
+    }
+
+    #car-contact-section h2 {
+        font-size: 1.3em;
+    }
+}
+
+/* PC + TABLETS */
+@media screen and (min-width: 481px) {
+    #info-container {
+        border: solid 5px var(--tiger-color);
+    }
+}
