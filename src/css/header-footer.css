@@ -181,7 +181,7 @@ footer hr:not(.divider) {
 
 .info p:hover,
 .hover:hover {
-    color: gray;
+    opacity: 0.6;
 }
 
 .gg-mail {
@@ -190,6 +190,10 @@ footer hr:not(.divider) {
 
 footer .gg-mail {
     bottom: -4px;
+}
+
+.bottom-text p a {
+    color: var(--blue-nav);
 }
 
 @media (max-width: 730px) {

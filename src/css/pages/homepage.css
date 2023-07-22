@@ -284,7 +284,8 @@
         height: 26em;
     }
 
-    .name {
+    .name,
+    .section-5 li {
         font-size: 26px;
     }
     
@@ -305,10 +306,6 @@
 
     .section-5 h2 {
         font-size: 2.5em;
-    }
-
-    .section-5 li {
-        font-size: 26px;
     }
 
     .section-5 button {
