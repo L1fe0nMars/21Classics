@@ -1,0 +1,51 @@
+.background-color,
+#car-contact-section button:hover {
+    background-color: var(--jaguar-targa-color);
+}
+
+.color {
+    color: var(--jaguar-targa-color);
+}
+
+.bottomSwiper .swiper-slide-thumb-active {
+    border: solid 8px var(--jaguar-targa-color);
+}
+
+#car-contact-section button {
+    border: solid 2px var(--jaguar-targa-color);
+}
+
+#video-section,
+#divider-section,
+#car-contact-info {
+    display: none;
+}
+
+.swiper-navBtn-next,
+.swiper-navBtn-prev,
+.swiper-navBtn-next:hover,
+.swiper-navBtn-prev:hover {
+    color: var(--jaguar-targa-color) !important;
+}
+
+.swiperContainer .swiper-slide img {
+    object-position: 50% 39%;
+}
+
+/* MOBILE */
+@media screen and (max-width: 480px) {
+    #info-section {
+        border: solid 5px var(--jaguar-targa-color);
+    }
+
+    #car-contact-section h2 {
+        font-size: 1.3em;
+    }
+}
+
+/* PC + TABLETS */
+@media screen and (min-width: 481px) {
+    #info-container {
+        border: solid 5px var(--jaguar-targa-color);
+    }
+}

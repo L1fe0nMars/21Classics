@@ -1,0 +1,46 @@
+.background-color,
+#car-contact-section button:hover {
+    background-color: var(--mga-color);
+}
+
+.color {
+    color: var(--mga-color);
+}
+
+.bottomSwiper .swiper-slide-thumb-active {
+    border: solid 8px var(--mga-color);
+}
+
+#car-contact-section button {
+    border: solid 2px var(--mga-color);
+}
+
+#divider-section,
+#car-contact-info {
+    display: none;
+}
+
+.swiper-navBtn-next,
+.swiper-navBtn-prev,
+.swiper-navBtn-next:hover,
+.swiper-navBtn-prev:hover {
+    color: var(--mga-color) !important;
+}
+
+/* MOBILE */
+@media screen and (max-width: 480px) {
+    #info-section {
+        border: solid 5px var(--mga-color);
+    }
+
+    #car-contact-section h2 {
+        font-size: 1.3em;
+    }
+}
+
+/* PC + TABLETS */
+@media screen and (min-width: 481px) {
+    #info-container {
+        border: solid 5px var(--mga-color);
+    }
+}
