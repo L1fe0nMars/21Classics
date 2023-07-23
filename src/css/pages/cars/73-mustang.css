@@ -33,6 +33,10 @@
 
 /* MOBILE */
 @media screen and (max-width: 480px) {
+    .section-2 h1 {
+        font-size: 1.84em;
+    }
+    
     #info-section {
         border: solid 5px var(--mustang-color);
     }
