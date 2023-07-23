@@ -12,7 +12,7 @@
     color: var(--tiger-color);
 }
 
-.section-5 li span {
+.section-2 li span {
     color: var(--dark-mode);
 }
 
@@ -29,8 +29,10 @@
     display: none;
 }
 
-.swiper-navBtn,
-.swiper-navBtn:hover {
+.swiper-navBtn-next,
+.swiper-navBtn-prev,
+.swiper-navBtn-next:hover,
+.swiper-navBtn-prev:hover {
     color: var(--tiger-color) !important;
 }
 

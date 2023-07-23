@@ -10,8 +10,8 @@ let swiper = new Swiper(".slide-content", {
       dynamicBullets: true,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-navBtn-next",
+      prevEl: ".swiper-navBtn-prev",
     },
     breakpoints:{
         0: {

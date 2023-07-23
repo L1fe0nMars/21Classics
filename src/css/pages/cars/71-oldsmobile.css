@@ -21,8 +21,10 @@
     display: none;
 }
 
-.swiper-navBtn,
-.swiper-navBtn:hover {
+.swiper-navBtn-next,
+.swiper-navBtn-prev,
+.swiper-navBtn-next:hover,
+.swiper-navBtn-prev:hover {
     color: var(--oldsmobile-white-color) !important;
 }
 
