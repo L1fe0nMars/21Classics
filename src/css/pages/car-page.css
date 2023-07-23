@@ -287,7 +287,8 @@
     margin-top: 2em;
     max-width: 40em;
     display: flex;
-    justify-content: space-evenly;
+    /*justify-content: space-evenly; For Add Your Car button*/
+    justify-content: center;
 }
 
 #bottom-buttons button {
@@ -308,6 +309,7 @@
 
 #add-your-car {
     border: solid 2px var(--golden-color);
+    display: none; /* Hide for now */
 }
 
 #add-your-car:hover {

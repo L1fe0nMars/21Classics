@@ -57,7 +57,8 @@
 }
 
 .section-2-extension {
-    padding: 2em 0;
+    /*padding: 2em 0;  For Add Your Car section*/
+    padding-top: 2em;
 }
 
 .section-2-extension button {
@@ -86,6 +87,7 @@
     background-size: cover;
     background-position: center;
     color: var(--off-white);
+    display: none; /* Hide Add Your Car section for now */
 }
 
 .section-4 h1 {
