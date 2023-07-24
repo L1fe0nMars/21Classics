@@ -8,10 +8,10 @@ let bottomSwiper = new Swiper(".bottomSwiper", {
     slidesPerView: 2,
     breakpoints: {
         640: {
-          slidesPerView: 4,
+          slidesPerView: setNumVisibleSlides(4),
         },
         1024: {
-          slidesPerView: 6,
+          slidesPerView: setNumVisibleSlides(6),
         },
     },
     navigation: {
@@ -68,6 +68,10 @@ let modalSwiper = new Swiper(".modalSwiper", {
 
 if (modalSwiper.slides.length == 1) {
     modalSwiper.unsetGrabCursor()
+}
+
+function setNumVisibleSlides(expectedNum) {
+    return (expectedNum > MAIN_IMG.length ? MAIN_IMG.length : expectedNum)
 }
 
 function openModal(slideIndex) {
