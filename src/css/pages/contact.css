@@ -32,6 +32,7 @@
 }
 
 #contact-section,
+#my-contact,
 #youtube {
     margin: 0 auto;
     width: max-content;
@@ -64,6 +65,13 @@
     width: 90%;
     border: none;
     background-color: var(--blue-nav);
+}
+
+/* MOBILE */
+@media screen and (max-width: 481px) {
+    #my-contact .gg-mail {
+        margin-top: 1.5em;
+    }
 }
 
 /* PC + TABLETS */
@@ -116,12 +124,12 @@
         margin-bottom: 4em;
     }
 
-    .section-1 .gg-mail {
-        bottom: 0;
+    .section-1 .gg-youtube {
+        margin-top: 5em;
     }
 
-    .section-1 hr {
-        margin-bottom: 5em;
+    .section-1 .gg-mail {
+        bottom: 0;
     }
 
     .section-1 p {
