@@ -17,7 +17,7 @@
     position: absolute;
     padding: 1em;
     width: 100%;
-    color: white;
+    color: var(--off-white-ignore);
     font-size: 0.9em;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.9);
