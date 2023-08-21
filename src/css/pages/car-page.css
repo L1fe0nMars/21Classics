@@ -71,7 +71,7 @@
 .bottomSwiper .swiper-button-next,
 .bottomSwiper .swiper-button-prev {
     background-color: rgb(0, 0, 0, 0.5);
-    color: var(--off-white) !important;
+    color: var(--off-white-ignore) !important;
     height: 120% !important;
     top: 0 !important;
     padding-top: 1.5em !important;
