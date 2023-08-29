@@ -7,12 +7,12 @@
     color: var(--cadillac-color);
 }
 
-.section-2 li {
+#section-2 li {
     padding: 0.25em;
     color: var(--cadillac-color);
 }
 
-.section-2 li span {
+#section-2 li span {
     color: var(--dark-mode);
 }
 
@@ -38,7 +38,7 @@
 
 /* MOBILE */
 @media screen and (max-width: 480px) {
-    .section-2 h1 {
+    #section-2 h1 {
         font-size: 1.71em;
     }
 

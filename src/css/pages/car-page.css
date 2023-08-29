@@ -1,11 +1,11 @@
 /* SECTION 1 */
 
-.section-1 .container {
+#section-1 .container {
     margin: 0 auto;
     height: 75%;
 }
 
-#background,
+.background,
 #video-background {
     position: absolute;
     top: 50%;
@@ -14,7 +14,7 @@
     height: 75%;
 }
 
-#background {
+.background {
     width: 110%;
 }
 
@@ -66,6 +66,10 @@
 
 .bottomSwiper .swiper-slide img {
     width: 100%;
+}
+
+.bottomSwiper .swiper-slide-thumb-active {
+    transition: 0.2s ease-out;
 }
 
 .bottomSwiper .swiper-button-next,
@@ -133,11 +137,11 @@
 
 /* SECTION 2 */
 
-.section-2 {
+#section-2 {
     text-align: center;
 }
 
-.section-2 h1 {
+#section-2 h1 {
     margin: 1em auto;
     padding: 0 1em;
     font-size: 2em;
@@ -175,6 +179,7 @@
 #video iframe {
     width: 100%;
     height: 50vw;
+    border: none;
 }
 
 #info-section {
@@ -184,14 +189,14 @@
     width: 90%;
 }
 
-.section-2 p {
+#section-2 p {
     margin: 0 auto;
     color: var(--dark-mode);
     font-size: 18px;
     text-align: justify;
 }
 
-.section-2 ul {
+#section-2 ul {
     margin: 0 auto;
     text-align: left;
     width: 75%;
@@ -200,7 +205,7 @@
     font-size: 20px;
 }
 
-.section-2 hr {
+#section-2 hr {
     margin: 2em auto;
     height: 2px;
     border: none;
@@ -265,13 +270,13 @@
 
 /* SECTION 3 */
 
-.section-3 {
+#section-3 {
     padding-bottom: 2em;
     text-align: center;
     color: var(--dark-mode);
 }
 
-.section-3 h1 {
+#section-3 h1 {
     padding-bottom: 1em;
     font-size: 2em;
     font-family: 'Poppins Bold', Verdana, sans-serif;
@@ -327,7 +332,7 @@
         margin-bottom: 2em;
     }
 
-    .section-2 ul {
+    #section-2 ul {
         margin-right: 1em;
     }
 
@@ -338,11 +343,11 @@
 
 /* PC + TABLETS */
 @media screen and (min-width: 481px) {
-    .section-2 p {
+    #section-2 p {
         font-size: 20px;
     }
 
-    .section-2 ul {
+    #section-2 ul {
         padding-bottom: 1em;
         font-size: 24px;
     }
@@ -360,18 +365,18 @@
 
 /* TABLETS */
 @media screen and (min-width: 481px) and (max-width: 1024px) {
-    .section-2 h1,
+    #section-2 h1,
     #sold,
-    .section-3 h1 {
+    #section-3 h1 {
         font-size: 2.5em;
     }
 }
 
 /* PC */
 @media screen and (min-width: 1025px) {
-    .section-2 h1,
+    #section-2 h1,
     #sold,
-    .section-3 h1 {
+    #section-3 h1 {
         font-size: 3em;
     }
 

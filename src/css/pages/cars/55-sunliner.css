@@ -33,7 +33,7 @@
 
 /* MOBILE */
 @media screen and (max-width: 480px) {
-    .section-2 h1 {
+    #section-2 h1 {
         font-size: 1.89em;
     }
     

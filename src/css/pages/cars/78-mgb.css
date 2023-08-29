@@ -7,12 +7,12 @@
     color: var(--mgb-color);
 }
 
-.section-2 li {
+#section-2 li {
     padding: 0.25em;
     color: var(--mgb-color);
 }
 
-.section-2 li span {
+#section-2 li span {
     color: var(--dark-mode);
 }
 

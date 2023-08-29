@@ -1,6 +1,6 @@
 /* SECTION 1 */
 
-.section-1 {
+#section-1 {
     background: linear-gradient(
         rgba(0, 0, 0, 0.8),
         rgba(0, 0, 0, 0.8)
@@ -9,12 +9,12 @@
     background-size: cover;
 }
 
-.section-1 .container {
+#section-1 .container {
     text-align: center;
     color: var(--off-white);
 }
 
-.section-1 h1 {
+#section-1 h1 {
     padding: 1em 0;
     font-size: 2em;
     font-family: 'Poppins Bold', Verdana, sans-serif;
@@ -23,17 +23,14 @@
 
 /* SECTION 2 */
 
-.section-2 {
+#section-2 {
     border-bottom: solid 8px var(--dark-mode);
 }
 
 #sort-options {
+    margin: 0 auto;
     padding: 1em;
     color: var(--dark-mode);
-}
-
-#sort-options {
-    margin: 0 auto;
     text-align: center;
     padding: 0 1em;
     display: flex;
@@ -63,11 +60,11 @@
 
 /* SECTION 3 */
 
-.section-3 {
+#section-3 {
     background-color: var(--off-white);
 }
 
-.section-3 .container {
+#section-3 .container {
     width: 100%;
     height: 100%;
 }
@@ -181,7 +178,7 @@
     color: var(--rolls-royce-spur-color);
 }
 
-#sold-text {
+.sold-text {
     position: absolute;
     padding: 0.5em 1.5em;
     color: var(--off-white-ignore);
@@ -243,14 +240,14 @@
 
 /* TABLETS */
 @media screen and (min-width: 481px) and (max-width: 1024px) {
-    .section-1 h1 {
+    #section-1 h1 {
         font-size: 2.5em;
     }
 }
 
 /* PC */
 @media screen and (min-width: 1025px) {
-    .section-1 h1 {
+    #section-1 h1 {
         font-size: 4em;
     }
 }

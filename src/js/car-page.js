@@ -10,10 +10,10 @@ let bottomSwiper = new Swiper(".bottomSwiper", {
     slidesPerView: 2,
     breakpoints: {
         640: {
-          slidesPerView: setNumVisibleSlides(4),
+            slidesPerView: setNumVisibleSlides(4),
         },
         1024: {
-          slidesPerView: setNumVisibleSlides(6),
+            slidesPerView: setNumVisibleSlides(6),
         },
     },
     navigation: {
@@ -28,7 +28,7 @@ let mainSwiper = new Swiper(".swiperContainer", {
     loop: true,
     spaceBetween: 10,
     thumbs: {
-      swiper: bottomSwiper,
+        swiper: bottomSwiper,
     },
     keyboard: {
         enabled: true,
@@ -41,10 +41,10 @@ let modalBottomSwiper = new Swiper(".modalBottomSwiper", {
     slidesPerView: 2,
     breakpoints: {
         640: {
-          slidesPerView: 4,
+            slidesPerView: 4,
         },
         1024: {
-          slidesPerView: 6,
+            slidesPerView: 6,
         },
     },
     navigation: {
@@ -61,8 +61,9 @@ let modalSwiper = new Swiper(".modalSwiper", {
     grabCursor: true,
     /*
     thumbs: {
-      swiper: modalBottomSwiper,
-    },*/
+        swiper: modalBottomSwiper,
+    },
+    */
     keyboard: {
         enabled: true,
     },
@@ -72,21 +73,41 @@ if (modalSwiper.slides.length == 1) {
     modalSwiper.unsetGrabCursor();
 }
 
+/**
+ * Sets the number of shown slides to either the passed value or the total number of slides there are
+ * 
+ * @param {number} expectedNum The expected number of slides to display
+ * 
+ * @return {number} The number of slides to display
+ */
 function setNumVisibleSlides(expectedNum) {
     return (expectedNum > MAIN_IMG.length ? MAIN_IMG.length : expectedNum);
 }
 
+/**
+ * Opens the image modal
+ * 
+ * @param {number} slideIndex The current slide
+ */
 function openModal(slideIndex) {
-    MODAL.setAttribute("style", "display:block !important");
+    MODAL.setAttribute("style", "display: block !important");
     modalSwiper.slideToLoop(slideIndex);
     BODY.style.overflow = "hidden";
 }
 
+/**
+ * Closes the image modal
+ */
 function closeModal() {
-    MODAL.setAttribute("style", "display:none !important");
+    MODAL.setAttribute("style", "display: none !important");
     BODY.style.overflow = "auto";
 }
 
+/**
+ * Checks if the modal is open
+ * 
+ * @return {boolean} Whether the modal is open or not
+ */
 function isModalOpen() {
     return (MODAL.style.display == "block" ? true : false);
 }

@@ -1,7 +1,7 @@
 "use strict";
 
-const BODY = document.querySelector("body")
 const ROOT = document.querySelector(":root");
+const BODY = document.querySelector("body");
 const HOME_PAGE_DOTS = document.getElementsByClassName("swiper-pagination");
 const MOBILE_CONTAINER = document.getElementById("mobile-container");
 const MOBILE_MENU = document.getElementById("mobile-menu-open");
@@ -27,15 +27,21 @@ if (darkMode == null) {
         && window.matchMedia('(prefers-color-scheme: dark)').matches
         ) {
         toggleDarkMode(true);
-    } else {
+    }
+    else {
         toggleDarkMode(false);
     }
-} else if (darkMode == "enabled") {
+}
+else if (darkMode == "enabled") {
     toggleDarkMode(true);
-} else if (darkMode == "disabled") {
+}
+else if (darkMode == "disabled") {
     toggleDarkMode(false);
 }
 
+/**
+ * Opens the mobile menu
+ */
 function openMobileMenu() {
     MOBILE_MENU.style.display = "block";
     BODY.style.overflow = "hidden";
@@ -45,6 +51,9 @@ function openMobileMenu() {
     }
 }
 
+/**
+ * Closes the mobile menu
+ */
 function closeMobileMenu() {
     MOBILE_MENU.style.display = "none";
     BODY.style.overflow = "auto";
@@ -54,10 +63,20 @@ function closeMobileMenu() {
     }
 }
 
+/**
+ * Checks if the mobile menu is open
+ * 
+ * @return {boolean} Whether the menu is open or not
+ */
 function isMobileMenuOpen() {
     return (MOBILE_MENU.style.display == "block" ? true : false);
 }
 
+/**
+ * Toggle dark mode on or off
+ * 
+ * @param {boolean} toggled Whether to toggle dark mode or light mode
+ */
 function toggleDarkMode(toggled) {
     for (const key in THEME_COLORS) {
         ROOT.style.setProperty(key, THEME_COLORS[key][+toggled]);
@@ -68,14 +87,14 @@ function toggleDarkMode(toggled) {
             DARK_BTN[i].style.display = "none";
             LIGHT_BTN[i].style.display = "inline";
             localStorage.setItem("darkMode", "enabled");
-        } else {
+        }
+        else {
             LIGHT_BTN[i].style.display = "none";
             DARK_BTN[i].style.display = "inline";
             localStorage.setItem("darkMode", "disabled");
         }
     }
 }
-
 
 MOBILE_CONTAINER.addEventListener("click", () => {
     MOBILE_CONTAINER.classList.toggle("change");

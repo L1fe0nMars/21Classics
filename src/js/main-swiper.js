@@ -1,3 +1,5 @@
+"use strict";
+
 let swiper = new Swiper(".slide-content", {
     slidesPerView: 3,
     spaceBetween: 30,
@@ -5,13 +7,13 @@ let swiper = new Swiper(".slide-content", {
     centerSlide: 'true',
     fade: 'true',
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets: true,
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
     },
     navigation: {
-      nextEl: ".swiper-navBtn-next",
-      prevEl: ".swiper-navBtn-prev",
+        nextEl: ".swiper-navBtn-next",
+        prevEl: ".swiper-navBtn-prev",
     },
     breakpoints:{
         0: {
