@@ -93,13 +93,9 @@
     transition: 0.25s ease-out;
 }
   
-.swiper-navBtn {
-    color: var(--blue-nav);
-    transition: color 0.3s ease;
-}
-
-.swiper-navBtn:hover {
-    color: var(--blue-nav-hover);
+.swiper-navBtn-next,
+.swiper-navBtn-prev {
+    color: var(--blue-nav) !important;
 }
 
 .swiper-navBtn::before,
@@ -117,16 +113,16 @@
 
 .swiper-pagination {
     position: absolute;
-    z-index: 1;
 }
 
 .swiper-pagination-bullet {
-    background-color: var(--blue-nav);
-    opacity: 1;
+    background-color: var(--blue-nav) !important;
+    width: 16px !important;
+    height: 16px !important;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: var(--blue-nav-hover);
+    background-color: var(--blue-nav) !important;
 }
 
 /* PC */

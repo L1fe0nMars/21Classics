@@ -271,7 +271,7 @@
 /* SECTION 3 */
 
 #section-3 {
-    padding-bottom: 2em;
+    padding: 2em 0 4em 0;
     text-align: center;
     color: var(--dark-mode);
 }

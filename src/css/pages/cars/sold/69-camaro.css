@@ -22,9 +22,7 @@
 }
 
 .swiper-navBtn-next,
-.swiper-navBtn-prev,
-.swiper-navBtn-next:hover,
-.swiper-navBtn-prev:hover {
+.swiper-navBtn-prev {
     color: var(--camaro-color) !important;
 }
 

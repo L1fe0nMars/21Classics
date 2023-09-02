@@ -158,13 +158,13 @@ footer hr {
 
 footer img {
     height: 6em;
-    margin: 1em auto;
+    margin: 2em auto 1.5em auto;
     border-radius: 50%;
 }
 
 .bottom-text {
     margin: 0 auto;
-    padding: 1em 0;
+    padding: 2em 0;
 }
 
 footer p {
@@ -184,6 +184,7 @@ footer hr:not(.divider) {
 }
 
 .contact {
+    margin: 2em auto;
     color: var(--dark-mode);
     text-align: center;
 }
@@ -254,6 +255,10 @@ footer .gg-mail {
 
     footer img {
         margin-bottom: 0;
+    }
+
+    .contact {
+        margin-top: 1em;
     }
 
     footer hr:not(.divider) {
