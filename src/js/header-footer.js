@@ -2,7 +2,7 @@
 
 const ROOT = document.querySelector(":root");
 const BODY = document.querySelector("body");
-const HOME_PAGE_DOTS = document.getElementsByClassName("swiper-pagination");
+const PAGINATION_DOTS = document.querySelector(".swiper-pagination");
 const MOBILE_CONTAINER = document.getElementById("mobile-container");
 const MOBILE_MENU = document.getElementById("mobile-menu-open");
 const LIGHT_BTN = document.getElementsByClassName("light-btn");
@@ -12,10 +12,10 @@ const MOBILE_MENU_CUTOFF_WIDTH = 875;
 let darkMode = localStorage.getItem("darkMode");
 
 const THEME_COLORS = {
-    "--dark-mode": ["rgb(28, 28, 28)", "rgb(248, 248, 248)"],
-    "--off-white": ["rgb(248, 248, 248)", "rgb(28, 28, 28)"],
+    "--dark-mode": ["rgb(28, 28, 28)", "rgb(245, 245, 245)"],
+    "--off-white": ["rgb(245, 245, 245)", "rgb(28, 28, 28)"],
     "--white": ["white", "rgb(38, 38, 38)"],
-    "--swiper-heading-color": ["#333", "rgb(248, 248, 248)"],
+    "--swiper-heading-color": ["#333", "rgb(245, 245, 245)"],
     "--rolls-color": ["rgb(47, 1, 1)", "rgb(190, 182, 142)"],
     "--tiger-color": ["rgb(7, 38, 56)", "rgb(61, 111, 142)"],
     "--oldsmobile-white-color": ["rgb(16, 18, 19)", "rgb(230, 230, 230)"],
@@ -24,8 +24,8 @@ const THEME_COLORS = {
 if (darkMode == null) {
     if (
         window.matchMedia
-        && window.matchMedia('(prefers-color-scheme: dark)').matches
-        ) {
+        && window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
         toggleDarkMode(true);
     }
     else {
@@ -46,8 +46,8 @@ function openMobileMenu() {
     MOBILE_MENU.style.display = "block";
     BODY.style.overflow = "hidden";
 
-    if (HOME_PAGE_DOTS[0] != null) {
-        HOME_PAGE_DOTS[0].style.visibility = "hidden";
+    if (PAGINATION_DOTS != null) {
+        PAGINATION_DOTS.style.visibility = "hidden";
     }
 }
 
@@ -58,8 +58,8 @@ function closeMobileMenu() {
     MOBILE_MENU.style.display = "none";
     BODY.style.overflow = "auto";
 
-    if (HOME_PAGE_DOTS[0] != null) {
-        HOME_PAGE_DOTS[0].style.visibility = "visible";
+    if (PAGINATION_DOTS != null) {
+        PAGINATION_DOTS.style.visibility = "visible";
     }
 }
 
