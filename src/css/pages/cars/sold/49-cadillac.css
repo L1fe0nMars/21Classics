@@ -17,7 +17,7 @@
 }
 
 .bottomSwiper .swiper-slide-thumb-active {
-    border: solid 8px var(--cadillac-color);
+    border: solid 5px var(--cadillac-color);
 }
 
 #car-contact-section button {
@@ -32,21 +32,6 @@
 .swiper-navBtn-next,
 .swiper-navBtn-prev {
     color: var(--cadillac-color) !important;
-}
-
-/* MOBILE */
-@media screen and (max-width: 480px) {
-    #section-2 h1 {
-        font-size: 1.71em;
-    }
-
-    #info-section {
-        border: solid 5px var(--cadillac-color);
-    }
-
-    #car-contact-section h2 {
-        font-size: 1.3em;
-    }
 }
 
 /* PC + TABLETS */

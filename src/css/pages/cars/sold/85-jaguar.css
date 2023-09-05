@@ -8,7 +8,7 @@
 }
 
 .bottomSwiper .swiper-slide-thumb-active {
-    border: solid 8px var(--jaguar-targa-color);
+    border: solid 5px var(--jaguar-targa-color);
 }
 
 #car-contact-section button {
@@ -28,17 +28,6 @@
 
 .swiperContainer .swiper-slide img {
     object-position: 50% 39%;
-}
-
-/* MOBILE */
-@media screen and (max-width: 480px) {
-    #info-section {
-        border: solid 5px var(--jaguar-targa-color);
-    }
-
-    #car-contact-section h2 {
-        font-size: 1.3em;
-    }
 }
 
 /* PC + TABLETS */

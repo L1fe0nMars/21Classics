@@ -119,6 +119,7 @@
     background-color: var(--blue-nav) !important;
     width: 16px !important;
     height: 16px !important;
+    transition: 0.25s ease;
 }
 
 .swiper-pagination-bullet-active {

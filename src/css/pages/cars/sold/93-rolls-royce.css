@@ -8,7 +8,7 @@
 }
 
 .bottomSwiper .swiper-slide-thumb-active {
-    border: solid 8px var(--rolls-royce-spur-color);
+    border: solid 5px var(--rolls-royce-spur-color);
 }
 
 #car-contact-section button {
@@ -24,17 +24,6 @@
 .swiper-navBtn-next,
 .swiper-navBtn-prev {
     color: var(--rolls-royce-spur-color) !important;
-}
-
-/* MOBILE */
-@media screen and (max-width: 480px) {
-    #info-section {
-        border: solid 5px var(--rolls-royce-spur-color);
-    }
-
-    #car-contact-section h2 {
-        font-size: 1.3em;
-    }
 }
 
 /* PC + TABLETS */

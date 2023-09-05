@@ -17,7 +17,7 @@
 }
 
 .bottomSwiper .swiper-slide-thumb-active {
-    border: solid 8px var(--mgb-color);
+    border: solid 5px var(--mgb-color);
 }
 
 #car-contact-section button {
@@ -36,17 +36,6 @@
 
 .swiperContainer .swiper-slide img {
     object-position: center;
-}
-
-/* MOBILE */
-@media screen and (max-width: 480px) {
-    #info-section {
-        border: solid 5px var(--mgb-color);
-    }
-
-    #car-contact-section h2 {
-        font-size: 1.3em;
-    }
 }
 
 /* PC + TABLETS */

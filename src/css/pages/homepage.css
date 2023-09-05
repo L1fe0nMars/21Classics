@@ -1,16 +1,13 @@
 /* SECTION 1 */
 
+#section-1 {
+    background: url(/images/cover-pic.jpg) no-repeat 50% 75%;
+    background-size: cover;
+}
+
 #section-1 .container {
     height: 16em;
     position: relative;
-}
-
-#section-1 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: bottom;
-    pointer-events: none;
 }
 
 .welcome {
@@ -21,6 +18,10 @@
     font-size: 0.9em;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.9);
+}
+
+.welcome h1 {
+    font-size: 1.5em;
 }
 
 /* SECTION 2 */
@@ -38,7 +39,6 @@
 #section-2 h1 {
     display: inline-block;
     font-family: 'Poppins Bold', Verdana, sans-serif;
-    font-size: 2em;
 }
 
 #section-2 p {
@@ -94,7 +94,6 @@
     padding: 1em 0.5em;
     padding-bottom: 0;
     font-family: 'Poppins Bold', Verdana, sans-serif;
-    font-size: 2em;
 }
 
 #section-4 button {
@@ -117,7 +116,7 @@
 
 #section-5 {
     text-align: center;
-    margin-bottom: 5em;
+    margin-bottom: 2em;
     width: 100%;
 }
 
@@ -129,7 +128,6 @@
     display: inline-block;
     margin: 1em auto;
     font-family: 'Poppins Bold', Verdana, sans-serif;
-    font-size: 2em;
 }
 
 #featured-container {
@@ -163,12 +161,10 @@
 }
 
 #featured-info {
-    padding: 1em;
     margin: 0 auto;
-    margin-top: 2em;
-    border: solid 5px var(--tiger-color);
-    border-radius: 30px;
+    margin-top: 1em;
     width: 90%;
+    border-radius: 30px;
 }
 
 #section-5 h2 {
@@ -183,7 +179,6 @@
     width: 75%;
     max-width: 19em;
     list-style-position: outside;
-    padding-bottom: 2em;
     font-size: 20px;
 }
 
@@ -197,9 +192,9 @@
 }
 
 #section-5 #featured-info button {
-    border: solid 2px var(--tiger-color);
     padding: 0.5em 1em;
-    margin-bottom: 1em;
+    margin: 2em auto;
+    border: solid 2px var(--tiger-color);
     border-radius: 2em;
     font-size: 18px;
     transition: 0.25s ease-out;
@@ -236,18 +231,13 @@
         height: 25em;
     }
 
-    .welcome {
-        font-size: 1.2em;
-    }
-
-    #section-2 h1,
-    #section-4 h1,
-    #section-5 h1 {
-        font-size: 2.5em;
+    .welcome h1 {
+        font-size: 2em;
     }
 
     #featured-info {
         border-radius: 60px;
+        border: solid 5px var(--tiger-color);
     }
 
     #section-5 h2 {
@@ -266,8 +256,12 @@
     }
 
     .welcome {
-        font-size: 1.75em;
         padding-left: 10%;
+    }
+
+    .welcome h1 {
+        font-size: 3em;
+        padding: 0.3em 0;
     }
 
     .image-content {
@@ -278,11 +272,9 @@
     #section-5 li {
         font-size: 26px;
     }
-    
-    #section-2 h1,
-    #section-4 h1,
-    #section-5 h1 {
-        font-size: 3em;
+
+    #section-5 {
+        margin-bottom: 5em;
     }
 
     #featured-container {
