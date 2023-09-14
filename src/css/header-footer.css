@@ -145,15 +145,15 @@ footer li:hover {
 
 footer {
     text-align: center;
+    box-shadow: inset 0 9px 25px -16px black;
 }
 
 footer hr {
+    margin: 0 auto;
+    height: 2px;
+    width: 70%;
     background-color: var(--dark-mode);
     border: none;
-}
-
-.divider {
-    height: 8px;
 }
 
 footer img {
@@ -175,12 +175,6 @@ footer p {
 footer p:last-child {
     font-size: 14px;
     padding-bottom: 0;
-}
-
-footer hr:not(.divider) {
-    height: 2px;
-    width: 70%;
-    margin: 0 auto;
 }
 
 .contact {
@@ -250,7 +244,7 @@ footer .gg-mail {
         align-items: center;
         justify-content: space-between;
         width: 70%;
-        border-top: solid 3px var(--dark-mode);
+        border-top: solid 2px var(--dark-mode);
     }
 
     footer img {
@@ -261,7 +255,7 @@ footer .gg-mail {
         margin-top: 1em;
     }
 
-    footer hr:not(.divider) {
+    footer hr {
         display: none;
     }
 
