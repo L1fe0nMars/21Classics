@@ -7,7 +7,9 @@ const MOBILE_CONTAINER = document.getElementById("mobile-container");
 const MOBILE_MENU = document.getElementById("mobile-menu-open");
 const LIGHT_BTN = document.getElementsByClassName("light-btn");
 const DARK_BTN = document.getElementsByClassName("dark-btn");
+const YEAR = document.getElementById("current-year");
 const MOBILE_MENU_CUTOFF_WIDTH = 875;
+const date = new Date();
 
 let darkMode = localStorage.getItem("darkMode");
 
@@ -20,6 +22,8 @@ const THEME_COLORS = {
     "--tiger-color": ["rgb(7, 38, 56)", "rgb(61, 111, 142)"],
     "--oldsmobile-white-color": ["rgb(16, 18, 19)", "rgb(230, 230, 230)"],
 };
+
+YEAR.innerHTML = date.getFullYear();
 
 if (darkMode == null) {
     if (
