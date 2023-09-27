@@ -21,6 +21,7 @@ const THEME_COLORS = {
     "--rolls-color": ["rgb(47, 1, 1)", "rgb(190, 182, 142)"],
     "--tiger-color": ["rgb(7, 38, 56)", "rgb(61, 111, 142)"],
     "--oldsmobile-white-color": ["rgb(16, 18, 19)", "rgb(230, 230, 230)"],
+    "--shelby-color": ["rgb(13, 40, 105)", "rgb(18, 89, 169)"],
 };
 
 YEAR.innerHTML = date.getFullYear();
