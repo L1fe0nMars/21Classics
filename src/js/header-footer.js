@@ -26,7 +26,7 @@ const THEME_COLORS = {
 
 YEAR.innerHTML = date.getFullYear();
 
-if (darkMode == null) {
+if (darkMode === null) {
     if (
         window.matchMedia
         && window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -50,8 +50,8 @@ else if (darkMode == "disabled") {
 function openMobileMenu() {
     MOBILE_MENU.style.display = "block";
     BODY.style.overflow = "hidden";
-
-    if (PAGINATION_DOTS != null) {
+    
+    if (PAGINATION_DOTS !== null) {
         PAGINATION_DOTS.style.visibility = "hidden";
     }
 }
@@ -63,7 +63,7 @@ function closeMobileMenu() {
     MOBILE_MENU.style.display = "none";
     BODY.style.overflow = "auto";
 
-    if (PAGINATION_DOTS != null) {
+    if (PAGINATION_DOTS !== null) {
         PAGINATION_DOTS.style.visibility = "visible";
     }
 }
@@ -74,7 +74,7 @@ function closeMobileMenu() {
  * @return {boolean} Whether the menu is open or not
  */
 function isMobileMenuOpen() {
-    return (MOBILE_MENU.style.display == "block" ? true : false);
+    return MOBILE_MENU.style.display === "block";
 }
 
 /**
@@ -114,13 +114,9 @@ window.addEventListener("resize", () => {
 });
 
 for (let i = 0; i < LIGHT_BTN.length; i++) {
-    LIGHT_BTN[i].addEventListener("click", () => {
-        toggleDarkMode(false);
-    });
+    LIGHT_BTN[i].addEventListener("click", () => toggleDarkMode(false));
 }
 
 for (let i = 0; i < DARK_BTN.length; i++) {
-    DARK_BTN[i].addEventListener("click", () => {
-        toggleDarkMode(true);
-    });
+    DARK_BTN[i].addEventListener("click", () => toggleDarkMode(true));
 }

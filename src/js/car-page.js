@@ -69,7 +69,7 @@ let modalSwiper = new Swiper(".modalSwiper", {
     },
 });
 
-if (modalSwiper.slides.length == 1) {
+if (modalSwiper.slides.length === 1) {
     modalSwiper.unsetGrabCursor();
 }
 
@@ -81,7 +81,7 @@ if (modalSwiper.slides.length == 1) {
  * @return {number} The number of slides to display
  */
 function setNumVisibleSlides(expectedNum) {
-    return (expectedNum > MAIN_IMG.length ? MAIN_IMG.length : expectedNum);
+    return expectedNum > MAIN_IMG.length ? MAIN_IMG.length : expectedNum;
 }
 
 /**
@@ -109,7 +109,7 @@ function closeModal() {
  * @return {boolean} Whether the modal is open or not
  */
 function isModalOpen() {
-    return (MODAL.style.display == "block" ? true : false);
+    return MODAL.style.display === "block";
 }
 
 for (let i = 0; i < MAIN_IMG.length; i++) {
