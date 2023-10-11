@@ -47,11 +47,7 @@
 }
 
 #unsold-tab:hover,
-#sold-tab:hover {
-    background-color: var(--dark-mode);
-    color: var(--off-white);
-}
-
+#sold-tab:hover,
 .selected {
     background-color: var(--dark-mode);
     color: var(--off-white);

@@ -1,5 +1,5 @@
 .background-color,
-#car-contact-section button:hover {
+#car-contact-section button {
     background-color: var(--trans-am-color);
 }
 

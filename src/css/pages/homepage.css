@@ -47,13 +47,14 @@
     max-width: 800px;
     padding: 2em;
     padding-top: 1em;
+    font-size: 18px;
 }
 
 /* SECTION 3 */
 
 #section-3 {
     text-align: center;
-    margin-bottom: 1em;
+    margin-bottom: 3em;
 }
 
 #section-2-extension {
@@ -62,17 +63,17 @@
 }
 
 #section-2-extension button {
-    color: var(--dark-mode);
+    background-color: var(--blue-nav);
+    color: var(--off-white);
     border: solid 2px var(--blue-nav);
     padding: 0.5em 1em;
     border-radius: 2em;
-    font-size: 18px;
     transition: 0.25s ease-out;
 }
 
 #section-2-extension button:hover {
-    background-color: var(--blue-nav);
-    color: var(--off-white);
+    background-color: transparent;
+    color: var(--dark-mode);
 }
 
 /* SECTION 4 */
@@ -97,19 +98,19 @@
 }
 
 #section-4 button {
+    background-color: var(--golden-color);
     color: var(--off-white);
     border: solid 2px var(--golden-color);
     margin: 2em auto;
     margin-bottom: 3em;
     padding: 0.5em 1em;
     border-radius: 2em;
-    font-size: 18px;
     transition: 0.25s ease-out;
 }
 
 #section-4 button:hover {
-    background-color: var(--golden-color);
-    color: var(--off-white);
+    background-color: transparent;
+    color: var(--dark-mode);
 }
 
 /* SECTION 5 */
@@ -192,17 +193,18 @@
 }
 
 #section-5 #featured-info button {
+    background-color: var(--tiger-color);
+    color: var(--off-white);
     padding: 0.5em 1em;
     margin: 2em auto;
     border: solid 2px var(--tiger-color);
     border-radius: 2em;
-    font-size: 18px;
     transition: 0.25s ease-out;
 }
 
 #section-5 #featured-info button:hover {
-    background-color: var(--tiger-color);
-    color: var(--off-white);
+    background-color: transparent;
+    color: var(--dark-mode);
 }
 
 /* PC + TABLETS */
@@ -295,9 +297,5 @@
         padding-top: 0.5em;
         margin-bottom: 1em;
         font-size: 2.5em;
-    }
-
-    #section-5 button {
-        font-size: 20px;
     }
 }

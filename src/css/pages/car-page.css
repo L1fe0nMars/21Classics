@@ -224,14 +224,15 @@
 }
 
 #car-contact-section button {
+    color: var(--off-white);
     padding: 0.5em 1em;
     border-radius: 2em;
-    font-size: 18px;
     transition: 0.25s ease-out;
 }
 
 #car-contact-section button:hover {
-    color: var(--off-white);
+    background-color: transparent;
+    color: var(--dark-mode);
 }
 
 #car-contact-info {
@@ -294,17 +295,18 @@
 #bottom-buttons button {
     padding: 0.5em 1em;
     border-radius: 2em;
-    font-size: 18px;
     transition: 0.25s ease-out;
 }
 
 #collection-button {
+    background-color: var(--blue-nav);
+    color: var(--off-white);
     border: solid 2px var(--blue-nav);
 }
 
 #collection-button:hover {
-    background-color: var(--blue-nav);
-    color: var(--off-white);
+    background-color: transparent;
+    color: var(--dark-mode);
 }
 
 #add-your-car {
@@ -326,10 +328,6 @@
 
     #video-section {
         margin-bottom: 2em;
-    }
-
-    #car-contact-section h2 {
-        font-size: 1.3em;
     }
 
     .contact-info:not(:first-child) {

@@ -1,5 +1,5 @@
 .background-color,
-#car-contact-section button:hover {
+#car-contact-section button {
     background-color: var(--rolls-color);
 }
 
@@ -27,13 +27,6 @@
 
 .swiperContainer .swiper-slide img {
     object-position: center;
-}
-
-/* MOBILE */
-@media screen and (max-width: 480px) {
-    #car-contact-section h2 {
-        font-size: 1.3em;
-    }
 }
 
 /* PC + TABLETS */
