@@ -79,6 +79,7 @@
     margin: 0;
     width: 100%;
     max-width: 30em;
+    order: 99;
 }
 
 .hidden {

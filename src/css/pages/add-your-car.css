@@ -42,8 +42,8 @@
     margin-bottom: 4em;
 }
 
-/* PC + TABLETS */
-@media screen and (min-width: 481px) {
+/* PC */
+@media screen and (min-width: 1025px) {
     #info-container {
         border: solid 5px var(--golden-color);
     }

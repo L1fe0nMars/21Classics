@@ -26,8 +26,8 @@
     color: var(--crown-victoria-color) !important;
 }
 
-/* PC + TABLETS */
-@media screen and (min-width: 481px) {
+/* PC */
+@media screen and (min-width: 1025px) {
     #info-container {
         border: solid 5px var(--crown-victoria-color);
     }

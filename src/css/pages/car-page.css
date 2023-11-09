@@ -351,13 +351,8 @@
         border-radius: 60px;
     }
 
-    #video-section {
-        width: 90%;
-        margin-top: 2em;
-    }
-
     #info-section {
-        padding: 2em;
+        padding: 1em;
     }
 }
 
@@ -371,5 +366,14 @@
     #video-section,
     #video iframe {
         height: 30vw;
+    }
+
+    #video-section {
+        width: 90%;
+        margin-top: 2em;
+    }
+
+    #info-section {
+        padding: 2em;
     }
 }
