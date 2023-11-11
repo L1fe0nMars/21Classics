@@ -14,6 +14,7 @@ const date = new Date();
 let darkMode = localStorage.getItem("darkMode");
 
 const THEME_COLORS = {
+    "color-scheme": ["light", "dark"],
     "--dark-mode": ["rgb(28, 28, 28)", "rgb(245, 245, 245)"],
     "--off-white": ["rgb(245, 245, 245)", "rgb(28, 28, 28)"],
     "--white": ["white", "rgb(38, 38, 38)"],
