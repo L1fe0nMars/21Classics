@@ -4,12 +4,12 @@ const UNSOLD_TAB = document.getElementById("unsold-tab");
 const SOLD_TAB = document.getElementById("sold-tab");
 const CARD = document.getElementsByClassName("card");
 
-console.log(CARD[0].querySelector(".name").innerHTML);
+//console.log(CARD[0].querySelector(".name").innerHTML);
 
 UNSOLD_TAB.addEventListener("click", () => {
     for (let i = 0; i < CARD.length; i ++) {
-        let isSold = CARD[i].classList.contains("sold");
-        let isHidden = CARD[i].classList.contains("hidden");
+        const isSold = CARD[i].classList.contains("sold");
+        const isHidden = CARD[i].classList.contains("hidden");
 
         if (
             (isSold && !isHidden)
@@ -30,8 +30,8 @@ UNSOLD_TAB.addEventListener("click", () => {
 
 SOLD_TAB.addEventListener("click", () => {
     for (let i = 0; i < CARD.length; i ++) {
-        let isSold = CARD[i].classList.contains("sold");
-        let isHidden = CARD[i].classList.contains("hidden");
+        const isSold = CARD[i].classList.contains("sold");
+        const isHidden = CARD[i].classList.contains("hidden");
 
         if (
             (isSold && isHidden)

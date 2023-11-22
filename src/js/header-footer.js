@@ -27,7 +27,13 @@ const THEME_COLORS = {
 
 YEAR.innerHTML = date.getFullYear();
 
-if (darkMode === null) {
+if (darkMode === "enabled") {
+    toggleDarkMode(true);
+}
+else if (darkMode === "disabled") {
+    toggleDarkMode(false);
+}
+else {
     if (
         window.matchMedia
         && window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -38,12 +44,6 @@ if (darkMode === null) {
         toggleDarkMode(false);
     }
 }
-else if (darkMode == "enabled") {
-    toggleDarkMode(true);
-}
-else if (darkMode == "disabled") {
-    toggleDarkMode(false);
-}
 
 /**
  * Opens the mobile menu
@@ -52,7 +52,7 @@ function openMobileMenu() {
     MOBILE_MENU.style.display = "block";
     BODY.style.overflow = "hidden";
     
-    if (PAGINATION_DOTS !== null) {
+    if (PAGINATION_DOTS) {
         PAGINATION_DOTS.style.visibility = "hidden";
     }
 }
@@ -64,7 +64,7 @@ function closeMobileMenu() {
     MOBILE_MENU.style.display = "none";
     BODY.style.overflow = "auto";
 
-    if (PAGINATION_DOTS !== null) {
+    if (PAGINATION_DOTS) {
         PAGINATION_DOTS.style.visibility = "visible";
     }
 }
@@ -104,7 +104,7 @@ function toggleDarkMode(toggled) {
 
 MOBILE_CONTAINER.addEventListener("click", () => {
     MOBILE_CONTAINER.classList.toggle("change");
-    MOBILE_MENU.style.display == "block" ? closeMobileMenu() : openMobileMenu();
+    MOBILE_MENU.style.display === "block" ? closeMobileMenu() : openMobileMenu();
 });
 
 window.addEventListener("resize", () => {

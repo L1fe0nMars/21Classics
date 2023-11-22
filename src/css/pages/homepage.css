@@ -6,22 +6,21 @@
 }
 
 #section-1 .container {
-    height: 16em;
+    height: 24em;
 }
 
 .welcome {
-    padding-left: 3%;
     width: 100%;
     height: 100%;
     color: var(--off-white-ignore);
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), transparent);
-    display: flex;
-    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), transparent);
 }
 
 .welcome h1 {
-    font-size: 2.5em;
+    font-size: 2.8em;
     font-family: 'Poppins Bold', Verdana, sans-serif;
+    text-align: center;
+    padding-top: 0.5em;
 }
 
 /* SECTION 2 */
@@ -34,6 +33,7 @@
 #section-2 .container {
     position: relative;
     padding: 3em 0;
+    padding-top: 5em;
 }
 
 #section-2 h1 {
@@ -209,6 +209,18 @@
 
 /* PC + TABLETS */
 @media screen and (min-width: 481px) {
+    .welcome {
+        padding-left: 3%;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.9), transparent);
+        display: flex;
+        align-items: center;
+    }
+    
+    .welcome h1 {
+        text-align: left;
+        max-width: max-content;
+    }
+    
     #section-2 p {
         font-size: 20px;
     }
