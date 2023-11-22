@@ -29,6 +29,6 @@
 /* PC */
 @media screen and (min-width: 1025px) {
     #info-container {
-        border: solid 5px var(--crown-victoria-color);
+        border: solid 8px var(--crown-victoria-color);
     }
 }

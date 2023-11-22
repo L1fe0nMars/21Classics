@@ -251,7 +251,7 @@
 
     #featured-info {
         border-radius: 60px;
-        border: solid 5px var(--tiger-color);
+        border: solid 8px var(--tiger-color);
     }
 
     #section-5 h2 {
@@ -293,7 +293,7 @@
         text-align: center;
         width: 90%;
         height: 90%;
-        border: solid 5px var(--tiger-color);
+        border: solid 8px var(--tiger-color);
         border-radius: 60px;
         display: grid;
         grid-template-columns: 1fr 0.75fr;

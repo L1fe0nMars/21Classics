@@ -37,6 +37,6 @@
 /* PC */
 @media screen and (min-width: 1025px) {
     #info-container {
-        border: solid 5px var(--cadillac-color);
+        border: solid 8px var(--cadillac-color);
     }
 }

@@ -32,6 +32,6 @@
 /* PC */
 @media screen and (min-width: 1025px) {
     #info-container {
-        border: solid 5px var(--trans-am-color);
+        border: solid 8px var(--trans-am-color);
     }
 }

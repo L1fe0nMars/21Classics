@@ -33,6 +33,6 @@
 /* PC */
 @media screen and (min-width: 1025px) {
     #info-container {
-        border: solid 5px var(--nova-color);
+        border: solid 8px var(--nova-color);
     }
 }
