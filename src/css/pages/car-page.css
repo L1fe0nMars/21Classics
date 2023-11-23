@@ -191,7 +191,7 @@
     margin: 0 auto;
     color: var(--dark-mode);
     font-size: 18px;
-    text-align: justify;
+    text-align: left;
 }
 
 #section-2 ul {
