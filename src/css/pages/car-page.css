@@ -142,7 +142,7 @@
 }
 
 #section-2 h1 {
-    margin: 1em auto 0.5em auto;
+    margin: 1em auto;
     padding: 0 1em;
     font-family: 'Poppins Bold', Verdana, sans-serif;
     color: var(--dark-mode);
@@ -387,6 +387,10 @@
 }
 
 @media screen and (min-width: 1500px) {
+    #section-2 h1 {
+        margin: 1em auto 0.5em auto;
+    }
+
     #info-container {
         display: flex;
         align-items: center;
