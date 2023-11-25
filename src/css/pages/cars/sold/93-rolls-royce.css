@@ -3,7 +3,8 @@
     background-color: var(--rolls-royce-spur-color);
 }
 
-.color {
+.color,
+.car-decoration {
     color: var(--rolls-royce-spur-color);
 }
 
@@ -28,7 +29,8 @@
 
 /* PC */
 @media screen and (min-width: 1025px) {
-    #info-container {
+    #info-box {
         border: solid 8px var(--rolls-royce-spur-color);
+        max-width: 75em;
     }
 }

@@ -142,18 +142,22 @@
 }
 
 #section-2 h1 {
-    margin: 1em auto;
+    margin: 1em auto 0.5em auto;
     padding: 0 1em;
     font-family: 'Poppins Bold', Verdana, sans-serif;
     color: var(--dark-mode);
 }
 
-#info-container {
-    margin: 0 auto;
-    margin-bottom: 2em;
+#section-2 h1:not(#sold) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#info-box {
+    margin: 5em auto;
+    margin-top: 2em;
     width: 100%;
-    max-width: 75em;
-    overflow-x: hidden;
 }
 
 #video-section {
@@ -165,7 +169,7 @@
 }
 
 #video-background {
-    width: 101%;
+    width: 100%;
 }
 
 #video {
@@ -346,8 +350,7 @@
         font-size: 24px;
     }
 
-    #info-container {
-        width: 90%;
+    #info-box{
         border-radius: 60px;
     }
 
@@ -363,6 +366,11 @@
         height: 9em;
     }
 
+    #info-box {
+        margin-top: 5em;
+        width: 90%;
+    }
+
     #video-section,
     #video iframe {
         height: 30vw;
@@ -375,5 +383,13 @@
 
     #info-section {
         padding: 2em;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    #info-container {
+        display: flex;
+        align-items: center;
+        padding-bottom: 2em;
     }
 }

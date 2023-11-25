@@ -3,7 +3,8 @@
     background-color: var(--crown-victoria-color);
 }
 
-.color {
+.color,
+.car-decoration {
     color: var(--crown-victoria-color);
 }
 
@@ -28,7 +29,8 @@
 
 /* PC */
 @media screen and (min-width: 1025px) {
-    #info-container {
+    #info-box {
         border: solid 8px var(--crown-victoria-color);
+        max-width: 75em;
     }
 }

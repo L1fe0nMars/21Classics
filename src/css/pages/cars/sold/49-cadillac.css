@@ -3,7 +3,8 @@
     background-color: var(--cadillac-color);
 }
 
-.color {
+.color,
+.car-decoration {
     color: var(--cadillac-color);
 }
 
@@ -36,7 +37,7 @@
 
 /* PC */
 @media screen and (min-width: 1025px) {
-    #info-container {
+    #info-box {
         border: solid 8px var(--cadillac-color);
     }
 }

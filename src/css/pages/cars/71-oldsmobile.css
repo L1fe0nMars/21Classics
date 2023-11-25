@@ -3,7 +3,8 @@
     background-color: var(--oldsmobile-white-color);
 }
 
-.color {
+.color,
+.car-decoration {
     color: var(--oldsmobile-white-color);
 }
 
@@ -35,7 +36,8 @@
 
 /* PC */
 @media screen and (min-width: 1025px) {
-    #info-container {
+    #info-box {
         border: solid 8px var(--oldsmobile-white-color);
+        max-width: 75em;
     }
 }

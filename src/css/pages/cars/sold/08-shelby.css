@@ -3,7 +3,8 @@
     background-color: var(--shelby-color);
 }
 
-.color {
+.color,
+.car-decoration {
     color: var(--shelby-color);
 }
 
@@ -39,7 +40,8 @@
 
 /* PC */
 @media screen and (min-width: 1025px) {
-    #info-container {
+    #info-box {
         border: solid 8px var(--shelby-color);
+        max-width: 75em;
     }
 }

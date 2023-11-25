@@ -3,7 +3,8 @@
     background-color: var(--golden-color);
 }
 
-.color {
+.color,
+.car-decoration {
     color: var(--golden-color);
 }
 
@@ -44,7 +45,8 @@
 
 /* PC */
 @media screen and (min-width: 1025px) {
-    #info-container {
+    #info-box {
         border: solid 8px var(--golden-color);
+        max-width: 75em;
     }
 }

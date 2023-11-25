@@ -3,7 +3,8 @@
     background-color: var(--bumblebee-color);
 }
 
-.color {
+.color,
+.car-decoration {
     color: var(--bumblebee-color);
 }
 
@@ -38,7 +39,7 @@
 
 /* PC */
 @media screen and (min-width: 1025px) {
-    #info-container {
+    #info-box {
         border: solid 8px var(--bumblebee-color);
     }
 }

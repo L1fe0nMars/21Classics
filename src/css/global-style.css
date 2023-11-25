@@ -38,6 +38,11 @@
     src: url("/fonts/Poppins/Poppins-Bold.ttf");
 }
 
+@font-face { 
+    font-family: 'Poppins Extra Bold'; 
+    src: url("/fonts/Poppins/Poppins-ExtraBold.ttf");
+}
+
 * {
     font-family: 'Poppins', Verdana, sans-serif;
     padding: 0;
@@ -69,6 +74,18 @@ img {
 
 h1 {
     font-size: 2em;
+}
+
+.title-decoration {
+    font-family: 'Poppins Extra Bold', Verdana, sans-serif;
+}
+
+.left {
+    padding-right: 0.5em;
+}
+
+.right {
+    padding-left: 0.5em;
 }
 
 /* TABLETS */
