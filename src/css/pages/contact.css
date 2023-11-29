@@ -62,21 +62,21 @@
 }
 
 #section-2 li {
-    padding: 0 1em;
     min-width: 13em;
     min-height: 8em;
     border-radius: 30px;
     text-align: center;
     background-color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition: 0.25s ease-out;
 }
 
 .contact-info {
-    display: block;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: inherit;
+    min-width: inherit;
+    min-height: inherit;
 }
 
 .contact-icon {
