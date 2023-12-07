@@ -246,6 +246,7 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 1.5em;
     max-width: 50em;
 }
 
@@ -259,16 +260,15 @@
 .contact-info p {
     text-align: center;
     width: 100%;
-    transition: 0.25s ease-out;
 }
 
-.contact-info .gg-mail,
-.contact-info .gg-phone {
+.contact-info svg,
+.contact-info svg {
     margin-right: 1em;
 }
 
 .contact-info p:hover {
-    opacity: 0.6;
+    text-decoration: underline;
 }
 
 /* SECTION 3 */

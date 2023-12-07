@@ -3,9 +3,12 @@
     background-color: var(--mgb-color);
 }
 
-.color,
 .car-decoration {
     color: var(--mgb-color);
+}
+
+.color {
+    fill: var(--mgb-color);
 }
 
 #section-2 li {

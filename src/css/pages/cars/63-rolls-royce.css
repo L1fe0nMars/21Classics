@@ -3,9 +3,12 @@
     background-color: var(--rolls-color);
 }
 
-.color,
 .car-decoration {
     color: var(--rolls-color);
+}
+
+.color {
+    fill: var(--rolls-color);
 }
 
 .bottomSwiper .swiper-slide-thumb-active {

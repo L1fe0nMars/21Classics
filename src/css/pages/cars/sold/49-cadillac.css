@@ -3,7 +3,6 @@
     background-color: var(--cadillac-color);
 }
 
-.color,
 .car-decoration {
     color: var(--cadillac-color);
 }
@@ -23,11 +22,6 @@
 
 #car-contact-section button {
     border: solid 2px var(--cadillac-color);
-}
-
-#divider-section,
-#car-contact-info {
-    display: none;
 }
 
 .swiper-navBtn-next,

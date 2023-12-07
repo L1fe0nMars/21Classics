@@ -3,7 +3,6 @@
     background-color: var(--jaguar-targa-color);
 }
 
-.color,
 .car-decoration {
     color: var(--jaguar-targa-color);
 }
@@ -16,9 +15,7 @@
     border: solid 2px var(--jaguar-targa-color);
 }
 
-#video-section,
-#divider-section,
-#car-contact-info {
+#video-section {
     display: none;
 }
 

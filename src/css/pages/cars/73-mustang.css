@@ -3,9 +3,12 @@
     background-color: var(--mustang-color);
 }
 
-.color,
 .car-decoration {
     color: var(--mustang-color);
+}
+
+.color {
+    fill: var(--mustang-color);
 }
 
 .bottomSwiper .swiper-slide-thumb-active {

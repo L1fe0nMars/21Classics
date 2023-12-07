@@ -3,7 +3,6 @@
     background-color: var(--rolls-royce-spur-color);
 }
 
-.color,
 .car-decoration {
     color: var(--rolls-royce-spur-color);
 }
@@ -16,9 +15,7 @@
     border: solid 2px var(--rolls-royce-spur-color);
 }
 
-#video-section,
-#divider-section,
-#car-contact-info {
+#video-section {
     display: none;
 }
 

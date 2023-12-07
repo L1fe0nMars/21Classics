@@ -3,9 +3,12 @@
     background-color: var(--trans-am-color);
 }
 
-.color,
 .car-decoration {
     color: var(--trans-am-color);
+}
+
+.color {
+    fill: var(--trans-am-color);
 }
 
 .bottomSwiper .swiper-slide-thumb-active {

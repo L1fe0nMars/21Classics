@@ -3,7 +3,6 @@
     background-color: var(--nova-color);
 }
 
-.color,
 .car-decoration {
     color: var(--nova-color);
 }
@@ -16,9 +15,7 @@
     border: solid 2px var(--nova-color);
 }
 
-#video-section,
-#divider-section,
-#car-contact-info {
+#video-section {
     display: none;
 }
 

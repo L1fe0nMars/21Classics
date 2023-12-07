@@ -3,9 +3,12 @@
     background-color: var(--jensen-color);
 }
 
-.color,
 .car-decoration {
     color: var(--jensen-color);
+}
+
+.color {
+    fill: var(--jensen-color);
 }
 
 #section-2 li {

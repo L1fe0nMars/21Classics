@@ -3,7 +3,6 @@
     background-color: var(--crown-victoria-color);
 }
 
-.color,
 .car-decoration {
     color: var(--crown-victoria-color);
 }
@@ -16,9 +15,7 @@
     border: solid 2px var(--crown-victoria-color);
 }
 
-#video-section,
-#divider-section,
-#car-contact-info {
+#video-section {
     display: none;
 }
 

@@ -3,9 +3,12 @@
     background-color: var(--corvette-color);
 }
 
-.color,
 .car-decoration {
     color: var(--corvette-color);
+}
+
+.color {
+    fill: var(--corvette-color);
 }
 
 .bottomSwiper .swiper-slide-thumb-active {

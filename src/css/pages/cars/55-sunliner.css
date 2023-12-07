@@ -3,9 +3,12 @@
     background-color: var(--bumblebee-color);
 }
 
-.color,
 .car-decoration {
     color: var(--bumblebee-color);
+}
+
+.color {
+    fill: var(--bumblebee-color);
 }
 
 .bottomSwiper .swiper-slide-thumb-active {

@@ -3,9 +3,12 @@
     background-color: var(--oldsmobile-color);
 }
 
-.color,
 .car-decoration {
     color: var(--oldsmobile-color);
+}
+
+.color {
+    fill: var(--oldsmobile-color);
 }
 
 .bottomSwiper .swiper-slide-thumb-active {

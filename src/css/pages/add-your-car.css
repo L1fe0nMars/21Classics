@@ -3,7 +3,6 @@
     background-color: var(--golden-color);
 }
 
-.color,
 .car-decoration {
     color: var(--golden-color);
 }
@@ -23,11 +22,6 @@
 #divider-section h2 span {
     color: green;
     font-family: 'Poppins Bold', Verdana, sans-serif;
-}
-
-#video-section,
-#car-contact-info {
-    display: none;
 }
 
 .swiper-navBtn,

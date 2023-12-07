@@ -3,7 +3,6 @@
     background-color: var(--mga-color);
 }
 
-.color,
 .car-decoration {
     color: var(--mga-color);
 }
@@ -14,11 +13,6 @@
 
 #car-contact-section button {
     border: solid 2px var(--mga-color);
-}
-
-#divider-section,
-#car-contact-info {
-    display: none;
 }
 
 .swiper-navBtn-next,

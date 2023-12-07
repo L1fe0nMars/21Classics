@@ -3,9 +3,12 @@
     background-color: var(--tiger-color);
 }
 
-.color,
 .car-decoration {
     color: var(--tiger-color);
+}
+
+.color {
+    fill: var(--tiger-color);
 }
 
 #section-2 li {

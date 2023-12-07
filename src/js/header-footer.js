@@ -5,8 +5,8 @@ const BODY = document.querySelector("body");
 const PAGINATION_DOTS = document.querySelector(".swiper-pagination");
 const MOBILE_CONTAINER = document.getElementById("mobile-container");
 const MOBILE_MENU = document.getElementById("mobile-menu-open");
-const LIGHT_BTN = document.getElementsByClassName("light-btn");
-const DARK_BTN = document.getElementsByClassName("dark-btn");
+const SUN = document.getElementsByClassName("sun");
+const MOON = document.getElementsByClassName("moon");
 const YEAR = document.getElementById("current-year");
 const MOBILE_MENU_CUTOFF_WIDTH = 875;
 const date = new Date();
@@ -88,15 +88,27 @@ function toggleDarkMode(toggled) {
         ROOT.style.setProperty(key, THEME_COLORS[key][+toggled]);
     }
 
-    for (let i = 0; i < LIGHT_BTN.length; i++) {
+    for (let i = 0; i < SUN.length; i++) {
         if (toggled) {
-            DARK_BTN[i].style.display = "none";
-            LIGHT_BTN[i].style.display = "inline";
+            MOON[i].style.transform = "translate(0, -100%)";
+            MOON[i].style.opacity = "0";
+            MOON[i].style.pointerEvents = "none";
+        
+            SUN[i].style.transform = "translate(0, 0)";
+            SUN[i].style.opacity = "1";
+            SUN[i].style.pointerEvents = "auto";
+    
             localStorage.setItem("darkMode", "enabled");
         }
         else {
-            LIGHT_BTN[i].style.display = "none";
-            DARK_BTN[i].style.display = "inline";
+            SUN[i].style.transform = "translate(0, 100%)";
+            SUN[i].style.opacity = "0";
+            SUN[i].style.pointerEvents = "none";
+        
+            MOON[i].style.transform = "translate(0, 0)";
+            MOON[i].style.opacity = "1";
+            MOON[i].style.pointerEvents = "auto";
+    
             localStorage.setItem("darkMode", "disabled");
         }
     }
@@ -114,10 +126,10 @@ window.addEventListener("resize", () => {
     }
 });
 
-for (let i = 0; i < LIGHT_BTN.length; i++) {
-    LIGHT_BTN[i].addEventListener("click", () => toggleDarkMode(false));
+for (let i = 0; i < SUN.length; i++) {
+    SUN[i].addEventListener("click", () => toggleDarkMode(false));
 }
 
-for (let i = 0; i < DARK_BTN.length; i++) {
-    DARK_BTN[i].addEventListener("click", () => toggleDarkMode(true));
+for (let i = 0; i < MOON.length; i++) {
+    MOON[i].addEventListener("click", () => toggleDarkMode(true));
 }

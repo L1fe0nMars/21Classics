@@ -68,6 +68,11 @@
     text-align: center;
     background-color: var(--white);
     transition: 0.25s ease-out;
+    box-shadow: 0 2px 7px 0 rgba(20, 20, 43, 0.06);
+}
+
+#section-2 li:hover {
+    box-shadow: 0 6px 8px 0 rgba(20, 20, 43, 0.08);
 }
 
 .contact-info {
@@ -81,28 +86,41 @@
 
 .contact-icon {
     margin: 1em auto;
-    transition: 0.25s ease-out;
-    --ggs: 1.6;
+    transform: scale(1.5);
 }
 
-.main-decoration,
-#main-contact .contact-icon {
+.contact-icon path {
+    transition: 0.25s ease-out;
+}
+
+.main-decoration {
     color: var(--blue-nav);
 }
 
-.dev-decoration,
-#my-contact .contact-icon {
+#main-contact .contact-icon {
+    fill: var(--blue-nav);
+}
+
+.dev-decoration {
     color: var(--golden-color);
 }
 
-.red-decoration,
-#section-2 .gg-youtube {
+#my-contact .contact-icon {
+    fill: var(--golden-color);
+}
+
+.red-decoration {
     color: red;
 }
 
+#youtube path {
+    fill: red;
+}
+
 #section-2 li:hover,
-#section-2 li:hover .contact-icon {
+#section-2 li:hover .contact-icon path {
     color: var(--off-white-ignore);
+    fill: var(--off-white-ignore);
 }
 
 #main-contact li:hover {

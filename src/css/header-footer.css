@@ -49,8 +49,7 @@ nav {
 }
 
 #desktop-nav li:hover:not(.light-dark-toggle),
-#mobile-menu-open li:hover:not(.light-dark-toggle),
-footer li:hover {
+#mobile-menu-open li:hover:not(.light-dark-toggle) {
     box-shadow: inset 0 -3px 0 var(--dark-mode);
 }
 
@@ -110,13 +109,7 @@ footer li:hover {
     height: 100%;
     line-height: 5em;
     display: none;
-    transition: display 1s linear;
     z-index: 2;
-    /*
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s linear;
-    */
 }
 
 #mobile-menu-open ul {
@@ -128,20 +121,45 @@ footer li:hover {
     list-style: none;
 }
 
-.gg-sun,
-.gg-moon {
+.light-dark-toggle {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5em;
+}
+
+.light-dark-toggle button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sun,
+.moon {
     transition: 0.25s ease-out;
-    --ggs: 1.25;
+    transform: scale(1.25);
+    transition: transform 0.3s, opacity 0.3s, fill 0.3s;
 }
 
-.gg-sun,
-.gg-sun:hover  {
-    color: goldenrod;
+.sun {
+    opacity: 1;
+    position: absolute;
 }
 
-.gg-moon,
-.gg-moon:hover {
-    color: midnightblue;
+.moon {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sun,
+.sun:hover {
+    fill: goldenrod;
+}
+
+.moon,
+.moon:hover {
+    fill: midnightblue;
 }
 
 footer {
@@ -205,12 +223,13 @@ footer p:last-child {
     opacity: 0.6;
 }
 
-.gg-mail {
-    min-width: 1.15em;
+.footer-mail {
+    bottom: -4px;
 }
 
-footer .gg-mail {
-    bottom: -4px;
+.footer-mail,
+.footer-phone {
+    fill: var(--dark-mode);
 }
 
 .bottom-text p a {
@@ -227,18 +246,22 @@ footer .gg-mail {
     #mobile-menu {
         display: none;
     }
+
+    .light-dark-toggle {
+        margin-top: 0;
+    }
+
+    .sun,
+    .moon {
+        fill: var(--dark-mode);
+        transform: scale(1);
+    }
 }
 
 /* PC + TABLETS */
 @media (min-width: 481px) {
     #mobile-menu-open ul {
         padding-top: 0.5em;
-    }
-
-    .gg-sun,
-    .gg-moon {
-        color: var(--dark-mode);
-        --ggs: 1;
     }
     
     .bottom-text {
