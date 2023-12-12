@@ -2,7 +2,6 @@
 
 const ROOT = document.querySelector(":root");
 const BODY = document.querySelector("body");
-const PAGINATION_DOTS = document.querySelector(".swiper-pagination");
 const MOBILE_CONTAINER = document.getElementById("mobile-container");
 const MOBILE_MENU = document.getElementById("mobile-menu-open");
 const SUN = document.getElementsByClassName("sun");
@@ -27,46 +26,20 @@ const THEME_COLORS = {
 
 YEAR.innerHTML = date.getFullYear();
 
-if (darkMode === "enabled") {
-    toggleDarkMode(true);
-}
-else if (darkMode === "disabled") {
-    toggleDarkMode(false);
-}
-else {
-    if (
-        window.matchMedia
-        && window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-        toggleDarkMode(true);
-    }
-    else {
-        toggleDarkMode(false);
-    }
-}
+detectTheme();
 
 /**
  * Opens the mobile menu
  */
 function openMobileMenu() {
-    MOBILE_MENU.style.display = "block";
-    BODY.style.overflow = "hidden";
-    
-    if (PAGINATION_DOTS) {
-        PAGINATION_DOTS.style.visibility = "hidden";
-    }
+    MOBILE_MENU.style.transform = "scaleY(1)";
 }
 
 /**
  * Closes the mobile menu
  */
 function closeMobileMenu() {
-    MOBILE_MENU.style.display = "none";
-    BODY.style.overflow = "auto";
-
-    if (PAGINATION_DOTS) {
-        PAGINATION_DOTS.style.visibility = "visible";
-    }
+    MOBILE_MENU.style.transform = "scaleY(0)";
 }
 
 /**
@@ -75,7 +48,30 @@ function closeMobileMenu() {
  * @return {boolean} Whether the menu is open or not
  */
 function isMobileMenuOpen() {
-    return MOBILE_MENU.style.display === "block";
+    return MOBILE_MENU.style.transform === "scaleY(1)";
+}
+
+/**
+ * Checks the saved theme or user's preferences on page load and sets the theme accordingly
+ */
+function detectTheme() {
+    if (darkMode === "enabled") {
+        toggleDarkMode(true);
+    }
+    else if (darkMode === "disabled") {
+        toggleDarkMode(false);
+    }
+    else {
+        if (
+            window.matchMedia
+            && window.matchMedia("(prefers-color-scheme: dark)").matches
+        ) {
+            toggleDarkMode(true);
+        }
+        else {
+            toggleDarkMode(false);
+        }
+    }
 }
 
 /**
@@ -116,7 +112,7 @@ function toggleDarkMode(toggled) {
 
 MOBILE_CONTAINER.addEventListener("click", () => {
     MOBILE_CONTAINER.classList.toggle("change");
-    MOBILE_MENU.style.display === "block" ? closeMobileMenu() : openMobileMenu();
+    MOBILE_MENU.style.transform === "scaleY(1)" ? closeMobileMenu() : openMobileMenu();
 });
 
 window.addEventListener("resize", () => {
