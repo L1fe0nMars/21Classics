@@ -15,6 +15,10 @@
     border: solid 2px var(--mga-color);
 }
 
+#video-section {
+    display: none;
+}
+
 .swiper-navBtn-next,
 .swiper-navBtn-prev {
     color: var(--mga-color) !important;
@@ -24,5 +28,6 @@
 @media screen and (min-width: 1025px) {
     #info-box {
         border: solid 8px var(--mga-color);
+        max-width: 75em;
     }
 }
