@@ -34,36 +34,11 @@ let mainSwiper = new Swiper(".swiperContainer", {
         enabled: true,
     },
 });
-/*
-let modalBottomSwiper = new Swiper(".modalBottomSwiper", {
-    loop: false,
-    spaceBetween: 10,
-    slidesPerView: 2,
-    breakpoints: {
-        640: {
-            slidesPerView: 4,
-        },
-        1024: {
-            slidesPerView: 6,
-        },
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    freeMode: true,
-    watchSlidesProgress: true,
-});
-*/
+
 let modalSwiper = new Swiper(".modalSwiper", {
     loop: true,
     spaceBetween: 10,
     grabCursor: true,
-    /*
-    thumbs: {
-        swiper: modalBottomSwiper,
-    },
-    */
     keyboard: {
         enabled: true,
     },
