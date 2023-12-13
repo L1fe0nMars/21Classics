@@ -33,7 +33,6 @@ detectTheme();
  */
 function openMobileMenu() {
     MOBILE_MENU.style.transform = "scaleY(1)";
-    MOBILE_MENU.ariaExpanded = "true";
 }
 
 /**
@@ -41,7 +40,6 @@ function openMobileMenu() {
  */
 function closeMobileMenu() {
     MOBILE_MENU.style.transform = "scaleY(0)";
-    MOBILE_MENU.ariaExpanded = "false";
 }
 
 /**
