@@ -58,6 +58,7 @@
 .bottomSwiper {
     height: 7em;
     width: 90%;
+    --swiper-navigation-color: var(--off-white-ignore);
 }
 
 .bottomSwiper .swiper-slide {
@@ -75,7 +76,6 @@
 .bottomSwiper .swiper-button-next,
 .bottomSwiper .swiper-button-prev {
     background-color: rgb(0, 0, 0, 0.5);
-    color: var(--off-white-ignore) !important;
     height: 120% !important;
     top: 0 !important;
     padding-top: 1.5em !important;

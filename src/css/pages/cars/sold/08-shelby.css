@@ -1,3 +1,7 @@
+.swiperContainer .swiper-slide img {
+    object-position: center;
+}
+
 .background-color,
 #car-contact-section button:hover {
     background-color: var(--shelby-color);
@@ -19,13 +23,8 @@
     display: none;
 }
 
-.swiper-navBtn-next,
-.swiper-navBtn-prev {
-    color: var(--shelby-color) !important;
-}
-
-.swiperContainer .swiper-slide img {
-    object-position: center;
+#section-3 .swiper {
+    --swiper-navigation-color: var(--shelby-color);
 }
 
 /* MOBILE */

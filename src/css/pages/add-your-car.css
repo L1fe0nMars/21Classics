@@ -1,3 +1,7 @@
+.swiperContainer .swiper-slide img {
+    object-position: center;
+}
+
 .background-color,
 #car-contact-section button {
     background-color: var(--golden-color);
@@ -9,6 +13,10 @@
 
 .bottomSwiper .swiper-slide-thumb-active {
     border: solid 5px var(--golden-color);
+}
+
+#section-2 {
+    margin-bottom: 4em;
 }
 
 #car-contact-section button {
@@ -24,17 +32,8 @@
     font-family: 'Poppins Bold', Verdana, sans-serif;
 }
 
-.swiper-navBtn,
-.swiper-navBtn:hover {
-    color: var(--golden-color) !important;
-}
-
-.swiperContainer .swiper-slide img {
-    object-position: center;
-}
-
-#section-2 {
-    margin-bottom: 4em;
+#section-3 .swiper {
+    --swiper-navigation-color: var(--golden-color);
 }
 
 /* PC */

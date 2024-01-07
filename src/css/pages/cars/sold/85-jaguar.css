@@ -7,6 +7,10 @@
     color: var(--jaguar-targa-color);
 }
 
+.swiperContainer .swiper-slide img {
+    object-position: 50% 39%;
+}
+
 .bottomSwiper .swiper-slide-thumb-active {
     border: solid 5px var(--jaguar-targa-color);
 }
@@ -19,13 +23,8 @@
     display: none;
 }
 
-.swiper-navBtn-next,
-.swiper-navBtn-prev {
-    color: var(--jaguar-targa-color) !important;
-}
-
-.swiperContainer .swiper-slide img {
-    object-position: 50% 39%;
+#section-3 .swiper {
+    --swiper-navigation-color: var(--jaguar-targa-color);
 }
 
 /* PC */

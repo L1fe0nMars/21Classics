@@ -20,8 +20,8 @@
     border: solid 5px var(--cadillac-color);
 }
 
-#car-contact-section button {
-    border: solid 2px var(--cadillac-color);
+#section-3 .swiper {
+    --swiper-navigation-color: var(--cadillac-color);
 }
 
 .swiper-navBtn-next,

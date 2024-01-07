@@ -34,9 +34,8 @@
     display: none;
 }
 
-.swiper-navBtn-next,
-.swiper-navBtn-prev {
-    color: var(--jensen-color) !important;
+#section-3 .swiper {
+    --swiper-navigation-color: var(--jensen-color);
 }
 
 /* MOBILE */

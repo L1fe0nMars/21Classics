@@ -1,3 +1,7 @@
+.swiperContainer .swiper-slide img {
+    object-position: center;
+}
+
 .background-color,
 #car-contact-section button {
     background-color: var(--bumblebee-color);
@@ -24,13 +28,8 @@
     display: none;
 }
 
-.swiper-navBtn-next,
-.swiper-navBtn-prev {
-    color: var(--bumblebee-color) !important;
-}
-
-.swiperContainer .swiper-slide img {
-    object-position: center;
+#section-3 .swiper {
+    --swiper-navigation-color: var(--bumblebee-color);
 }
 
 /* MOBILE */

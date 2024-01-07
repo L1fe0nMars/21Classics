@@ -33,9 +33,8 @@
     display: none;
 }
 
-.swiper-navBtn-next,
-.swiper-navBtn-prev {
-    color: var(--tiger-color) !important;
+#section-3 .swiper {
+    --swiper-navigation-color: var(--tiger-color);
 }
 
 /* MOBILE */
