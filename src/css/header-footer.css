@@ -189,6 +189,7 @@ footer hr {
     width: 70%;
     background-color: var(--dark-mode);
     border: none;
+    border-radius: 30px;
 }
 
 footer img {
