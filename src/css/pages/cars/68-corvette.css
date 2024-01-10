@@ -17,6 +17,7 @@
 
 #car-contact-section button {
     border: solid 2px var(--corvette-color);
+    color: var(--dark-mode-ignore);
 }
 
 #sold,

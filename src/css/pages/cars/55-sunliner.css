@@ -21,6 +21,7 @@
 
 #car-contact-section button {
     border: solid 2px var(--bumblebee-color);
+    color: var(--dark-mode-ignore);
 }
 
 #sold,
