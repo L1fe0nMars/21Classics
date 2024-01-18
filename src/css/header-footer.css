@@ -13,8 +13,9 @@ header img {
     float: left;
 }
 
-header h1 {
+header span {
     display: inline-block;
+    font-weight: bold;
     font-size: 2em;
     line-height: 3.5em;
     color: var(--dark-mode);
@@ -328,7 +329,7 @@ footer p:last-child {
         height: 8em;
     }
 
-    header h1 {
+    header span {
         line-height: 2.3em;
         font-size: 3.5em;
     }

@@ -228,6 +228,11 @@
     font-family: 'Poppins Bold', Verdana, sans-serif;
 }
 
+#car-contact-section span {
+    font-size: 2em;
+    font-family: 'Poppins Bold', Verdana, sans-serif;
+}
+
 #car-contact-section button {
     color: var(--off-white);
     padding: 0.5em 1em;
@@ -279,7 +284,7 @@
     color: var(--dark-mode);
 }
 
-#section-3 h1 {
+#section-3 h2 {
     padding-bottom: 1em;
     font-family: 'Poppins Bold', Verdana, sans-serif;
 }
@@ -389,6 +394,10 @@
     #info-section {
         padding: 2em;
     }
+
+    #car-contact-section span {
+        font-size: 2.5em;
+    }
 }
 
 @media screen and (min-width: 1500px) {
@@ -400,5 +409,9 @@
         display: flex;
         align-items: center;
         padding-bottom: 2em;
+    }
+
+    #car-contact-section span {
+        font-size: 3em;
     }
 }
