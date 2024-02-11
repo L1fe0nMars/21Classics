@@ -1,32 +1,32 @@
 :root {
     --white: white;
-    --off-white: rgb(245, 245, 245);
-    --off-white-ignore: rgb(245, 245, 245);
-    --dark-mode: rgb(28, 28, 28);
-    --dark-mode-ignore: rgb(28, 28, 28);
-    --dark-mode-light: rgb(38, 38, 38);
+    --off-white: #f5f5f5;
+    --off-white-ignore: #f5f5f5;
+    --dark-mode: #1c1c1c;
+    --dark-mode-ignore: #1c1c1c;
+    --dark-mode-light: #262626;
     --swiper-heading-color: #333;
     --blue-nav: #4073ff;
-    --golden-color: rgb(235, 174, 42);
-    --jensen-color: rgb(233, 0, 0);
-    --rolls-color: rgb(47, 1, 1);
-    --tiger-color: rgb(7, 38, 56);
-    --mustang-color: rgb(226, 0, 26);
-    --bumblebee-color: rgb(239, 214, 84);
-    --oldsmobile-color: rgb(195, 173, 131);
-    --mgb-color: rgb(192, 0, 0);
-    --trans-am-color: rgb(1, 120, 220);
-    --oldsmobile-white-color: rgb(16, 18, 19);
-    --corvette-color: rgb(234, 231, 150);
-    --cadillac-color: rgb(195, 30, 41);
-    --crown-victoria-color: rgb(214, 0, 0);
-    --camaro-color: rgb(8, 82, 148);
-    --nova-color: rgb(188, 142, 21);
-    --jaguar-targa-color: rgb(159, 181, 200);
-    --shelby-color: rgb(13, 40, 105);
-    --mga-color: rgb(0, 136, 72);
-    --rolls-royce-spur-color: rgb(100, 116, 126);
-    --prowler-color: rgb(86, 117, 185);
+    --golden-color: #ebae2a;
+    --jensen-color: #e90000;
+    --rolls-color: #2f0101;
+    --tiger-color: #072638;
+    --mustang-color: #e2001a;
+    --bumblebee-color: #efd654;
+    --oldsmobile-color: #c3ad83;
+    --mgb-color: #c00000;
+    --trans-am-color: #0178dc;
+    --oldsmobile-white-color: #101213;
+    --corvette-color: #eae796;
+    --cadillac-color: #c31e29;
+    --crown-victoria-color: #d60000;
+    --camaro-color: #085294;
+    --nova-color: #bc8e15;
+    --jaguar-targa-color: #9fb5c8;
+    --shelby-color: #0d2869;
+    --mga-color: #008848;
+    --rolls-royce-spur-color: #64747e;
+    --prowler-color: #5675b9;
 }
 
 @font-face { 
