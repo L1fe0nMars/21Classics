@@ -3,7 +3,7 @@
 }
 
 .background-color,
-#car-contact-section button {
+#car-contact-btn {
     background-color: var(--trans-am-color);
 }
 
@@ -19,7 +19,7 @@
     border: solid 5px var(--trans-am-color);
 }
 
-#car-contact-section button {
+#car-contact-btn {
     border: solid 2px var(--trans-am-color);
 }
 

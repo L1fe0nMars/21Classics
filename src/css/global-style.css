@@ -62,7 +62,8 @@ a {
     color: inherit;
 }
 
-button {
+button,
+.button {
     all: unset;
     cursor: pointer;
     font-weight: bold;

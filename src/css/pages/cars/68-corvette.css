@@ -1,5 +1,5 @@
 .background-color,
-#car-contact-section button {
+#car-contact-btn {
     background-color: var(--corvette-color);
 }
 
@@ -15,7 +15,7 @@
     border: solid 5px var(--corvette-color);
 }
 
-#car-contact-section button {
+#car-contact-btn {
     border: solid 2px var(--corvette-color);
     color: var(--dark-mode-ignore);
 }

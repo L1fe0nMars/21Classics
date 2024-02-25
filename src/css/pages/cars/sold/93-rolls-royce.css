@@ -1,5 +1,5 @@
 .background-color,
-#car-contact-section button:hover {
+#car-contact-btn:hover {
     background-color: var(--rolls-royce-spur-color);
 }
 
@@ -11,7 +11,7 @@
     border: solid 5px var(--rolls-royce-spur-color);
 }
 
-#car-contact-section button {
+#car-contact-btn {
     border: solid 2px var(--rolls-royce-spur-color);
 }
 

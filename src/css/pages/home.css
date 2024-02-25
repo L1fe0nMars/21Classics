@@ -53,6 +53,7 @@
 }
 
 #collection-btn {
+    display: inline-block;
     background-color: var(--blue-nav);
     color: var(--off-white);
     border: solid 2px var(--blue-nav);
@@ -89,7 +90,7 @@
     font-family: 'Poppins Bold', Verdana, sans-serif;
 }
 
-#section-3 button {
+#section-3 .button {
     background-color: var(--golden-color);
     color: var(--off-white);
     border: solid 2px var(--golden-color);
@@ -100,7 +101,7 @@
     transition: 0.25s ease-out;
 }
 
-#section-3 button:hover {
+#section-3 .button:hover {
     background-color: transparent;
     color: var(--dark-mode);
 }
@@ -189,7 +190,8 @@
     color: var(--dark-mode);
 }
 
-#section-4 #featured-info button {
+#section-4 #featured-info .button {
+    display: inline-block;
     background-color: var(--tiger-color);
     color: var(--off-white);
     padding: 0.5em 1em;
@@ -199,7 +201,7 @@
     transition: 0.25s ease-out;
 }
 
-#section-4 #featured-info button:hover {
+#section-4 #featured-info .button:hover {
     background-color: transparent;
     color: var(--dark-mode);
 }

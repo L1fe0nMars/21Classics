@@ -233,14 +233,14 @@
     font-family: 'Poppins Bold', Verdana, sans-serif;
 }
 
-#car-contact-section button {
+#car-contact-btn {
     color: var(--off-white);
     padding: 0.5em 1em;
     border-radius: 2em;
     transition: 0.25s ease-out;
 }
 
-#car-contact-section button:hover {
+#car-contact-btn:hover {
     background-color: transparent;
     color: var(--dark-mode);
 }
@@ -302,19 +302,19 @@
     justify-content: center;
 }
 
-#bottom-buttons button {
+#bottom-buttons .button {
     padding: 0.5em 1em;
     border-radius: 2em;
     transition: 0.25s ease-out;
 }
 
-#collection-button {
+#collection-btn {
     background-color: var(--blue-nav);
     color: var(--off-white);
     border: solid 2px var(--blue-nav);
 }
 
-#collection-button:hover {
+#collection-btn:hover {
     background-color: transparent;
     color: var(--dark-mode);
 }

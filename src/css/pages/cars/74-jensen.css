@@ -1,5 +1,5 @@
 .background-color,
-#car-contact-section button {
+#car-contact-btn {
     background-color: var(--jensen-color);
 }
 
@@ -24,7 +24,7 @@
     border: solid 5px var(--jensen-color);
 }
 
-#car-contact-section button {
+#car-contact-btn {
     border: solid 2px var(--jensen-color);
 }
 

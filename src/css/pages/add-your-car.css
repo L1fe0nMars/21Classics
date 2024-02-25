@@ -3,7 +3,7 @@
 }
 
 .background-color,
-#car-contact-section button {
+#car-contact-btn {
     background-color: var(--golden-color);
 }
 
@@ -19,7 +19,7 @@
     margin-bottom: 4em;
 }
 
-#car-contact-section button {
+#car-contact-btn {
     border: solid 2px var(--golden-color);
 }
 
