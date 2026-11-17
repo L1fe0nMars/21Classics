@@ -38,13 +38,6 @@
     --swiper-navigation-color: var(--jensen-color);
 }
 
-/* MOBILE */
-@media screen and (max-width: 480px) {
-    #section-2 h1 {
-        font-size: 1.53em;
-    }
-}
-
 /* PC */
 @media screen and (min-width: 1025px) {
     #info-box {

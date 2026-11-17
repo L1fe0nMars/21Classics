@@ -33,13 +33,6 @@
     --swiper-navigation-color: var(--oldsmobile-color);
 }
 
-/* MOBILE */
-@media screen and (max-width: 480px) {
-    #section-2 h1 {
-        font-size: 1.66em;
-    }
-}
-
 /* PC */
 @media screen and (min-width: 1025px) {
     #info-box {
