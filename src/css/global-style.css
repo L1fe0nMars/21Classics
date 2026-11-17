@@ -8,6 +8,8 @@
     --swiper-heading-color: #333;
     --blue-nav: #4073ff;
     --golden-color: #ebae2a;
+    --muted-text: #555555;
+    --youtube-red: #cc0000;
     --jensen-color: #e90000;
     --rolls-color: #2f0101;
     --tiger-color: #072638;
@@ -96,16 +98,26 @@ h3 {
     outline-offset: 3px;
 }
 
+/* Draws a rounded bar in place of the "-" text, which is pushed out of view */
 .title-decoration {
-    font-weight: 800;
+    display: inline-block;
+    flex-shrink: 0;
+    width: 0.5em;
+    height: 0.14em;
+    border-radius: 999px;
+    background-color: currentColor;
+    vertical-align: middle;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
 }
 
 .left {
-    padding-right: 0.5em;
+    margin-right: 0.5em;
 }
 
 .right {
-    padding-left: 0.5em;
+    margin-left: 0.5em;
 }
 
 @media (prefers-reduced-motion: reduce) {

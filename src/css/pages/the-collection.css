@@ -41,7 +41,7 @@
     border: solid 2px var(--dark-mode);
     margin: 1em auto;
     padding: 0.5em 1em;
-    border-radius: 2em;
+    border-radius: 16px;
     font-size: 18px;
     transition: 0.25s ease-out;
 }
@@ -207,9 +207,13 @@
     letter-spacing: 0.025em;
 }
 
+/* isolation keeps Safari from drawing square corners while the image is scaled */
 .car-image {
     height: 85%;
     width: 100%;
+    overflow: hidden;
+    border-radius: 30px;
+    isolation: isolate;
 }
 
 .card-img {
@@ -217,6 +221,12 @@
     width: 100%;
     object-fit: cover;
     border-radius: 30px;
+    transition: transform 0.25s ease-out;
+}
+
+.card:hover .card-img,
+.card:focus-within .card-img {
+    transform: scale(1.04);
 }
 
 .card-content {
