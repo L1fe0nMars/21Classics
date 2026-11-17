@@ -1,30 +1,36 @@
 @import "/src/css/global-style.css";
 
 header {
+    position: relative;
     margin: 0 auto;
     height: 7em;
     width: 100%;
     max-width: 85em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header > a {
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 header img {
     padding: 1em;
     height: 100%;
-    float: left;
 }
 
 header > a span {
-    display: inline-block;
     font-weight: bold;
     font-size: 2em;
-    line-height: 3.5em;
     color: var(--dark-mode);
 }
 
 nav {
     height: 100%;
     width: 36em;
-    float: right;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,7 +81,6 @@ nav {
 #mobile-menu {
     height: 100%;
     width: 35px;
-    float: right;
     margin-right: 1em;
     display: flex;
     align-items: center;
@@ -115,7 +120,9 @@ nav {
     background-color: var(--off-white);
     color: var(--dark-mode);
     text-align: center;
-    position: relative;
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
     height: max-content;
     line-height: 5em;
@@ -145,8 +152,8 @@ nav {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 1.5em;
-    width: 1.5em;
+    height: 2.75rem;
+    width: 2.75rem;
     margin-bottom: 0.5em;
 }
 
@@ -167,12 +174,14 @@ nav {
 }
 
 .sun,
-.sun:hover {
+.light-dark-toggle button:hover .sun,
+.light-dark-toggle button:focus-visible .sun {
     fill: goldenrod;
 }
 
 .moon,
-.moon:hover {
+.light-dark-toggle button:hover .moon,
+.light-dark-toggle button:focus-visible .moon {
     fill: midnightblue;
 }
 
@@ -262,10 +271,6 @@ footer p:last-child {
         display: none;
     }
 
-    #mobile-menu-open {
-        position: absolute;
-    }
-
     .light-dark-toggle {
         margin-top: 0;
     }
@@ -329,7 +334,6 @@ footer p:last-child {
     }
 
     header > a span {
-        line-height: 2.3em;
         font-size: 3.5em;
     }
 
