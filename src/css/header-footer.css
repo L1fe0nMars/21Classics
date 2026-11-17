@@ -13,7 +13,7 @@ header img {
     float: left;
 }
 
-header span {
+header > a span {
     display: inline-block;
     font-weight: bold;
     font-size: 2em;
@@ -83,7 +83,7 @@ nav {
 }
 
 #mobile-container {
-    cursor: pointer;
+    display: block;
     z-index: 10;
 }
 
@@ -102,6 +102,7 @@ nav {
 #bar1,
 #bar2,
 #bar3 {
+    display: block;
     width: 35px;
     height: 5px;
     background-color: var(--dark-mode);
@@ -121,7 +122,9 @@ nav {
     z-index: 2;
     transform: scaleY(0);
     transform-origin: top;
-    transition: transform 0.5s ease;
+    visibility: hidden;
+    /* Visibility flips at the end of the close transition, so the menu stays visible while it shrinks */
+    transition: transform 0.5s ease, visibility 0.5s;
 }
 
 #mobile-menu-open ul {
@@ -145,13 +148,10 @@ nav {
     height: 1.5em;
     width: 1.5em;
     margin-bottom: 0.5em;
-    cursor: default;
 }
 
 .sun,
 .moon {
-    cursor: pointer;
-    transition: 0.25s ease-out;
     transform: scale(1.25);
     transition: transform 0.3s, opacity 0.3s, fill 0.3s;
 }
@@ -164,7 +164,6 @@ nav {
 .moon {
     position: absolute;
     opacity: 0;
-    pointer-events: none;
 }
 
 .sun,
@@ -329,7 +328,7 @@ footer p:last-child {
         height: 8em;
     }
 
-    header span {
+    header > a span {
         line-height: 2.3em;
         font-size: 3.5em;
     }

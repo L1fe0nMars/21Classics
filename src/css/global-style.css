@@ -29,19 +29,25 @@
     --prowler-color: #5675b9;
 }
 
-@font-face { 
-    font-family: 'Poppins'; 
-    src: url("/fonts/Poppins/Poppins-Regular.ttf");
+@font-face {
+    font-family: 'Poppins';
+    src: url("/fonts/Poppins/Poppins-Regular.woff2") format("woff2"), url("/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap;
 }
 
-@font-face { 
-    font-family: 'Poppins Bold'; 
-    src: url("/fonts/Poppins/Poppins-Bold.ttf");
+@font-face {
+    font-family: 'Poppins';
+    src: url("/fonts/Poppins/Poppins-Bold.woff2") format("woff2"), url("/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-display: swap;
 }
 
-@font-face { 
-    font-family: 'Poppins Extra Bold'; 
-    src: url("/fonts/Poppins/Poppins-ExtraBold.ttf");
+@font-face {
+    font-family: 'Poppins';
+    src: url("/fonts/Poppins/Poppins-ExtraBold.woff2") format("woff2"), url("/fonts/Poppins/Poppins-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-display: swap;
 }
 
 * {
@@ -79,8 +85,13 @@ h2 {
     font-size: 2em;
 }
 
+:focus-visible {
+    outline: 3px solid var(--blue-nav);
+    outline-offset: 3px;
+}
+
 .title-decoration {
-    font-family: 'Poppins Extra Bold', Verdana, sans-serif;
+    font-weight: 800;
 }
 
 .left {
@@ -89,6 +100,16 @@ h2 {
 
 .right {
     padding-left: 0.5em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 /* TABLETS */

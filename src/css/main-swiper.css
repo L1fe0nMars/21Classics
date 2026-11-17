@@ -22,43 +22,53 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-.card:hover .jensen {
+.card:hover .jensen,
+.card:focus-within .jensen {
     color: var(--jensen-color);
 }
 
-.card:hover .rolls {
+.card:hover .rolls,
+.card:focus-within .rolls {
     color: var(--rolls-color);
 }
 
-.card:hover .trans-am {
+.card:hover .trans-am,
+.card:focus-within .trans-am {
     color: var(--trans-am-color);
 }
 
-.card:hover .tiger {
+.card:hover .tiger,
+.card:focus-within .tiger {
     color: var(--tiger-color);
 }
 
-.card:hover .mustang {
+.card:hover .mustang,
+.card:focus-within .mustang {
     color: var(--mustang-color);
 }
 
-.card:hover .bumblebee {
+.card:hover .bumblebee,
+.card:focus-within .bumblebee {
     color: var(--bumblebee-color);
 }
 
-.card:hover .oldsmobile {
+.card:hover .oldsmobile,
+.card:focus-within .oldsmobile {
     color: var(--oldsmobile-color);
 }
 
-.card:hover .mgb {
+.card:hover .mgb,
+.card:focus-within .mgb {
     color: var(--mgb-color);
 }
 
-.card:hover .corvette {
+.card:hover .corvette,
+.card:focus-within .corvette {
     color: var(--corvette-color);
 }
 
-.card:hover .oldsmobile-white {
+.card:hover .oldsmobile-white,
+.card:focus-within .oldsmobile-white {
     color: var(--oldsmobile-white-color);
 }
 
@@ -96,7 +106,7 @@
 .name {
     padding: 0.5em;
     font-size: 20px;
-    font-family: 'Poppins Bold', Verdana, sans-serif;
+    font-weight: 800;
     color: var(--swiper-heading-color);
     transition: 0.25s ease-out;
 }

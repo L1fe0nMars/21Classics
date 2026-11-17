@@ -144,7 +144,7 @@
 #section-2 h1 {
     margin: 1em auto;
     padding: 0 1em;
-    font-family: 'Poppins Bold', Verdana, sans-serif;
+    font-weight: 800;
     color: var(--dark-mode);
 }
 
@@ -219,18 +219,18 @@
 
 #car-contact-section h1 {
     margin: 0 auto;
-    font-family: 'Poppins Bold', Verdana, sans-serif;
+    font-weight: 800;
 }
 
 #car-contact-section h2 {
     font-size: 1.5em;
     margin-bottom: 1.5em;
-    font-family: 'Poppins Bold', Verdana, sans-serif;
+    font-weight: 800;
 }
 
 #car-contact-section span {
     font-size: 2em;
-    font-family: 'Poppins Bold', Verdana, sans-serif;
+    font-weight: 700;
 }
 
 #car-contact-btn {
@@ -286,7 +286,7 @@
 
 #section-3 h2 {
     padding-bottom: 1em;
-    font-family: 'Poppins Bold', Verdana, sans-serif;
+    font-weight: 800;
 }
 
 .swiper-pagination {

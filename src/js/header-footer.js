@@ -6,6 +6,7 @@ const MOBILE_CONTAINER = document.getElementById('mobile-container');
 const MOBILE_MENU = document.getElementById('mobile-menu-open');
 const SUN = document.getElementsByClassName('sun');
 const MOON = document.getElementsByClassName('moon');
+const THEME_BUTTONS = document.querySelectorAll('.light-dark-toggle button');
 const YEAR = document.getElementById('current-year');
 const MOBILE_MENU_CUTOFF_WIDTH = 875;
 const date = new Date();
@@ -33,6 +34,9 @@ detectTheme();
  */
 function openMobileMenu() {
     MOBILE_MENU.style.transform = 'scaleY(1)';
+    MOBILE_MENU.style.visibility = 'visible';
+    MOBILE_CONTAINER.setAttribute('aria-expanded', 'true');
+    MOBILE_CONTAINER.setAttribute('aria-label', 'Close menu');
 }
 
 /**
@@ -40,6 +44,9 @@ function openMobileMenu() {
  */
 function closeMobileMenu() {
     MOBILE_MENU.style.transform = 'scaleY(0)';
+    MOBILE_MENU.style.visibility = 'hidden';
+    MOBILE_CONTAINER.setAttribute('aria-expanded', 'false');
+    MOBILE_CONTAINER.setAttribute('aria-label', 'Open menu');
 }
 
 /**
@@ -80,6 +87,8 @@ function detectTheme() {
  * @param {boolean} toggled Whether to toggle dark mode or light mode
  */
 function toggleDarkMode(toggled) {
+    darkMode = toggled ? 'enabled' : 'disabled';
+
     for (const key in THEME_COLORS) {
         ROOT.style.setProperty(key, THEME_COLORS[key][+toggled]);
     }
@@ -88,22 +97,18 @@ function toggleDarkMode(toggled) {
         if (toggled) {
             MOON[i].style.transform = 'translate(0, -100%)';
             MOON[i].style.opacity = '0';
-            MOON[i].style.pointerEvents = 'none';
         
             SUN[i].style.transform = 'translate(0, 0)';
             SUN[i].style.opacity = '1';
-            SUN[i].style.pointerEvents = 'auto';
     
             localStorage.setItem('darkMode', 'enabled');
         }
         else {
             SUN[i].style.transform = 'translate(0, 100%)';
             SUN[i].style.opacity = '0';
-            SUN[i].style.pointerEvents = 'none';
         
             MOON[i].style.transform = 'translate(0, 0)';
             MOON[i].style.opacity = '1';
-            MOON[i].style.pointerEvents = 'auto';
     
             localStorage.setItem('darkMode', 'disabled');
         }
@@ -122,10 +127,6 @@ window.addEventListener('resize', () => {
     }
 });
 
-for (let i = 0; i < SUN.length; i++) {
-    SUN[i].addEventListener('click', () => toggleDarkMode(false));
-}
-
-for (let i = 0; i < MOON.length; i++) {
-    MOON[i].addEventListener('click', () => toggleDarkMode(true));
+for (const button of THEME_BUTTONS) {
+    button.addEventListener('click', () => toggleDarkMode(darkMode !== 'enabled'));
 }
