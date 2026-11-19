@@ -368,7 +368,7 @@
 /* SECTION 3 */
 
 #section-3 {
-    padding: 2.5em 0 5.25em 0;
+    margin: 2.5em auto 0;
     text-align: center;
     color: var(--dark-mode);
 }
