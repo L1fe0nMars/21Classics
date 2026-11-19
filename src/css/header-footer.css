@@ -318,8 +318,9 @@ footer::before,
     transition: 0.25s ease-out;
 }
 
-.footer-youtube:hover {
-    filter: brightness(0.88);
+.footer-youtube:hover,
+.footer-youtube:focus-visible {
+    filter: brightness(0.85);
 }
 
 .footer-youtube svg {

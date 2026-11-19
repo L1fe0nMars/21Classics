@@ -308,9 +308,12 @@
 }
 
 #call-btn:hover,
+#call-btn:focus-visible,
 #sold-btn:hover,
-#youtube-btn:hover {
-    filter: brightness(0.9);
+#sold-btn:focus-visible,
+#youtube-btn:hover,
+#youtube-btn:focus-visible {
+    filter: brightness(0.85);
 }
 
 /* --car-icon-color is set by cars whose color is too light for an outline or icon on the panel */
@@ -323,13 +326,15 @@
     fill: var(--car-icon-color, var(--car-color));
 }
 
-#inquiry-buttons #email-btn:hover {
+#inquiry-buttons #email-btn:hover,
+#inquiry-buttons #email-btn:focus-visible {
     background-color: var(--car-color);
     border-color: var(--car-color);
     color: var(--car-text-color);
 }
 
-#email-btn:hover path {
+#email-btn:hover path,
+#email-btn:focus-visible path {
     fill: var(--car-text-color);
 }
 
@@ -411,9 +416,9 @@
     transition: 0.25s ease-out;
 }
 
-#collection-btn:hover {
-    background-color: transparent;
-    color: var(--dark-mode);
+#collection-btn:hover,
+#collection-btn:focus-visible {
+    filter: brightness(0.85);
 }
 
 /* MOBILE */

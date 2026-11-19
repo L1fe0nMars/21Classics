@@ -98,7 +98,8 @@ img {
     transition: 0.25s ease-out;
 }
 
-.icon-btn:hover {
+.icon-btn:hover,
+.icon-btn:focus-visible {
     opacity: 1;
 }
 

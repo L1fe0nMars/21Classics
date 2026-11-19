@@ -45,9 +45,9 @@
     transition: 0.25s ease-out;
 }
 
-#collection-btn:hover {
-    background-color: transparent;
-    color: var(--dark-mode);
+#collection-btn:hover,
+#collection-btn:focus-visible {
+    filter: brightness(0.85);
 }
 
 
@@ -83,9 +83,9 @@
     transition: 0.25s ease-out;
 }
 
-#section-3 .button:hover {
-    background-color: transparent;
-    color: var(--dark-mode);
+#section-3 .button:hover,
+#section-3 .button:focus-visible {
+    filter: brightness(0.85);
 }
 
 /* SECTION 4 */
@@ -200,8 +200,9 @@
     transition: 0.25s ease-out;
 }
 
-#featured-btn:hover {
-    filter: brightness(0.9);
+#featured-btn:hover,
+#featured-btn:focus-visible {
+    filter: brightness(0.85);
 }
 
 /* PC + TABLETS */

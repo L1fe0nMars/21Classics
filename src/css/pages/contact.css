@@ -62,6 +62,7 @@
 }
 
 #contact-buttons {
+    max-width: 28rem;
     display: flex;
     flex-direction: column;
     gap: 0.75em;
@@ -98,8 +99,9 @@
     fill: var(--off-white-ignore);
 }
 
-#call-btn:hover {
-    filter: brightness(0.9);
+#call-btn:hover,
+#call-btn:focus-visible {
+    filter: brightness(0.85);
 }
 
 #email-btn {
@@ -110,12 +112,14 @@
     fill: var(--blue-nav);
 }
 
-#email-btn:hover {
+#email-btn:hover,
+#email-btn:focus-visible {
     background-color: var(--blue-nav);
     color: var(--off-white-ignore);
 }
 
-#email-btn:hover path {
+#email-btn:hover path,
+#email-btn:focus-visible path {
     fill: var(--off-white-ignore);
 }
 
@@ -220,8 +224,9 @@
     transition: 0.25s ease-out;
 }
 
-#youtube-btn:hover {
-    filter: brightness(0.88);
+#youtube-btn:hover,
+#youtube-btn:focus-visible {
+    filter: brightness(0.85);
 }
 
 /* TABLETS */
@@ -242,6 +247,7 @@
     }
 
     #contact-photo img {
+        max-height: 26rem;
         border-radius: 24px;
     }
 
