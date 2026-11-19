@@ -42,10 +42,12 @@
     margin-bottom: 0.5em;
 }
 
+/* The slides stay full width so the colored band runs across the page; only the photos are capped */
 .swiperContainer .swiper-slide img {
     position: relative;
     margin: 0 auto;
     width: 90%;
+    max-width: 85em;
     height: 100%;
     border-radius: 30px;
     object-fit: cover;
@@ -59,6 +61,7 @@
 .bottomSwiper {
     height: 7em;
     width: 90%;
+    max-width: 85em;
     border-radius: 12px;
     --swiper-navigation-color: var(--off-white-ignore);
 }
@@ -150,6 +153,12 @@
 
 #section-2 {
     text-align: center;
+}
+
+#section-2 .container,
+#section-3 .container {
+    margin: 0 auto;
+    max-width: 85em;
 }
 
 #section-2 h1 {

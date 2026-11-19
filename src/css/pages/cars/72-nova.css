@@ -27,6 +27,5 @@
 @media screen and (min-width: 1025px) {
     #info-box {
         border: solid 8px var(--nova-color);
-        max-width: 75em;
     }
 }
