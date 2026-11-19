@@ -1,5 +1,8 @@
-.background-color,
-#car-contact-btn:hover {
+#section-2 {
+    --car-color: var(--mga-color);
+}
+
+.background-color {
     background-color: var(--mga-color);
 }
 
@@ -11,17 +14,6 @@
     border: solid 5px var(--mga-color);
 }
 
-#car-contact-btn {
-    border: solid 2px var(--mga-color);
-}
-
 #section-3 .swiper {
     --swiper-navigation-color: var(--mga-color);
-}
-
-/* PC */
-@media screen and (min-width: 1025px) {
-    #info-box {
-        border: solid 8px var(--mga-color);
-    }
 }

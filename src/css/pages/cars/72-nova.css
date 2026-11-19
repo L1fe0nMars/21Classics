@@ -1,9 +1,14 @@
+#section-2 {
+    --car-color: var(--nova-color);
+    --car-text-color: var(--dark-mode-ignore);
+    --car-icon-color: var(--dark-mode);
+}
+
 .swiperContainer .swiper-slide img {
     object-position: center;
 }
 
-.background-color,
-#car-contact-btn:hover {
+.background-color {
     background-color: var(--nova-color);
 }
 
@@ -15,17 +20,6 @@
     border: solid 5px var(--nova-color);
 }
 
-#car-contact-btn {
-    border: solid 2px var(--nova-color);
-}
-
 #section-3 .swiper {
     --swiper-navigation-color: var(--nova-color);
-}
-
-/* PC */
-@media screen and (min-width: 1025px) {
-    #info-box {
-        border: solid 8px var(--nova-color);
-    }
 }

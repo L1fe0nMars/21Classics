@@ -1,5 +1,10 @@
-.background-color,
-#car-contact-btn {
+#section-2 {
+    --car-color: var(--corvette-color);
+    --car-text-color: var(--dark-mode-ignore);
+    --car-icon-color: var(--dark-mode);
+}
+
+.background-color {
     background-color: var(--corvette-color);
 }
 
@@ -7,31 +12,10 @@
     color: var(--corvette-color);
 }
 
-.color {
-    fill: var(--corvette-color);
-}
-
 .bottomSwiper .swiper-slide-thumb-active {
     border: solid 5px var(--corvette-color);
 }
 
-#car-contact-btn {
-    border: solid 2px var(--corvette-color);
-    color: var(--dark-mode-ignore);
-}
-
-#sold,
-#car-contact-info {
-    display: none;
-}
-
 #section-3 .swiper {
     --swiper-navigation-color: var(--corvette-color);
-}
-
-/* PC */
-@media screen and (min-width: 1025px) {
-    #info-box {
-        border: solid 8px var(--corvette-color);
-    }
 }

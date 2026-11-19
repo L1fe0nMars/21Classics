@@ -1,5 +1,10 @@
-.background-color,
-#car-contact-btn:hover {
+#section-2 {
+    --car-color: var(--jaguar-targa-color);
+    --car-text-color: var(--dark-mode-ignore);
+    --car-icon-color: var(--dark-mode);
+}
+
+.background-color {
     background-color: var(--jaguar-targa-color);
 }
 
@@ -15,17 +20,6 @@
     border: solid 5px var(--jaguar-targa-color);
 }
 
-#car-contact-btn {
-    border: solid 2px var(--jaguar-targa-color);
-}
-
 #section-3 .swiper {
     --swiper-navigation-color: var(--jaguar-targa-color);
-}
-
-/* PC */
-@media screen and (min-width: 1025px) {
-    #info-box {
-        border: solid 8px var(--jaguar-targa-color);
-    }
 }

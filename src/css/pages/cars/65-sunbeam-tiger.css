@@ -1,5 +1,8 @@
-.background-color,
-#car-contact-btn {
+#section-2 {
+    --car-color: var(--tiger-color);
+}
+
+.background-color {
     background-color: var(--tiger-color);
 }
 
@@ -7,39 +10,10 @@
     color: var(--tiger-color);
 }
 
-.color {
-    fill: var(--tiger-color);
-}
-
-#section-2 li {
-    padding: 0.25em;
-    color: var(--tiger-color);
-}
-
-#section-2 li span {
-    color: var(--dark-mode);
-}
-
 .bottomSwiper .swiper-slide-thumb-active {
     border: solid 5px var(--tiger-color);
 }
 
-#car-contact-btn {
-    border: solid 2px var(--tiger-color);
-}
-
-#sold,
-#car-contact-info {
-    display: none;
-}
-
 #section-3 .swiper {
     --swiper-navigation-color: var(--tiger-color);
-}
-
-/* PC */
-@media screen and (min-width: 1025px) {
-    #info-box {
-        border: solid 8px var(--tiger-color);
-    }
 }

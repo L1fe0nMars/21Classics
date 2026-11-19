@@ -1,9 +1,12 @@
+#section-2 {
+    --car-color: var(--shelby-color);
+}
+
 .swiperContainer .swiper-slide img {
     object-position: center;
 }
 
-.background-color,
-#car-contact-btn:hover {
+.background-color {
     background-color: var(--shelby-color);
 }
 
@@ -15,17 +18,6 @@
     border: solid 5px var(--shelby-color);
 }
 
-#car-contact-btn {
-    border: solid 2px var(--shelby-color);
-}
-
 #section-3 .swiper {
     --swiper-navigation-color: var(--shelby-color);
-}
-
-/* PC */
-@media screen and (min-width: 1025px) {
-    #info-box {
-        border: solid 8px var(--shelby-color);
-    }
 }

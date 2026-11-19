@@ -1,5 +1,8 @@
-.background-color,
-#car-contact-btn:hover {
+#section-2 {
+    --car-color: var(--rolls-royce-spur-color);
+}
+
+.background-color {
     background-color: var(--rolls-royce-spur-color);
 }
 
@@ -11,17 +14,6 @@
     border: solid 5px var(--rolls-royce-spur-color);
 }
 
-#car-contact-btn {
-    border: solid 2px var(--rolls-royce-spur-color);
-}
-
 #section-3 .swiper {
     --swiper-navigation-color: var(--rolls-royce-spur-color);
-}
-
-/* PC */
-@media screen and (min-width: 1025px) {
-    #info-box {
-        border: solid 8px var(--rolls-royce-spur-color);
-    }
 }

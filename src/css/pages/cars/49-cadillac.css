@@ -1,19 +1,13 @@
-.background-color,
-#car-contact-btn:hover {
+#section-2 {
+    --car-color: var(--cadillac-color);
+}
+
+.background-color {
     background-color: var(--cadillac-color);
 }
 
 .car-decoration {
     color: var(--cadillac-color);
-}
-
-#section-2 li {
-    padding: 0.25em;
-    color: var(--cadillac-color);
-}
-
-#section-2 li span {
-    color: var(--dark-mode);
 }
 
 .bottomSwiper .swiper-slide-thumb-active {
@@ -27,11 +21,4 @@
 .swiper-navBtn-next,
 .swiper-navBtn-prev {
     color: var(--cadillac-color) !important;
-}
-
-/* PC */
-@media screen and (min-width: 1025px) {
-    #info-box {
-        border: solid 8px var(--cadillac-color);
-    }
 }
