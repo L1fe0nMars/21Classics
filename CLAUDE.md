@@ -50,7 +50,7 @@ There are no tests or lint commands. Check changes by loading the affected pages
 
 - **index.html** - Home page: hero (`#section-1`), The Collection carousel (`#section-2`), a commented-out "Add your car" section (`#section-3`), and the Featured Car (`#section-4`)
 - **src/pages/the-collection.html** - Grid of every car (`ul#car-gallery` of `li.card`). Sold cars are listed with `class="card sold hidden"`. The Collection / Sold Cars tabs (`#sort-options`) are commented out, so sold cars are currently hidden.
-- **src/pages/contact.html** - Inquiries, website developer, and socials sections
+- **src/pages/contact.html** - Split card with a photo and the `h1` beside the inquiry panel (call and email buttons, location) in `#section-1`, and a YouTube banner in `#section-2`
 - **src/pages/cars/<year>-<make>-<model>.html** - One static page per available car
 - **src/pages/cars/sold/<year>-<make>-<model>.html** - One static page per sold car
 - **src/js/header-footer.js** - Loaded on every page: mobile menu, light/dark theme toggle, and the footer year. Defines the shared `ROOT` and `BODY` constants that `car-page.js` also uses, so it must load before `car-page.js`.
@@ -75,7 +75,7 @@ There are no tests or lint commands. Check changes by loading the affected pages
 **Car accent colors:**
 - Each car has a color variable on `:root` in `global-style.css` (`--tiger-color`) and a short class (`tiger`) used on its card name.
 - The card name takes the car's color on hover through `.card:hover .<car-class>` rules, which exist in both `main-swiper.css` and `the-collection.css`.
-- The car's page stylesheet applies its color to `.background-color`, `.car-decoration`, `.color` (SVG icons), the active thumbnail border, `#car-contact-btn`, the "More Cars" swiper navigation, and the desktop `#info-box` border.
+- The car's page stylesheet applies its color to `.background-color`, `.car-decoration`, `.color` (SVG icons), the active thumbnail border, `#car-contact-btn`, and the "More Cars" swiper navigation. `.background-color` also colors `#video-background`, the band behind the video.
 - Dark mode works by overwriting `:root` variables from `THEME_COLORS` in `header-footer.js` (index 0 is light, 1 is dark). A car color that is unreadable on the dark background needs an entry there.
 
 **Theme:**
@@ -86,7 +86,7 @@ There are no tests or lint commands. Check changes by loading the affected pages
 - Copy an existing car page and its stylesheet as the template (`1965-sunbeam-tiger.html` for available cars, a page in `sold/` for sold cars).
 - `<head>`: meta description listing the car's features, a `preload` for the cover image, then `header-footer.css`, `main-swiper.css`, `car-page.css`, the car's stylesheet, and the Swiper CSS. Title format: `<Year Make Model> | 21 Classics`.
 - `#section-1`: the gallery. The same image list appears three times, in order: `.swiperContainer` (with `.main-img` and a `.background.background-color` div per slide), `.bottomSwiper` thumbnails, and `.modalSwiper`. Keep all three in sync. Only the first main image is not lazy-loaded.
-- `#section-2`: `#info-box` with the `h1` (wrapped in `.title-decoration` dashes), the YouTube embed in `#video-section`, the features list in `#info-section`, and `#car-contact-section`. The features list matches the meta description.
+- `#section-2`: `#info-box` with the `h1` (wrapped in `.title-decoration` dashes, drawn as rounded bars), the YouTube embed in `#video-section`, the features list in `#info-section`, and `#car-contact-section`. The features list matches the meta description.
 - Available and sold pages share the markup; the car stylesheet hides what doesn't apply (available cars hide `#sold` and `#car-contact-info`, sold cars hide `#video-section` when there's no video).
 - `#section-3`: "More Cars" carousel and the button back to The Collection.
 - Scripts at the end of `<body>`: Swiper JS, `header-footer.js`, `car-page.js`, `main-swiper.js`.

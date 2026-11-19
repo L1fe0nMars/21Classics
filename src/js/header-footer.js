@@ -20,6 +20,7 @@ const THEME_COLORS = {
     '--white': ['white', '#262626'],
     '--swiper-heading-color': ['#333', '#f5f5f5'],
     '--muted-text': ['#555555', '#bdbdbd'],
+    '--divider': ['#d4d4d4', '#3d3d3d'],
     '--rolls-color': ['#2f0101', '#beb68e'],
     '--tiger-color': ['#072638', '#3d6f8e'],
     '--oldsmobile-white-color': ['#101213', '#e6e6e6'],

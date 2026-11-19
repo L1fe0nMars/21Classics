@@ -9,6 +9,19 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 2px;
+}
+
+/* Sits in the header's bottom padding so it stays below the nav hover bar instead of covering it */
+header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    border-radius: 30px;
+    background-color: var(--divider);
 }
 
 header > a {
@@ -186,17 +199,30 @@ nav {
 }
 
 footer {
+    position: relative;
+    margin: 0 auto;
     text-align: center;
-    box-shadow: inset 0 9px 25px -16px black;
     color: var(--dark-mode);
     padding-top: 1em;
+    max-width: 85em;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 2px;
+    border-radius: 30px;
+    background-color: var(--divider);
 }
 
 footer hr {
     margin: 0 auto;
     height: 2px;
     width: 70%;
-    background-color: var(--dark-mode);
+    background-color: var(--divider);
     border: none;
     border-radius: 30px;
 }
