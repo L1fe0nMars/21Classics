@@ -158,14 +158,11 @@
     max-width: 85em;
 }
 
-#section-2 h1 {
-    margin: 1em auto;
-    padding: 0 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    color: var(--dark-mode);
+/* Same width as #info-card so the title lines up with its left edge */
+#car-title {
+    margin: 2em auto 1.5em auto;
+    width: calc(100% - 2em);
+    text-align: left;
 }
 
 #info-card,
@@ -189,30 +186,6 @@
     font-size: clamp(1.75rem, 1.4rem + 1vw, 2.25rem);
     font-weight: 800;
     line-height: 1.15;
-}
-
-#section-2 .eyebrow {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    gap: 0.75em;
-    font-size: 0.875rem;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--dark-mode);
-}
-
-.eyebrow::before {
-    content: '';
-    flex: 0 0 2em;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--car-color);
-}
-
-.eyebrow.youtube::before {
-    background-color: var(--youtube-red);
 }
 
 #section-2 .muted {
@@ -400,49 +373,26 @@
     color: var(--dark-mode);
 }
 
-#section-3 h2 {
-    padding-bottom: 1em;
-    font-weight: 800;
+#section-3 .carousel-heading {
+    margin-bottom: 0.5em;
 }
 
 .swiper-pagination {
     display: none;
 }
 
-#bottom-buttons {
-    margin: 0 auto;
-    margin-top: 2em;
-    max-width: 40em;
-    display: flex;
-    /*justify-content: space-evenly; For Add Your Car button*/
-    justify-content: center;
-}
-
-#bottom-buttons .button {
+#collection-btn {
     padding: 0.5em 1em;
     border-radius: 16px;
+    background-color: var(--car-color);
+    color: var(--car-text-color);
+    border: solid 2px var(--car-color);
     transition: 0.25s ease-out;
-}
-
-#collection-btn {
-    background-color: var(--blue-nav);
-    color: var(--off-white);
-    border: solid 2px var(--blue-nav);
 }
 
 #collection-btn:hover {
     background-color: transparent;
     color: var(--dark-mode);
-}
-
-#add-your-car {
-    border: solid 2px var(--golden-color);
-    display: none; /* Hide for now */
-}
-
-#add-your-car:hover {
-    background-color: var(--golden-color);
-    color: var(--off-white);
 }
 
 /* MOBILE */
@@ -482,6 +432,7 @@
 
 /* TABLETS */
 @media screen and (min-width: 481px) and (max-width: 1024px) {
+    #car-title,
     #info-card,
     #video-card {
         width: calc(100% - 4em);
@@ -509,6 +460,11 @@
     .bottomSwiper,
     .bottomSwiper .swiper-slide {
         height: 9em;
+    }
+
+    #car-title {
+        margin-top: 2.5em;
+        width: 90%;
     }
 
     #info-card,

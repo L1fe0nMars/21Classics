@@ -104,26 +104,60 @@ h3 {
     outline-offset: 3px;
 }
 
-/* Draws a rounded bar in place of the "-" text, which is pushed out of view */
-.title-decoration {
-    display: inline-block;
-    flex-shrink: 0;
-    width: 0.5em;
-    height: 0.14em;
-    border-radius: 999px;
-    background-color: currentColor;
-    vertical-align: middle;
-    overflow: hidden;
-    text-indent: 100%;
-    white-space: nowrap;
+.eyebrow {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--dark-mode);
 }
 
-.left {
-    margin-right: 0.5em;
+.eyebrow::before {
+    content: '';
+    flex: 0 0 2em;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--car-color, var(--blue-nav));
 }
 
-.right {
-    margin-left: 0.5em;
+.eyebrow.youtube::before {
+    background-color: var(--youtube-red);
+}
+
+.section-heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1.25em;
+    text-align: left;
+}
+
+.section-heading-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+    min-width: 0;
+}
+
+.section-heading-text h1,
+.section-heading-text h2 {
+    margin: 0;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--dark-mode);
+}
+
+.section-heading-text .muted {
+    margin: 0;
+    max-width: 36em;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: var(--muted-text);
 }
 
 @media (prefers-reduced-motion: reduce) {

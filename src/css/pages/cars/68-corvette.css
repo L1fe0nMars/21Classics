@@ -1,4 +1,5 @@
-#section-2 {
+#section-2,
+#section-3 {
     --car-color: var(--corvette-color);
     --car-text-color: var(--dark-mode-ignore);
     --car-icon-color: var(--dark-mode);
@@ -6,10 +7,6 @@
 
 .background-color {
     background-color: var(--corvette-color);
-}
-
-.car-decoration {
-    color: var(--corvette-color);
 }
 
 .bottomSwiper .swiper-slide-thumb-active {

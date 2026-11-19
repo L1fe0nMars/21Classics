@@ -1,14 +1,11 @@
-#section-2 {
+#section-2,
+#section-3 {
     --car-color: var(--oldsmobile-white-color);
     --car-text-color: var(--off-white);
 }
 
 .background-color {
     background-color: var(--oldsmobile-white-color);
-}
-
-.car-decoration {
-    color: var(--oldsmobile-white-color);
 }
 
 .bottomSwiper .swiper-slide-thumb-active {

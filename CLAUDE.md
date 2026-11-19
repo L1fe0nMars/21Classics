@@ -50,13 +50,13 @@ There are no tests or lint commands. Check changes by loading the affected pages
 
 - **index.html** - Home page: hero (`#section-1`), The Collection carousel (`#section-2`), a commented-out "Add your car" section (`#section-3`), and the Featured Car (`#section-4`)
 - **src/pages/the-collection.html** - Grid of every car (`ul#car-gallery` of `li.card`). Sold cars are listed with `class="card sold hidden"`. The Collection / Sold Cars tabs (`#sort-options`) are commented out, so sold cars are currently hidden.
-- **src/pages/contact.html** - Split card with a photo and the `h1` beside the inquiry panel (call and email buttons, location) in `#section-1`, and a YouTube banner in `#section-2`
+- **src/pages/contact.html** - Split card with a photo beside the inquiry panel ("For Inquiries" eyebrow, `h1`, call and email buttons, location) in `#section-1`, and a YouTube banner ("Socials" `.eyebrow.youtube` and `h2`) in `#section-2`
 - **src/pages/cars/<year>-<make>-<model>.html** - One static page per car, available and sold alike. A car keeps the same URL when it sells.
 - **src/js/header-footer.js** - Loaded on every page: mobile menu, light/dark theme toggle, and the footer year. Defines the shared `ROOT` and `BODY` constants that `car-page.js` also uses, so it must load before `car-page.js`.
 - **src/js/main-swiper.js** - The card carousel (`.slide-content`) used on the home page and the "More Cars" section of car pages
 - **src/js/car-page.js** - Car page gallery: main swiper (`.swiperContainer`), thumbnail swiper (`.bottomSwiper`), and the full-screen image modal (`#modal`, `.modalSwiper`, closed with `#close` or Escape)
 - **src/js/the-collection.js** - Sold/unsold tab filtering by toggling `.hidden` on `.card` elements. Not currently loaded because the tabs are commented out.
-- **src/css/global-style.css** - Color variables on `:root`, `@font-face` rules, resets, base `button`/`.button` styles, heading sizes, and `.title-decoration`
+- **src/css/global-style.css** - Color variables on `:root`, `@font-face` rules, resets, base `button`/`.button` styles, heading sizes, `.eyebrow` (and `.eyebrow.youtube`), and the `.section-heading` row
 - **src/css/header-footer.css** - Imports `global-style.css`; header, desktop nav, mobile menu, theme toggle, and footer. Every page links this first.
 - **src/css/main-swiper.css** - Card carousel styles, including the per-car `.card:hover .<car-class>` name colors
 - **src/css/pages/*.css** - One stylesheet per page type (`home`, `the-collection`, `contact`, `car-page`, and an unused `add-your-car`)
@@ -72,12 +72,18 @@ There are no tests or lint commands. Check changes by loading the affected pages
 - The nav link for the current page gets `class="active"` in both the mobile and desktop nav.
 - Car cards are hand-written HTML in three places: the home carousel, The Collection grid, and the "More Cars" carousel on each car page (which lists the other available cars). Car names in cards are `h3` (carousels) or `h2` (The Collection) with `class="name <car-class>"` and `aria-hidden="true"`, since the image `alt` already names the car.
 
+**Section headings:**
+- Section titles use `.section-heading`: `.section-heading-text` on the left (a `p.eyebrow`, the `h1`/`h2`, and optional `p.muted`) and the section's actions on the right, bottom-aligned, wrapping below on narrow screens. Used by the home Collection section, The Collection page header, and "More Cars" on car pages.
+- The name goes in the heading and the eyebrow only adds context: "The Collection" and "More Cars" are the headings, never the eyebrow text.
+- The eyebrow bar uses `--car-color`, falling back to `--blue-nav`. `.carousel-heading` (in `main-swiper.css`) lines a heading row up with the carousel cards below it.
+- The eyebrow also labels headings outside a `.section-heading` row (the contact page, the car page info and video cards). `.eyebrow.youtube` gives it a YouTube red bar.
+
 **Car accent colors:**
 - Each car has a color variable on `:root` in `global-style.css` (`--tiger-color`) and a short class (`tiger`) used on its card name.
 - Cards are a full-bleed photo with a dark gradient and a white name. A short accent bar above the name (`.name::before`) takes the car's color through a `.<car-class> { --car-color: ... }` rule, which exists in both `main-swiper.css` and `the-collection.css`. The bar widens on hover and focus.
 - The card overlay is dark in both themes, so a car whose color is too dark to see on it gets a `--<short-name>-bar-color` variable in `global-style.css` (its dark-mode color) for its card rule.
-- The car's page stylesheet applies its color to `.background-color` (the gallery band), `.car-decoration`, the active thumbnail border, and the "More Cars" swiper navigation, and sets `--car-color` on `#section-2` for the info card, status panel, and their buttons.
-- `#section-2` also takes `--car-text-color` (text on `--car-color` fills, default `--off-white-ignore`) and `--car-icon-color` (email button outline and panel icons, default `--car-color`). A light car color (Corvette, Sunliner, Oldsmobile 442, Nova, Jaguar) sets `--car-text-color: var(--dark-mode-ignore)` and `--car-icon-color: var(--dark-mode)`. A color that flips between dark and light with the theme (Silver Cloud, '71 442) sets `--car-text-color: var(--off-white)`.
+- The car's page stylesheet applies its color to `.background-color` (the gallery band), the active thumbnail border, and the "More Cars" swiper navigation, and sets `--car-color` on `#section-2, #section-3` for the eyebrow bars, info card, status panel, and their buttons, including the "More Cars" `#collection-btn`.
+- That same rule also takes `--car-text-color` (text on `--car-color` fills, default `--off-white-ignore`) and `--car-icon-color` (email button outline and panel icons, default `--car-color`). A light car color (Corvette, Sunliner, Oldsmobile 442, Nova, Jaguar) sets `--car-text-color: var(--dark-mode-ignore)` and `--car-icon-color: var(--dark-mode)`. A color that flips between dark and light with the theme (Silver Cloud, '71 442) sets `--car-text-color: var(--off-white)`.
 - Dark mode works by overwriting `:root` variables from `THEME_COLORS` in `header-footer.js` (index 0 is light, 1 is dark). A car color that is unreadable on the dark background needs an entry there.
 
 **Theme:**
@@ -88,11 +94,11 @@ There are no tests or lint commands. Check changes by loading the affected pages
 - Copy an existing car page and its stylesheet as the template (`1965-sunbeam-tiger.html` for available cars, `1949-cadillac-convertible.html` for sold cars).
 - `<head>`: meta description listing the car's features, a `preload` for the cover image, then `header-footer.css`, `main-swiper.css`, `car-page.css`, the car's stylesheet, and the Swiper CSS. Title format: `<Year Make Model> | 21 Classics`.
 - `#section-1`: the gallery. The same image list appears three times, in order: `.swiperContainer` (with `.main-img` and a `.background.background-color` div per slide), `.bottomSwiper` thumbnails, and `.modalSwiper`. Keep all three in sync. Only the first main image is not lazy-loaded.
-- `#section-2`: the `h1` (wrapped in `.title-decoration` dashes, drawn as rounded bars), then `#info-card` and `#video-card`.
+- `#section-2`: `#car-title` (a `.section-heading-text` with an "Available" or "Sold" `.eyebrow` and the `h1` car name, the width of `#info-card`), then `#info-card` and `#video-card`.
 - `#info-card` holds `#info-details` (a "Details" `.eyebrow`, then an `h2` "Features" with `ul.feature-list`, or "About this car" with `p.description`) and `#status-panel`. The features or description match the meta description. A list with 9 or more items splits into two columns from tablet width up.
 - `#status-panel` on available pages: "For Inquiries" eyebrow, `h2`, `.muted` text naming the car, `#inquiry-buttons` (`#call-btn`, `#email-btn`), and `.location`. On sold pages: "Sold" eyebrow, `h2`, `.muted` text, and `#sold-btn` linking to The Collection.
 - `#video-card`: the YouTube `iframe` in `#video-embed`, and `#video-text` with a `.eyebrow.youtube`, `h2`, `.muted` text, and `#youtube-btn` linking to that video on YouTube. Omit `#video-card` from the markup when the car has no video; don't hide it with CSS.
-- `#section-3`: "More Cars" carousel and the button back to The Collection.
+- `#section-3`: a `.section-heading.carousel-heading` ("The Collection" eyebrow, `h2` "More Cars", and `#collection-btn` back to The Collection), then the "More Cars" carousel.
 - Scripts at the end of `<body>`: Swiper JS, `header-footer.js`, `car-page.js`, `main-swiper.js`.
 
 **Checklist when adding a car:**
@@ -101,7 +107,7 @@ There are no tests or lint commands. Check changes by loading the affected pages
 3. Add a `.<short-name> { --car-color: ... }` rule to `main-swiper.css` and `the-collection.css`
 4. Create the page in `src/pages/cars/` and its stylesheet in `src/css/pages/cars/` from the template
 5. Add a card to The Collection grid, the home carousel (available cars), and the "More Cars" carousel on the other available car pages
-6. When marking a car as sold, keep its page and stylesheet where they are (the URL must not change): replace the inquiry content of `#status-panel` with the sold content (copy it from a sold page), change its card in The Collection to `class="card sold hidden"` and move it to the sold cards, and remove it from the home and "More Cars" carousels
+6. When marking a car as sold, keep its page and stylesheet where they are (the URL must not change): change the `#car-title` eyebrow to "Sold", replace the inquiry content of `#status-panel` with the sold content (copy it from a sold page), change its card in The Collection to `class="card sold hidden"` and move it to the sold cards, and remove it from the home and "More Cars" carousels
 
 ### Known Inconsistencies
 

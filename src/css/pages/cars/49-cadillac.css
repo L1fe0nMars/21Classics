@@ -1,13 +1,10 @@
-#section-2 {
+#section-2,
+#section-3 {
     --car-color: var(--cadillac-color);
 }
 
 .background-color {
     background-color: var(--cadillac-color);
-}
-
-.car-decoration {
-    color: var(--cadillac-color);
 }
 
 .bottomSwiper .swiper-slide-thumb-active {

@@ -1,4 +1,5 @@
-#section-2 {
+#section-2,
+#section-3 {
     --car-color: var(--bumblebee-color);
     --car-text-color: var(--dark-mode-ignore);
     --car-icon-color: var(--dark-mode);
@@ -10,10 +11,6 @@
 
 .background-color {
     background-color: var(--bumblebee-color);
-}
-
-.car-decoration {
-    color: var(--bumblebee-color);
 }
 
 .bottomSwiper .swiper-slide-thumb-active {

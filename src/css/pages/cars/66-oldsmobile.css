@@ -1,4 +1,5 @@
-#section-2 {
+#section-2,
+#section-3 {
     --car-color: var(--oldsmobile-color);
     --car-text-color: var(--dark-mode-ignore);
     --car-icon-color: var(--dark-mode);
@@ -10,10 +11,6 @@
 
 .background-color {
     background-color: var(--oldsmobile-color);
-}
-
-.car-decoration {
-    color: var(--oldsmobile-color);
 }
 
 .bottomSwiper .swiper-slide-thumb-active {

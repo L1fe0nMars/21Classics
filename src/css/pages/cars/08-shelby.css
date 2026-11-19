@@ -1,4 +1,5 @@
-#section-2 {
+#section-2,
+#section-3 {
     --car-color: var(--shelby-color);
 }
 
@@ -8,10 +9,6 @@
 
 .background-color {
     background-color: var(--shelby-color);
-}
-
-.car-decoration {
-    color: var(--shelby-color);
 }
 
 .bottomSwiper .swiper-slide-thumb-active {

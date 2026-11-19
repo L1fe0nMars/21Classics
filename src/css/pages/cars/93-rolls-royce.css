@@ -1,13 +1,10 @@
-#section-2 {
+#section-2,
+#section-3 {
     --car-color: var(--rolls-royce-spur-color);
 }
 
 .background-color {
     background-color: var(--rolls-royce-spur-color);
-}
-
-.car-decoration {
-    color: var(--rolls-royce-spur-color);
 }
 
 .bottomSwiper .swiper-slide-thumb-active {

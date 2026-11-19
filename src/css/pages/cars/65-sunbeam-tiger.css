@@ -1,13 +1,10 @@
-#section-2 {
+#section-2,
+#section-3 {
     --car-color: var(--tiger-color);
 }
 
 .background-color {
     background-color: var(--tiger-color);
-}
-
-.car-decoration {
-    color: var(--tiger-color);
 }
 
 .bottomSwiper .swiper-slide-thumb-active {

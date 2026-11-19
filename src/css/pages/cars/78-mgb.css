@@ -1,4 +1,5 @@
-#section-2 {
+#section-2,
+#section-3 {
     --car-color: var(--mgb-color);
 }
 
@@ -8,10 +9,6 @@
 
 .background-color {
     background-color: var(--mgb-color);
-}
-
-.car-decoration {
-    color: var(--mgb-color);
 }
 
 .bottomSwiper .swiper-slide-thumb-active {

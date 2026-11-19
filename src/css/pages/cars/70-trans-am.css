@@ -1,4 +1,5 @@
-#section-2 {
+#section-2,
+#section-3 {
     --car-color: var(--trans-am-color);
 }
 
@@ -8,10 +9,6 @@
 
 .background-color {
     background-color: var(--trans-am-color);
-}
-
-.car-decoration {
-    color: var(--trans-am-color);
 }
 
 .bottomSwiper .swiper-slide-thumb-active {

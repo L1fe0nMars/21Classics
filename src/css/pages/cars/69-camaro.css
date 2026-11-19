@@ -1,13 +1,10 @@
-#section-2 {
+#section-2,
+#section-3 {
     --car-color: var(--camaro-color);
 }
 
 .background-color {
     background-color: var(--camaro-color);
-}
-
-.car-decoration {
-    color: var(--camaro-color);
 }
 
 .bottomSwiper .swiper-slide-thumb-active {

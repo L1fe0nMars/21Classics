@@ -3,7 +3,12 @@
 }
 
 #section-2 .swiper {
-    padding: 3em 0 !important;
+    padding: 1.5em 0 3em 0 !important;
+}
+
+/* Matches the .slide-content margin and padding so the heading lines up with the cards */
+.carousel-heading {
+    margin: 0 1em;
 }
 
 .slide-container {
@@ -154,6 +159,10 @@
 
 /* PC + TABLETS */
 @media screen and (min-width: 481px) {
+    .carousel-heading {
+        margin: 0 3.5em;
+    }
+
     .slide-content {
         margin: 0 2.5em;
     }

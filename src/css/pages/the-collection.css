@@ -1,37 +1,16 @@
 /* SECTION 1 */
 
+/* Same width as #car-gallery so the heading lines up with the grid */
 #section-1 .container {
-    padding: 1.5em 1em 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 22px;
-    text-align: center;
-}
-
-#section-1 h1 {
-    margin: 0;
-    line-height: 1.05;
-    font-weight: 800;
-    color: var(--dark-mode);
-}
-
-#section-1 .title-decoration {
-    background-color: var(--blue-nav);
-}
-
-#section-1 p {
-    margin: 0;
-    max-width: 32em;
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--muted-text);
+    margin: 0 auto;
+    padding-top: 1.5em;
+    width: calc(100% - 2em);
+    max-width: 85em;
 }
 
 #sort-options {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 10px;
 }
 
@@ -270,9 +249,5 @@
 
     #section-1 h1 {
         font-size: 4em;
-    }
-
-    #section-1 p {
-        font-size: 18px;
     }
 }

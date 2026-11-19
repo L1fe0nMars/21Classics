@@ -1,13 +1,10 @@
-#section-2 {
+#section-2,
+#section-3 {
     --car-color: var(--jensen-color);
 }
 
 .background-color {
     background-color: var(--jensen-color);
-}
-
-.car-decoration {
-    color: var(--jensen-color);
 }
 
 .bottomSwiper .swiper-slide-thumb-active {

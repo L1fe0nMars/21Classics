@@ -1,13 +1,10 @@
-#section-2 {
+#section-2,
+#section-3 {
     --car-color: var(--crown-victoria-color);
 }
 
 .background-color {
     background-color: var(--crown-victoria-color);
-}
-
-.car-decoration {
-    color: var(--crown-victoria-color);
 }
 
 .bottomSwiper .swiper-slide-thumb-active {

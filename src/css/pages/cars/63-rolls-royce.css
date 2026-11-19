@@ -1,4 +1,5 @@
-#section-2 {
+#section-2,
+#section-3 {
     --car-color: var(--rolls-color);
     --car-text-color: var(--off-white);
 }
@@ -9,10 +10,6 @@
 
 .background-color {
     background-color: var(--rolls-color);
-}
-
-.car-decoration {
-    color: var(--rolls-color);
 }
 
 .bottomSwiper .swiper-slide-thumb-active {
