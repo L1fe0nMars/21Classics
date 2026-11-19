@@ -56,7 +56,7 @@ There are no tests or lint commands. Check changes by loading the affected pages
 - **src/js/main-swiper.js** - The card carousel (`.slide-content`, with `#carousel-prev`/`#carousel-next`) used on the home page and the "More Cars" section of car pages
 - **src/js/car-page.js** - Car page gallery: main swiper (`.swiperContainer`, with `#gallery-prev`/`#gallery-next` arrows), thumbnail swiper (`.bottomSwiper`, with `#thumb-prev`/`#thumb-next`), and the full-screen image modal (`#modal`, `.modalSwiper` with pinch and double-tap zoom and `#modal-prev`/`#modal-next` arrows, opened by clicking the photo or `#gallery-fullscreen`, closed with `#close` or Escape)
 - **src/js/the-collection.js** - Sold/unsold tab filtering by toggling `.hidden` on `.card` elements. Not currently loaded because the tabs are commented out.
-- **src/css/global-style.css** - Color variables on `:root`, `@font-face` rules, resets, base `button`/`.button` styles, heading sizes, `.eyebrow` (and `.eyebrow.youtube`), and the `.section-heading` row
+- **src/css/global-style.css** - Color, shadow, and radius variables on `:root`, `@font-face` rules, resets, base `button`/`.button` styles, heading sizes, `.eyebrow` (and `.eyebrow.youtube`), and the `.section-heading` row
 - **src/css/header-footer.css** - Imports `global-style.css`; header, desktop nav, mobile menu, theme toggle, and footer. Every page links this first.
 - **src/css/main-swiper.css** - Card carousel styles, including the per-car `.card:hover .<car-class>` name colors
 - **src/css/pages/*.css** - One stylesheet per page type (`home`, `the-collection`, `contact`, `car-page`, and an unused `add-your-car`)
@@ -64,6 +64,7 @@ There are no tests or lint commands. Check changes by loading the affected pages
 - **_redirects** - Netlify 301 redirects from the old `/src/pages/cars/sold/` URLs to the current car pages
 - **images/<yy>-<short-name>/** - Photos for each car. `cover.jpg` is the card and first gallery image; others are named by view (`front-angle`, `rear-angle`, `side`, `interior`, `engine`, `dash`, ...) with a number suffix for extras (`interior1.jpg`). Also `images/logo.png` (logo and favicon), `images/cover-pic.webp` (home hero), and `images/collections/`.
 - **fonts/Poppins/** - Self-hosted Poppins font files and license
+- **docs/style-guide.md** - The visual style guide: colors, type, spacing, shape, and shared components
 
 ### Key Architectural Patterns
 
@@ -72,24 +73,10 @@ There are no tests or lint commands. Check changes by loading the affected pages
 - The nav link for the current page gets `class="active"` in both the mobile and desktop nav.
 - Car cards are hand-written HTML in three places: the home carousel, The Collection grid, and the "More Cars" carousel on each car page (which lists the other available cars). Car names in cards are `h3` (carousels) or `h2` (The Collection) with `class="name <car-class>"` and `aria-hidden="true"`, since the image `alt` already names the car.
 
-**Section headings:**
-- Section titles use `.section-heading`: `.section-heading-text` on the left (a `p.eyebrow`, the `h1`/`h2`, and optional `p.muted`) and the section's actions on the right, bottom-aligned, wrapping below on narrow screens. Used by the home Collection section, The Collection page header, and "More Cars" on car pages.
-- The name goes in the heading and the eyebrow only adds context: "The Collection" and "More Cars" are the headings, never the eyebrow text.
-- The eyebrow bar uses `--car-color`, falling back to `--blue-nav`. `.carousel-heading` (in `main-swiper.css`) lines a heading row up with the carousel cards below it.
-- The eyebrow also labels headings outside a `.section-heading` row (the contact page, the car page info and video cards). `.eyebrow.youtube` gives it a YouTube red bar.
-
-**Car accent colors:**
-- Each car has a color variable on `:root` in `global-style.css` (`--tiger-color`) and a short class (`tiger`) used on its card name.
-- Cards are a full-bleed photo with a dark gradient and a white name. A short accent bar above the name (`.name::before`) takes the car's color through a `.<car-class> { --car-color: ... }` rule, which exists in both `main-swiper.css` and `the-collection.css`. The bar widens on hover and focus.
-- The card overlay is dark in both themes, so a car whose color is too dark to see on it gets a `--<short-name>-bar-color` variable in `global-style.css` (its dark-mode color) for its card rule.
-- The car's page stylesheet applies its color to `.background-color` (the gallery band), the active thumbnail border, and the "More Cars" swiper navigation, and sets `--car-color` on `#section-2, #section-3` for the eyebrow bars, info card, status panel, and their buttons, including the "More Cars" `#collection-btn`.
-- That same rule also takes `--car-text-color` (text on `--car-color` fills, default `--off-white-ignore`) and `--car-icon-color` (email button outline and panel icons, default `--car-color`). A light car color (Corvette, Sunliner, Oldsmobile 442, Nova, Jaguar) sets `--car-text-color: var(--dark-mode-ignore)` and `--car-icon-color: var(--dark-mode)`. A color that flips between dark and light with the theme (Silver Cloud, '71 442) sets `--car-text-color: var(--off-white)`.
-- Dark mode works by overwriting `:root` variables from `THEME_COLORS` in `header-footer.js` (index 0 is light, 1 is dark). A car color that is unreadable on the dark background needs an entry there.
-
-**Arrow buttons:**
-- Every carousel and gallery arrow is a `<button>` with an SVG chevron and an `aria-label`, never Swiper's default `.swiper-button-next`/`-prev` icons. They share `.icon-btn` (`global-style.css`) and add one variant: `.gallery-btn` (white rounded square on a photo: the main gallery, fullscreen, and modal buttons), `.thumb-btn` (smaller square on the thumbnails), or `.carousel-btn` (outlined rounded square in `--car-icon-color`, falling back to `--car-color` and then `--blue-nav`, that fills on hover like `#email-btn`).
-- Carousel arrows (`#carousel-prev`, `#carousel-next`) sit in the heading row, not on the carousel: `.carousel-actions` holds the two arrows and then `#collection-btn`, and stretches the arrows to the button's height.
-- Pass the button elements to Swiper's `navigation` option, not class selectors. Swiper's `.swiper-button-disabled` fades a button and `.swiper-button-lock` hides it.
+**Visual style:**
+- **Before adding or changing any CSS, read `docs/style-guide.md` and follow it.** It defines the color roles, type, spacing, radius, and shadow scales, and the shared components: buttons, arrow buttons (`.icon-btn`), eyebrows, `.section-heading` rows, photo cards, and panel cards.
+- It also covers how a car's accent color reaches its page and cards (`--car-color`, `--car-text-color`, `--car-icon-color`, `--<short-name>-bar-color`, and `THEME_COLORS` entries). Follow it when adding a car or changing a car color.
+- When a style change adds a new pattern or changes a scale, update the style guide in the same change.
 
 **Theme:**
 - `localStorage` key `darkMode` is `'enabled'` or `'disabled'`. With no stored value, `detectTheme` follows `prefers-color-scheme`.

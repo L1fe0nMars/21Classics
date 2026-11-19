@@ -51,9 +51,9 @@
 }
 
 #contact-text h1 {
-    font-size: clamp(2.5rem, 1.5rem + 3vw, 4.5rem);
+    font-size: clamp(2.75rem, 1.6rem + 4vw, 4.75rem);
     font-weight: 800;
-    line-height: 1.02;
+    line-height: 1;
     letter-spacing: -0.02em;
 }
 
@@ -73,7 +73,7 @@
     min-height: 4.5rem;
     padding: 0 1.5rem;
     border: 2px solid var(--blue-nav);
-    border-radius: 16px;
+    border-radius: var(--radius-control);
     display: flex;
     align-items: center;
     gap: 1em;
@@ -150,21 +150,21 @@
     box-sizing: border-box;
     width: 100%;
     max-width: 66em;
-    padding: 1em 1em 1.75em 1em;
-    border-radius: 30px;
+    padding: 0.75em;
+    border-radius: var(--radius-card);
     display: flex;
     flex-direction: column;
     gap: 1.25em;
     background-color: var(--white);
     color: var(--dark-mode);
-    box-shadow: 0 2px 7px 0 #14142b0f;
+    box-shadow: var(--shadow-panel);
 }
 
 #youtube-thumb {
     position: relative;
     display: block;
     aspect-ratio: 16 / 9;
-    border-radius: 20px;
+    border-radius: var(--radius-inner);
     overflow: hidden;
 }
 
@@ -186,7 +186,7 @@
     top: 50%;
     width: 68px;
     height: 48px;
-    border-radius: 14px;
+    border-radius: var(--radius-control);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -199,6 +199,7 @@
 }
 
 #youtube-text {
+    padding: 0.5em 0.5em 1em 0.5em;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -206,19 +207,19 @@
 }
 
 #youtube-text h2 {
-    font-size: clamp(1.5rem, 1.2rem + 1vw, 1.875rem);
+    font-size: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
     font-weight: 800;
     line-height: 1.15;
 }
 
 #youtube-btn {
     box-sizing: border-box;
-    min-height: 3.25rem;
+    min-height: 3.5rem;
     padding: 0 1.75rem;
-    border-radius: 16px;
+    border-radius: var(--radius-control);
     display: inline-flex;
     align-items: center;
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
     background-color: var(--youtube-red);
     color: var(--off-white-ignore);
     transition: 0.25s ease-out;
@@ -256,7 +257,7 @@
     }
 
     #youtube-card {
-        padding: 1.25em;
+        padding: 1em;
         flex-direction: row;
         align-items: center;
         gap: 1.75em;
@@ -267,6 +268,7 @@
     }
 
     #youtube-text {
+        padding: 0 0.5em 0 0;
         flex: 1 1 55%;
     }
 }
@@ -304,7 +306,7 @@
     }
 
     #youtube-card {
-        padding: 1.5em 3em 1.5em 1.5em;
+        padding: 1.25em 3em 1.25em 1.25em;
         flex-direction: row;
         align-items: center;
         gap: 2.5em;
@@ -312,5 +314,9 @@
 
     #youtube-thumb {
         flex: 0 0 26em;
+    }
+
+    #youtube-text {
+        padding: 0;
     }
 }

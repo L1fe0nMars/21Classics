@@ -18,7 +18,6 @@ const THEME_COLORS = {
     '--dark-mode': ['#1c1c1c', '#f5f5f5'],
     '--off-white': ['#f5f5f5', '#1c1c1c'],
     '--white': ['white', '#262626'],
-    '--swiper-heading-color': ['#333', '#f5f5f5'],
     '--muted-text': ['#555555', '#bdbdbd'],
     '--divider': ['#d4d4d4', '#3d3d3d'],
     '--rolls-color': ['#2f0101', '#beb68e'],

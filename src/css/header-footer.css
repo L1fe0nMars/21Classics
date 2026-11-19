@@ -308,7 +308,7 @@ footer::before,
     box-sizing: border-box;
     min-height: 2.75rem;
     padding: 0 1.125rem;
-    border-radius: 14px;
+    border-radius: var(--radius-control);
     display: inline-flex;
     align-items: center;
     gap: 0.5em;
@@ -336,7 +336,7 @@ footer::before,
     justify-content: space-between;
     align-items: center;
     gap: 1em 1.5em;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: var(--muted-text);
 }
 

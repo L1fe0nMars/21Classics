@@ -4,8 +4,6 @@
     --off-white-ignore: #f5f5f5;
     --dark-mode: #1c1c1c;
     --dark-mode-ignore: #1c1c1c;
-    --dark-mode-light: #262626;
-    --swiper-heading-color: #333;
     --blue-nav: #4073ff;
     --golden-color: #ebae2a;
     --muted-text: #555555;
@@ -35,6 +33,19 @@
     --tiger-bar-color: #3d6f8e;
     --oldsmobile-white-bar-color: #e6e6e6;
     --shelby-bar-color: #1259a9;
+    --shadow-card: 0 6px 12px -2px #00000040, 0 3px 7px -3px #0000004d;
+    --shadow-panel: 0 2px 7px 0 #14142b0f;
+    --radius-card: 24px;
+    --radius-inner: 20px;
+    --radius-control: 16px;
+}
+
+/* PC + TABLETS */
+@media screen and (min-width: 481px) {
+    :root {
+        --radius-card: 30px;
+        --radius-inner: 24px;
+    }
 }
 
 @font-face {
