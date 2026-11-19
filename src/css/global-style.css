@@ -30,6 +30,11 @@
     --mga-color: #008848;
     --rolls-royce-spur-color: #64747e;
     --prowler-color: #5675b9;
+    /* Card accent bars sit on a dark photo overlay in both themes, so these cars use their dark-mode colors there */
+    --rolls-bar-color: #beb68e;
+    --tiger-bar-color: #3d6f8e;
+    --oldsmobile-white-bar-color: #e6e6e6;
+    --shelby-bar-color: #1259a9;
 }
 
 @font-face {

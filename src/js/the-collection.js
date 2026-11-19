@@ -2,50 +2,32 @@
 
 const UNSOLD_TAB = document.getElementById('unsold-tab');
 const SOLD_TAB = document.getElementById('sold-tab');
-const CARD = document.getElementsByClassName('card');
+const CARDS = document.querySelectorAll('#car-gallery .card');
+const SOLD_COUNT = document.querySelectorAll('#car-gallery .card.sold').length;
 
-//console.log(CARD[0].querySelector('.name').innerHTML);
+document.getElementById('unsold-count').textContent = CARDS.length - SOLD_COUNT;
+document.getElementById('sold-count').textContent = SOLD_COUNT;
+
+/**
+ * Shows either the sold or the available cars and marks the matching tab as selected.
+ * @param {boolean} showSold - true to show sold cars, false to show available cars
+ * @return {void}
+ */
+function showCars(showSold) {
+    CARDS.forEach((card) => {
+        card.classList.toggle('hidden', card.classList.contains('sold') !== showSold);
+    });
+
+    UNSOLD_TAB.classList.toggle('selected', !showSold);
+    UNSOLD_TAB.setAttribute('aria-pressed', String(!showSold));
+    SOLD_TAB.classList.toggle('selected', showSold);
+    SOLD_TAB.setAttribute('aria-pressed', String(showSold));
+}
 
 UNSOLD_TAB.addEventListener('click', () => {
-    for (let i = 0; i < CARD.length; i ++) {
-        const isSold = CARD[i].classList.contains('sold');
-        const isHidden = CARD[i].classList.contains('hidden');
-
-        if (
-            (isSold && !isHidden)
-            || (!isSold && isHidden)
-        ) {
-            CARD[i].classList.toggle('hidden');
-        }
-    }
-    
-    if (!UNSOLD_TAB.classList.contains('selected')) {
-        UNSOLD_TAB.classList.toggle('selected');
-    }
-
-    if (SOLD_TAB.classList.contains('selected')) {
-        SOLD_TAB.classList.toggle('selected');
-    }
+    showCars(false);
 });
 
 SOLD_TAB.addEventListener('click', () => {
-    for (let i = 0; i < CARD.length; i ++) {
-        const isSold = CARD[i].classList.contains('sold');
-        const isHidden = CARD[i].classList.contains('hidden');
-
-        if (
-            (isSold && isHidden)
-            || (!isSold && !isHidden)
-        ) {
-            CARD[i].classList.toggle('hidden');
-        }
-    }
-
-    if (!SOLD_TAB.classList.contains('selected')) {
-        SOLD_TAB.classList.toggle('selected');
-    }
-
-    if (UNSOLD_TAB.classList.contains('selected')) {
-        UNSOLD_TAB.classList.toggle('selected');
-    }
+    showCars(true);
 });

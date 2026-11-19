@@ -74,7 +74,8 @@ There are no tests or lint commands. Check changes by loading the affected pages
 
 **Car accent colors:**
 - Each car has a color variable on `:root` in `global-style.css` (`--tiger-color`) and a short class (`tiger`) used on its card name.
-- The card name takes the car's color on hover through `.card:hover .<car-class>` rules, which exist in both `main-swiper.css` and `the-collection.css`.
+- Cards are a full-bleed photo with a dark gradient and a white name. A short accent bar above the name (`.name::before`) takes the car's color through a `.<car-class> { --car-color: ... }` rule, which exists in both `main-swiper.css` and `the-collection.css`. The bar widens on hover and focus.
+- The card overlay is dark in both themes, so a car whose color is too dark to see on it gets a `--<short-name>-bar-color` variable in `global-style.css` (its dark-mode color) for its card rule.
 - The car's page stylesheet applies its color to `.background-color`, `.car-decoration`, `.color` (SVG icons), the active thumbnail border, `#car-contact-btn`, and the "More Cars" swiper navigation. `.background-color` also colors `#video-background`, the band behind the video.
 - Dark mode works by overwriting `:root` variables from `THEME_COLORS` in `header-footer.js` (index 0 is light, 1 is dark). A car color that is unreadable on the dark background needs an entry there.
 
@@ -93,11 +94,11 @@ There are no tests or lint commands. Check changes by loading the affected pages
 
 **Checklist when adding a car:**
 1. Add photos to `images/<yy>-<short-name>/` with a `cover.jpg`
-2. Add `--<short-name>-color` to `:root` in `global-style.css` (and to `THEME_COLORS` if it needs a dark-mode value)
-3. Add `.card:hover .<short-name>` rules to `main-swiper.css` and `the-collection.css`
+2. Add `--<short-name>-color` to `:root` in `global-style.css` (and to `THEME_COLORS` if it needs a dark-mode value, plus `--<short-name>-bar-color` if it's too dark for the card overlay)
+3. Add a `.<short-name> { --car-color: ... }` rule to `main-swiper.css` and `the-collection.css`
 4. Create the page in `src/pages/cars/` and its stylesheet in `src/css/pages/cars/` from the template
 5. Add a card to The Collection grid, the home carousel (available cars), and the "More Cars" carousel on the other available car pages
-6. When marking a car as sold, keep its page and stylesheet where they are (the URL must not change): remove the inquiry markup from the page and the `#sold`/`#car-contact-info` hiding from its stylesheet, change its card in The Collection to the sold card markup (`class="card sold hidden"` with the `.sold-text` overlay) and move it to the sold cards, and remove it from the home and "More Cars" carousels
+6. When marking a car as sold, keep its page and stylesheet where they are (the URL must not change): remove the inquiry markup from the page and the `#sold`/`#car-contact-info` hiding from its stylesheet, change its card in The Collection to `class="card sold hidden"` and move it to the sold cards, and remove it from the home and "More Cars" carousels
 
 ### Known Inconsistencies
 
@@ -141,7 +142,7 @@ These exist in the current code. Fix them only when asked or when touching the s
 
 - Before adding a function, check `header-footer.js` and `car-page.js` for an existing one and reuse it.
 - When the same multi-line logic appears in two places, extract it into a shared function. Don't extract one-liners.
-- Keep car-specific styling in that car's stylesheet and its `:root` color variable rather than adding car-specific rules to shared stylesheets (the card hover color rules are the exception).
+- Keep car-specific styling in that car's stylesheet and its `:root` color variable rather than adding car-specific rules to shared stylesheets (the card `--car-color` rules are the exception).
 
 ## Configuration
 
