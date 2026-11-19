@@ -1,17 +1,24 @@
 /* SECTION 1 */
 
-#section-1 .container {
-    margin: 0 auto;
-    height: 75%;
+/* The photo is sized from the screen height so it and the thumbnails fit on the first screen. It stays 4:3, the shape of the photos, so the car isn't cropped. The reserve is the header, thumbnails, and gaps. */
+#section-1 {
+    --gallery-reserve: 18.5em;
+    --photo-width: clamp(18em, min(100vw - 1.5em, (100svh - var(--gallery-reserve)) * 4 / 3), 85em);
+    --photo-height: calc(var(--photo-width) * 3 / 4);
 }
 
-.background {
+#section-1 .container {
+    position: relative;
+    padding: 1.5em 0;
+}
+
+/* Centered on the photo at 75% of its height, so the top of the photo sits on the page background below the header line */
+#gallery-band {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 110%;
-    height: 75%;
+    top: calc(1.5em + var(--photo-height) * 0.125);
+    left: 0;
+    right: 0;
+    height: calc(var(--photo-height) * 0.75);
 }
 
 .swiper,
@@ -32,32 +39,77 @@
     justify-content: center;
 }
 
-.swiperContainer .swiper-slide {
-    height: 50vw;
-    max-height: 50em;
-    margin-bottom: 0.5em;
-}
-
-/* The slides stay full width so the colored band runs across the page; only the photos are capped */
-.swiperContainer .swiper-slide img {
+#gallery-main {
     position: relative;
+    z-index: 1;
     margin: 0 auto;
-    width: 90%;
-    max-width: 85em;
+    width: var(--photo-width);
+}
+
+.swiperContainer {
+    height: var(--photo-height);
+    border-radius: 20px;
+}
+
+.swiperContainer .swiper-slide {
     height: 100%;
-    border-radius: 30px;
-    object-fit: cover;
-    object-position: 50% 30%;
 }
 
 .swiperContainer .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     cursor: pointer;
 }
 
+.gallery-btn {
+    position: absolute;
+    z-index: 2;
+    box-sizing: border-box;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--off-white-ignore);
+    color: var(--dark-mode-ignore);
+    opacity: 0.9;
+    transition: 0.25s ease-out;
+}
+
+.gallery-btn:hover {
+    opacity: 1;
+}
+
+.gallery-btn:focus-visible {
+    outline: 3px solid var(--off-white-ignore);
+    outline-offset: 2px;
+}
+
+#gallery-prev,
+#gallery-next {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#gallery-prev {
+    left: 0.75rem;
+}
+
+#gallery-next {
+    right: 0.75rem;
+}
+
+#gallery-fullscreen {
+    top: 0.75rem;
+    right: 0.75rem;
+}
+
 .bottomSwiper {
+    margin: 0.75em auto 0 auto;
     height: 7em;
-    width: 90%;
-    max-width: 85em;
+    width: var(--photo-width);
     border-radius: 12px;
     --swiper-navigation-color: var(--off-white-ignore);
 }
@@ -66,13 +118,12 @@
     height: 7em;
     border-radius: 12px;
     overflow: hidden;
+    cursor: pointer;
 }
 
-/* The thumbnails sit inside .swiperContainer, so this undoes the main image radius. The slide's rounded clip shapes them instead, keeping them flush with the active border. */
 .bottomSwiper .swiper-slide img {
     width: 100%;
     height: 100%;
-    border-radius: 0;
     object-fit: cover;
 }
 
@@ -424,6 +475,33 @@
         border-radius: 24px;
     }
 
+    #section-1 {
+        --photo-width: clamp(18em, min(100vw - 4em, (100svh - var(--gallery-reserve)) * 4 / 3), 85em);
+    }
+
+    .swiperContainer {
+        border-radius: 24px;
+    }
+
+    .gallery-btn {
+        width: 3.25rem;
+        height: 3.25rem;
+        border-radius: 16px;
+    }
+
+    #gallery-prev {
+        left: 1rem;
+    }
+
+    #gallery-next,
+    #gallery-fullscreen {
+        right: 1rem;
+    }
+
+    #gallery-fullscreen {
+        top: 1rem;
+    }
+
     #sold-btn,
     #youtube-btn {
         align-self: flex-start;
@@ -457,9 +535,14 @@
 
 /* PC */
 @media screen and (min-width: 1025px) {
+    /* Shorter than on tablets so the thumbnails stay close to 4:3 at this photo width */
+    #section-1 {
+        --gallery-reserve: 17em;
+    }
+
     .bottomSwiper,
     .bottomSwiper .swiper-slide {
-        height: 9em;
+        height: 6em;
     }
 
     #car-title {

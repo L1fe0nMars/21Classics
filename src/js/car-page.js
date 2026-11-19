@@ -3,6 +3,9 @@
 const MAIN_IMG = document.getElementsByClassName('main-img');
 const MODAL = document.getElementById('modal');
 const CLOSE_BUTTON = document.getElementById('close');
+const FULLSCREEN_BUTTON = document.getElementById('gallery-fullscreen');
+const GALLERY_PREV = document.getElementById('gallery-prev');
+const GALLERY_NEXT = document.getElementById('gallery-next');
 
 let bottomSwiper = new Swiper('.bottomSwiper', {
     loop: false,
@@ -29,6 +32,11 @@ let mainSwiper = new Swiper('.swiperContainer', {
     spaceBetween: 10,
     thumbs: {
         swiper: bottomSwiper,
+    },
+    // Elements are passed directly because a class selector would also match the thumbnail and "More Cars" arrows
+    navigation: {
+        nextEl: GALLERY_NEXT,
+        prevEl: GALLERY_PREV,
     },
     keyboard: {
         enabled: true,
@@ -92,6 +100,10 @@ for (let i = 0; i < MAIN_IMG.length; i++) {
         openModal(i);
     });
 }
+
+FULLSCREEN_BUTTON.addEventListener('click', () => {
+    openModal(mainSwiper.realIndex);
+});
 
 CLOSE_BUTTON.addEventListener('click', closeModal);
 
