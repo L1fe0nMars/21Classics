@@ -4,33 +4,29 @@
 
 .background-color,
 #car-contact-btn:hover {
-    background-color: var(--nova-color);
+    background-color: var(--shelby-color);
 }
 
 .car-decoration {
-    color: var(--nova-color);
+    color: var(--shelby-color);
 }
 
 .bottomSwiper .swiper-slide-thumb-active {
-    border: solid 5px var(--nova-color);
+    border: solid 5px var(--shelby-color);
 }
 
 #car-contact-btn {
-    border: solid 2px var(--nova-color);
-}
-
-#video-section {
-    display: none;
+    border: solid 2px var(--shelby-color);
 }
 
 #section-3 .swiper {
-    --swiper-navigation-color: var(--nova-color);
+    --swiper-navigation-color: var(--shelby-color);
 }
 
 /* PC */
 @media screen and (min-width: 1025px) {
     #info-box {
-        border: solid 8px var(--nova-color);
+        border: solid 8px var(--shelby-color);
         max-width: 75em;
     }
 }

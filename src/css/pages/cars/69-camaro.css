@@ -15,10 +15,6 @@
     border: solid 2px var(--camaro-color);
 }
 
-#video-section {
-    display: none;
-}
-
 #section-3 .swiper {
     --swiper-navigation-color: var(--camaro-color);
 }

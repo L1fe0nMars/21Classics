@@ -15,10 +15,6 @@
     border: solid 2px var(--crown-victoria-color);
 }
 
-#video-section {
-    display: none;
-}
-
 #section-3 .swiper {
     --swiper-navigation-color: var(--crown-victoria-color);
 }

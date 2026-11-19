@@ -19,10 +19,6 @@
     border: solid 2px var(--jaguar-targa-color);
 }
 
-#video-section {
-    display: none;
-}
-
 #section-3 .swiper {
     --swiper-navigation-color: var(--jaguar-targa-color);
 }
