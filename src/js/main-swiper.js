@@ -9,11 +9,6 @@ let swiper = new Swiper('.slide-content', {
     loop: true,
     centerSlide: 'true',
     fade: 'true',
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        dynamicBullets: true,
-    },
     navigation: {
         nextEl: CAROUSEL_NEXT,
         prevEl: CAROUSEL_PREV,

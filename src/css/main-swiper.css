@@ -151,16 +151,6 @@
     color: var(--car-text-color, var(--off-white-ignore));
 }
 
-.swiper-pagination {
-    --swiper-pagination-color: var(--blue-nav);
-    --swiper-pagination-bullet-inactive-color: var(--blue-nav);
-    --swiper-pagination-bullet-size: 16px;
-}
-
-.swiper-pagination-bullet {
-    transition: 0.25s ease;
-}
-
 /* PC */
 @media screen and (min-width: 1025px) {
     .name {

@@ -403,10 +403,6 @@
     margin-bottom: 0.5em;
 }
 
-.swiper-pagination {
-    display: none;
-}
-
 #collection-btn {
     padding: 0.5em 1em;
     border-radius: 16px;
