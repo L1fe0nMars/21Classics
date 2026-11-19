@@ -16,7 +16,3 @@
 .bottomSwiper .swiper-slide-thumb-active {
     border: solid 5px var(--bumblebee-color);
 }
-
-#section-3 .swiper {
-    --swiper-navigation-color: var(--bumblebee-color);
-}

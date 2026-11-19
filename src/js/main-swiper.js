@@ -1,5 +1,8 @@
 'use strict';
 
+const CAROUSEL_PREV = document.getElementById('carousel-prev');
+const CAROUSEL_NEXT = document.getElementById('carousel-next');
+
 let swiper = new Swiper('.slide-content', {
     slidesPerView: 3,
     spaceBetween: 30,
@@ -12,8 +15,8 @@ let swiper = new Swiper('.slide-content', {
         dynamicBullets: true,
     },
     navigation: {
-        nextEl: '.swiper-navBtn-next',
-        prevEl: '.swiper-navBtn-prev',
+        nextEl: CAROUSEL_NEXT,
+        prevEl: CAROUSEL_PREV,
     },
     breakpoints:{
         0: {

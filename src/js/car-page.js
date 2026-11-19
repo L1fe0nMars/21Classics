@@ -6,6 +6,10 @@ const CLOSE_BUTTON = document.getElementById('close');
 const FULLSCREEN_BUTTON = document.getElementById('gallery-fullscreen');
 const GALLERY_PREV = document.getElementById('gallery-prev');
 const GALLERY_NEXT = document.getElementById('gallery-next');
+const THUMB_PREV = document.getElementById('thumb-prev');
+const THUMB_NEXT = document.getElementById('thumb-next');
+const MODAL_PREV = document.getElementById('modal-prev');
+const MODAL_NEXT = document.getElementById('modal-next');
 
 let bottomSwiper = new Swiper('.bottomSwiper', {
     loop: false,
@@ -20,8 +24,8 @@ let bottomSwiper = new Swiper('.bottomSwiper', {
         },
     },
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: THUMB_NEXT,
+        prevEl: THUMB_PREV,
     },
     freeMode: true,
     watchSlidesProgress: true,
@@ -33,7 +37,6 @@ let mainSwiper = new Swiper('.swiperContainer', {
     thumbs: {
         swiper: bottomSwiper,
     },
-    // Elements are passed directly because a class selector would also match the thumbnail and "More Cars" arrows
     navigation: {
         nextEl: GALLERY_NEXT,
         prevEl: GALLERY_PREV,
@@ -47,8 +50,15 @@ let modalSwiper = new Swiper('.modalSwiper', {
     loop: true,
     spaceBetween: 10,
     grabCursor: true,
+    navigation: {
+        nextEl: MODAL_NEXT,
+        prevEl: MODAL_PREV,
+    },
     keyboard: {
         enabled: true,
+    },
+    zoom: {
+        maxRatio: 3,
     },
 });
 
@@ -82,6 +92,7 @@ function openModal(slideIndex) {
  * Closes the image modal
  */
 function closeModal() {
+    modalSwiper.zoom.out();
     MODAL.setAttribute('style', 'display: none !important');
     BODY.style.overflow = 'auto';
 }

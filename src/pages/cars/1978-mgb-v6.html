@@ -111,13 +111,13 @@
                                 </div>
                             </div>
                         </div>
-                        <button id="gallery-prev" class="gallery-btn" type="button" aria-label="Previous photo">
+                        <button id="gallery-prev" class="icon-btn gallery-btn" type="button" aria-label="Previous photo">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
                         </button>
-                        <button id="gallery-next" class="gallery-btn" type="button" aria-label="Next photo">
+                        <button id="gallery-next" class="icon-btn gallery-btn" type="button" aria-label="Next photo">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
                         </button>
-                        <button id="gallery-fullscreen" class="gallery-btn" type="button" aria-label="View photos full screen">
+                        <button id="gallery-fullscreen" class="icon-btn gallery-btn" type="button" aria-label="View photos full screen">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
                         </button>
                     </div>
@@ -142,31 +142,55 @@
                                 <img src="/images/78-mgb/engine2.jpg" alt="1978 MGB V6 engine" decoding="async" loading="lazy">
                             </div>
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+                        <button id="thumb-prev" class="icon-btn thumb-btn" type="button" aria-label="Previous thumbnails">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+                        </button>
+                        <button id="thumb-next" class="icon-btn thumb-btn" type="button" aria-label="Next thumbnails">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+                        </button>
                     </div>
                 </div>
                 <div id="modal">
-                    <span id="close">&times;</span>
+                    <button id="close" class="icon-btn gallery-btn" type="button" aria-label="Close full screen photos">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                    </button>
+                    <button id="modal-prev" class="icon-btn gallery-btn" type="button" aria-label="Previous photo">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    <button id="modal-next" class="icon-btn gallery-btn" type="button" aria-label="Next photo">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
                     <div class="swiper modalSwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="/images/78-mgb/cover.jpg" alt="1978 MGB V6" decoding="async" loading="lazy">
+                                <div class="swiper-zoom-container">
+                                    <img src="/images/78-mgb/cover.jpg" alt="1978 MGB V6" decoding="async" loading="lazy">
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="/images/78-mgb/side.jpg" alt="1978 MGB V6" decoding="async" loading="lazy">
+                                <div class="swiper-zoom-container">
+                                    <img src="/images/78-mgb/side.jpg" alt="1978 MGB V6" decoding="async" loading="lazy">
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="/images/78-mgb/rear-angle.jpg" alt="1978 MGB V6" decoding="async" loading="lazy">
+                                <div class="swiper-zoom-container">
+                                    <img src="/images/78-mgb/rear-angle.jpg" alt="1978 MGB V6" decoding="async" loading="lazy">
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="/images/78-mgb/rear-rack.jpg" alt="1978 MGB V6 luggage rack" decoding="async" loading="lazy">
+                                <div class="swiper-zoom-container">
+                                    <img src="/images/78-mgb/rear-rack.jpg" alt="1978 MGB V6 luggage rack" decoding="async" loading="lazy">
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="/images/78-mgb/engine1.jpg" alt="1978 MGB V6 engine" decoding="async" loading="lazy">
+                                <div class="swiper-zoom-container">
+                                    <img src="/images/78-mgb/engine1.jpg" alt="1978 MGB V6 engine" decoding="async" loading="lazy">
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="/images/78-mgb/engine2.jpg" alt="1978 MGB V6 engine" decoding="async" loading="lazy">
+                                <div class="swiper-zoom-container">
+                                    <img src="/images/78-mgb/engine2.jpg" alt="1978 MGB V6 engine" decoding="async" loading="lazy">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -234,9 +258,17 @@
                             <p class="eyebrow">The Collection</p>
                             <h2>More Cars</h2>
                         </div>
-                        <a id="collection-btn" class="button" href="/src/pages/the-collection.html">
-                            The Collection
-                        </a>
+                        <div class="carousel-actions">
+                            <button id="carousel-prev" class="icon-btn carousel-btn" type="button" aria-label="Previous cars">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+                            </button>
+                            <button id="carousel-next" class="icon-btn carousel-btn" type="button" aria-label="Next cars">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+                            </button>
+                            <a id="collection-btn" class="button" href="/src/pages/the-collection.html">
+                                The Collection
+                            </a>
+                        </div>
                     </div>
                     <div class="slide-container swiper">
                         <div class="slide-content">
@@ -351,8 +383,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-button-next swiper-navBtn-next"></div>
-                        <div class="swiper-button-prev swiper-navBtn-prev"></div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>

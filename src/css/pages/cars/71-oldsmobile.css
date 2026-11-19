@@ -11,7 +11,3 @@
 .bottomSwiper .swiper-slide-thumb-active {
     border: solid 5px var(--oldsmobile-white-color);
 }
-
-#section-3 .swiper {
-    --swiper-navigation-color: var(--oldsmobile-white-color);
-}

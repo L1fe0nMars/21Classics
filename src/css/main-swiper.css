@@ -1,12 +1,8 @@
-.swiper {
-    --swiper-navigation-color: var(--blue-nav);
-}
-
 #section-2 .swiper {
     padding: 1.5em 0 3em 0 !important;
 }
 
-/* Matches the .slide-content margin and padding so the heading lines up with the cards */
+/* Matches the .slide-content padding so the heading lines up with the cards */
 .carousel-heading {
     margin: 0 1em;
 }
@@ -132,19 +128,25 @@
     width: 64px;
 }
 
-.swiper-navBtn::before,
-.swiper-navBtn::after {
-    font-size: 35px;
+.carousel-actions {
+    display: flex;
+    gap: 0.5em;
 }
 
-.swiper-navBtn-next {
-    display: none !important;
-    right: 0;
+/* No height, so the row stretches it to the height of the #collection-btn beside it. Outlined like #email-btn on car pages. */
+.carousel-btn {
+    width: 3.25rem;
+    min-height: 2.75rem;
+    border-radius: 16px;
+    border: solid 2px var(--car-icon-color, var(--car-color, var(--blue-nav)));
+    color: var(--car-icon-color, var(--car-color, var(--blue-nav)));
+    opacity: 1;
 }
 
-.swiper-navBtn-prev {
-    display: none !important;
-    left: 0;
+.carousel-btn:hover {
+    background-color: var(--car-color, var(--blue-nav));
+    border-color: var(--car-color, var(--blue-nav));
+    color: var(--car-text-color, var(--off-white-ignore));
 }
 
 .swiper-pagination {
@@ -155,22 +157,6 @@
 
 .swiper-pagination-bullet {
     transition: 0.25s ease;
-}
-
-/* PC + TABLETS */
-@media screen and (min-width: 481px) {
-    .carousel-heading {
-        margin: 0 3.5em;
-    }
-
-    .slide-content {
-        margin: 0 2.5em;
-    }
-    
-    .swiper-navBtn-next,
-    .swiper-navBtn-prev {
-        display: block !important;
-    }
 }
 
 /* PC */

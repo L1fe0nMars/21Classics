@@ -14,7 +14,3 @@
 .bottomSwiper .swiper-slide-thumb-active {
     border: solid 5px var(--trans-am-color);
 }
-
-#section-3 .swiper {
-    --swiper-navigation-color: var(--trans-am-color);
-}

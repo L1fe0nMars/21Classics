@@ -62,46 +62,47 @@
     cursor: pointer;
 }
 
-.gallery-btn {
+.gallery-btn,
+.thumb-btn {
     position: absolute;
     z-index: 2;
-    box-sizing: border-box;
+    background-color: var(--off-white-ignore);
+    color: var(--dark-mode-ignore);
+}
+
+.gallery-btn {
     width: 2.75rem;
     height: 2.75rem;
     border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--off-white-ignore);
-    color: var(--dark-mode-ignore);
-    opacity: 0.9;
-    transition: 0.25s ease-out;
 }
 
-.gallery-btn:hover {
-    opacity: 1;
-}
-
-.gallery-btn:focus-visible {
+.gallery-btn:focus-visible,
+.thumb-btn:focus-visible {
     outline: 3px solid var(--off-white-ignore);
     outline-offset: 2px;
 }
 
 #gallery-prev,
-#gallery-next {
+#gallery-next,
+#modal-prev,
+#modal-next,
+.thumb-btn {
     top: 50%;
     transform: translateY(-50%);
 }
 
-#gallery-prev {
+#gallery-prev,
+#modal-prev {
     left: 0.75rem;
 }
 
-#gallery-next {
+#gallery-next,
+#modal-next {
     right: 0.75rem;
 }
 
-#gallery-fullscreen {
+#gallery-fullscreen,
+#close {
     top: 0.75rem;
     right: 0.75rem;
 }
@@ -111,7 +112,6 @@
     height: 7em;
     width: var(--photo-width);
     border-radius: 12px;
-    --swiper-navigation-color: var(--off-white-ignore);
 }
 
 .bottomSwiper .swiper-slide {
@@ -131,34 +131,18 @@
     transition: 0.15s linear;
 }
 
-.bottomSwiper .swiper-button-next,
-.bottomSwiper .swiper-button-prev {
-    background-color: rgb(0, 0, 0, 0.5);
-    height: 100% !important;
-    top: 0 !important;
-    /* Swiper pulls its arrows up by half their size to center them, which would push these full-height arrows off the top */
-    margin-top: 0 !important;
+.thumb-btn {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 10px;
 }
 
-.bottomSwiper .swiper-button-next {
-    right: 0 !important;
-    padding-right: 1em !important;
-    padding-left: 1.5em !important;
-    border-radius: 0 12px 12px 0;
+#thumb-prev {
+    left: 0.5rem;
 }
 
-.bottomSwiper .swiper-button-prev {
-    left: 0 !important;
-    padding-right: 1.5em !important;
-    padding-left: 1em !important;
-    border-radius: 12px 0 0 12px;
-}
-
-.bottomSwiper .swiper-button-next-active,
-.bottomSwiper .swiper-button-prev-active {
-    color: black;
-    background-color: rgb(0, 0, 0, 0.5);
-    height: 100%;
+#thumb-next {
+    right: 0.5rem;
 }
 
 #modal {
@@ -180,20 +164,6 @@
     width: 90%;
     height: 100%;
     object-fit: contain;
-}
-
-#close {
-    cursor: pointer;
-    position: absolute;
-    color: var(--off-white-ignore);
-    padding: 0 0.2em;
-    right: 1%;
-    font-size: 4em;
-    z-index: 11;
-}
-
-#close:hover {
-    opacity: 0.6;
 }
 
 /* SECTION 2 */
@@ -451,6 +421,12 @@
     .modalSwiper .swiper-wrapper .swiper-slide img {
         width: 100%;
     }
+
+    /* Swiping is enough on phones, and the arrows would cover the photo */
+    #modal-prev,
+    #modal-next {
+        display: none;
+    }
 }
 
 /* PC + TABLETS */
@@ -489,16 +465,20 @@
         border-radius: 16px;
     }
 
-    #gallery-prev {
+    #gallery-prev,
+    #modal-prev {
         left: 1rem;
     }
 
     #gallery-next,
-    #gallery-fullscreen {
+    #modal-next,
+    #gallery-fullscreen,
+    #close {
         right: 1rem;
     }
 
-    #gallery-fullscreen {
+    #gallery-fullscreen,
+    #close {
         top: 1rem;
     }
 

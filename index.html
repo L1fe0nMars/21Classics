@@ -99,9 +99,17 @@
                             <h2>The Collection</h2>
                             <p class="muted">Take a look at The Collection, a gallery of beautiful classic cars. Select a car to view its photos and details.</p>
                         </div>
-                        <a id="collection-btn" class="button" href="/src/pages/the-collection.html">
-                            View All Cars
-                        </a>
+                        <div class="carousel-actions">
+                            <button id="carousel-prev" class="icon-btn carousel-btn" type="button" aria-label="Previous cars">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+                            </button>
+                            <button id="carousel-next" class="icon-btn carousel-btn" type="button" aria-label="Next cars">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+                            </button>
+                            <a id="collection-btn" class="button" href="/src/pages/the-collection.html">
+                                View All Cars
+                            </a>
+                        </div>
                     </div>
                     <div class="slide-container swiper">
                         <div class="slide-content">
@@ -229,8 +237,6 @@
                             </div>
                         </div>
                         <div class="swiper-pagination"></div>
-                        <div class="swiper-button-next swiper-navBtn-next"></div>
-                        <div class="swiper-button-prev swiper-navBtn-prev"></div>
                     </div>
                 </div>
             </section>

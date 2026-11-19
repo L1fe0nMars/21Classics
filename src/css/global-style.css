@@ -88,6 +88,30 @@ img {
     user-select: none;
 }
 
+/* Base for the gallery, thumbnail, and carousel arrow buttons. Each variant sets its own size, shape, and colors. */
+.icon-btn {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    transition: 0.25s ease-out;
+}
+
+.icon-btn:hover {
+    opacity: 1;
+}
+
+/* Swiper adds these classes: disabled at either end of a carousel that doesn't loop, lock when every slide already fits */
+.icon-btn.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+
+.icon-btn.swiper-button-lock {
+    display: none;
+}
+
 h1,
 h2 {
     font-size: clamp(1.75rem, 1.2rem + 2.5vw, 3rem);
