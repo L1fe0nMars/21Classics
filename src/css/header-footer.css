@@ -198,16 +198,18 @@ nav {
     fill: midnightblue;
 }
 
+/* Inset with width instead of side padding so the top divider (footer::before) lines up with the bottom one */
 footer {
     position: relative;
-    margin: 0 auto;
-    text-align: center;
-    color: var(--dark-mode);
-    padding-top: 1em;
+    margin: 3em auto 0 auto;
+    padding: 3.5em 0 2em 0;
+    width: calc(100% - 2em);
     max-width: 85em;
+    color: var(--dark-mode);
 }
 
-footer::before {
+footer::before,
+.footer-bottom::before {
     content: '';
     position: absolute;
     left: 0;
@@ -218,72 +220,129 @@ footer::before {
     background-color: var(--divider);
 }
 
-footer hr {
-    margin: 0 auto;
-    height: 2px;
-    width: 70%;
-    background-color: var(--divider);
-    border: none;
-    border-radius: 30px;
+.footer-columns {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5em;
 }
 
-footer img {
-    height: 6em;
-    margin: 2em auto 1.5em auto;
+/* The size and centering reset the global nav rule, which is meant for the header */
+.footer-brand,
+.footer-column {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.875em;
+}
+
+.footer-brand {
+    gap: 1.125em;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.875em;
+}
+
+.footer-logo img {
+    height: 4em;
     border-radius: 50%;
 }
 
-.bottom-text {
-    margin: 0 auto;
-    padding: 2em 0;
+.footer-logo span {
+    font-size: 1.625em;
+    font-weight: 800;
 }
 
-footer p {
-    padding-bottom: 1em;
-}
-
-footer p:last-child {
-    font-size: 14px;
-    padding-bottom: 0;
-}
-
-.contact {
-    margin: 2em auto;
-    text-align: center;
-}
-
-.info {
-    margin: 1em auto;
+.footer-location {
     display: flex;
-    justify-content: center;
-    max-width: 15em;
+    align-items: center;
+    gap: 0.5em;
+    font-weight: bold;
+    color: var(--muted-text);
 }
 
-.info p {
-    width: 100%;
+.footer-location svg {
+    fill: var(--blue-nav);
+}
+
+.footer-heading {
+    font-size: 0.8125em;
+    font-weight: bold;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted-text);
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    gap: 0.625em;
+    font-size: 1.0625em;
     transition: 0.25s ease-out;
 }
 
-.hover {
-    transition: 0.25s ease-out;
-}
-
-.info p:hover,
-.hover:hover {
+.footer-link:hover,
+.footer-bottom a:hover {
     opacity: 0.6;
 }
 
-.footer-mail {
-    bottom: -4px;
+.footer-link svg {
+    fill: none;
+    stroke: var(--blue-nav);
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
-.footer-mail,
-.footer-phone {
-    fill: var(--dark-mode);
+.footer-text {
+    line-height: 1.55;
+    color: var(--muted-text);
 }
 
-.bottom-text p a {
+.footer-youtube {
+    box-sizing: border-box;
+    min-height: 2.75rem;
+    padding: 0 1.125rem;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 1em;
+    background-color: var(--youtube-red);
+    color: var(--off-white-ignore);
+    transition: 0.25s ease-out;
+}
+
+.footer-youtube:hover {
+    filter: brightness(0.88);
+}
+
+.footer-youtube svg {
+    fill: currentColor;
+}
+
+.footer-bottom {
+    position: relative;
+    margin-top: 2.5em;
+    padding-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em 1.5em;
+    font-size: 14px;
+    color: var(--muted-text);
+}
+
+.footer-bottom a {
+    font-weight: bold;
     color: var(--blue-nav);
+    transition: 0.25s ease-out;
 }
 
 @media (max-width: 874px) {
@@ -317,40 +376,18 @@ footer p:last-child {
     #mobile-menu-open ul {
         padding-top: 0.5em;
     }
-    
-    .bottom-text {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 70%;
-        border-top: solid 2px var(--dark-mode);
-    }
-
-    footer img {
-        margin-bottom: 0;
-    }
-
-    .contact {
-        margin-top: 1em;
-    }
-
-    footer hr {
-        display: none;
-    }
-
-    footer p {
-        width: 17em;
-        padding: 0 1em;
-    }
-
-    footer p:last-child {
-        font-size: 16px;
-    }
 }
 
 /* TABLETS */
 @media screen and (min-width: 481px) and (max-width: 1024px) {
-    
+    footer {
+        padding: 3.5em 0 2.5em 0;
+        width: calc(100% - 4em);
+    }
+
+    .footer-columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 /* PC */
@@ -367,7 +404,13 @@ footer p:last-child {
         font-size: 20px;
     }
 
-    footer p {
-        width: 30em;
+    footer {
+        margin-top: 5em;
+        padding: 3.5em 0 2.5em 0;
+        width: calc(100% - 4em);
+    }
+
+    .footer-columns {
+        grid-template-columns: 1.4fr 1fr 1.1fr 1.2fr;
     }
 }
