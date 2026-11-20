@@ -49,17 +49,18 @@ There are no tests or lint commands. Check changes by loading the affected pages
 ### Project Structure
 
 - **index.html** - Home page: hero (`#section-1`), The Collection carousel (`#section-2`), a commented-out "Add your car" section (`#section-3`), and the Featured Car (`#section-4`)
-- **collection/index.html** - Grid of every car (`ul#car-gallery` of `li.card`). Sold cars are listed with `class="card sold hidden"`. The Collection / Sold Cars tabs (`#sort-options`) are commented out, so sold cars are currently hidden.
+- **collection/index.html** - Grid of every car (`ul#car-gallery` of `li.card`). Sold cars are listed with `class="card sold hidden"`. The Available / Sold tabs (`#sort-options`, `#unsold-tab` and `#sold-tab`, each with a car count) switch between available and sold cars.
 - **contact/index.html** - Split card with a photo beside the inquiry panel ("For Inquiries" eyebrow, `h1`, call and email buttons, location) in `#section-1`, and a YouTube banner ("Socials" `.eyebrow.youtube` and `h2`) in `#section-2`
+- **404.html** - Shown by Netlify for any URL with no page. A centered `#not-found-card` panel ("Page Not Found" eyebrow, `h1`, `.muted` text) with links to The Collection and Home. It is the one page not in its own folder, because Netlify looks for `/404.html` by that exact name. It has `noindex` and no canonical, Open Graph, or JSON-LD tags, is left out of `sitemap.xml`, and no nav link is `active`.
 - **cars/<year>-<make>-<model>/index.html** - One static page per car, available and sold alike, at `/cars/<year>-<make>-<model>/`. A car keeps the same URL when it sells.
 - **src/js/header-footer.js** - Loaded on every page: mobile menu (closes on Escape), light/dark theme toggle (keeps `aria-pressed` in sync), and the footer year. Defines the shared `ROOT` and `BODY` constants that `car-page.js` also uses, so it must load before `car-page.js`.
 - **src/js/main-swiper.js** - The card carousel (`.slide-content`, with `#carousel-prev`/`#carousel-next`) used on the home page and the "More Cars" section of car pages
 - **src/js/car-page.js** - Car page gallery: main swiper (`.swiperContainer`, with `#gallery-prev`/`#gallery-next` arrows), thumbnail swiper (`.bottomSwiper`, with `#thumb-prev`/`#thumb-next`), and the full-screen image modal (`dialog#modal` opened with `showModal()`, `.modalSwiper` with pinch and double-tap zoom and `#modal-prev`/`#modal-next` arrows, opened by clicking the photo or `#gallery-fullscreen`, closed with `#close` or Escape). Each Swiper sets `a11y` `prevSlideMessage`/`nextSlideMessage` to match its arrow labels, since Swiper otherwise replaces them with "Previous slide"/"Next slide".
-- **src/js/the-collection.js** - Sold/unsold tab filtering by toggling `.hidden` on `.card` elements. Not currently loaded because the tabs are commented out.
+- **src/js/the-collection.js** - Loaded on The Collection page. Fills in the tab counts and filters sold/available cars by toggling `.hidden` on `.card` elements, keeping each tab's `aria-pressed` in sync.
 - **src/css/global-style.css** - Color, shadow, and radius variables on `:root`, `@font-face` rules, resets, base `button`/`.button` styles, heading sizes, `.eyebrow` (and `.eyebrow.youtube`), and the `.section-heading` row
 - **src/css/header-footer.css** - Imports `global-style.css`; header, desktop nav, mobile menu, theme toggle, and footer. Every page links this first.
 - **src/css/main-swiper.css** - Card carousel styles, including the per-car `.card:hover .<car-class>` name colors
-- **src/css/pages/*.css** - One stylesheet per page type (`home`, `the-collection`, `contact`, `car-page`, and an unused `add-your-car`)
+- **src/css/pages/*.css** - One stylesheet per page type (`home`, `the-collection`, `contact`, `car-page`, `404`, and an unused `add-your-car`)
 - **src/css/pages/cars/<short-name>.css** - Per-car accent color overrides for car pages
 - **_redirects** - Netlify 301 redirects from the old `/src/pages/...html` and `/src/pages/cars/sold/...html` URLs to the current pages, and from `/cars` to `/collection/`. Keep them, and add one whenever a page moves.
 - **robots.txt** and **sitemap.xml** - Allow all crawlers and list every page by its full `https://21classics.com` URL. Add new pages to the sitemap and update a page's `<lastmod>` when its content changes.

@@ -206,6 +206,7 @@ White content cards: `#featured-card`, `#info-card`, `#video-card`, `#youtube-ca
 - Padding from [Spacing](#spacing). Photos inside use `--radius-inner`, except the video `iframe` (see [Fixed radii](#fixed-radii)).
 - The title uses the card title size.
 - An inset panel inside a card (`#status-panel`) uses `--off-white`, `--radius-inner`, and no shadow.
+- A text-only card with no photo (`#not-found-card` on the 404 page) has more padding, since nothing inside it fills the edges: `1.75em 1.25em` mobile, `2.5em 2em` tablet, `3em` PC.
 
 ### Feature lists
 
