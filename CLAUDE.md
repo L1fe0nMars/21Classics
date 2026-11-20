@@ -14,7 +14,7 @@ These are authoritative for this repository:
 - **Tooling:** None. There is no `package.json`, build step, bundler, linter, or test suite.
 - **Third-party library:** Swiper 10, loaded from jsDelivr (`swiper@10/swiper-bundle.min.css` and `.js`) on pages that use carousels. It is the only dependency.
 - **State:** The only persisted state is the theme preference in `localStorage`.
-- **Navigation:** Separate static HTML pages. No router. Pages live under `/src/pages/` and are linked with root-absolute `.html` URLs (`/src/pages/the-collection.html`). Links to the home page use `/`, never `/index.html`.
+- **Navigation:** Separate static HTML pages. No router. Each page is an `index.html` in a folder named after it (`collection/index.html`, `cars/1965-sunbeam-tiger/index.html`) and is linked by its folder URL with a trailing slash (`/collection/`, `/cars/1965-sunbeam-tiger/`), never with `index.html`. Links to the home page use `/`.
 - **Styling:** Plain CSS with CSS custom properties for colors. Shared styles are pulled in through `@import` in `header-footer.css`. Font is self-hosted Poppins (`fonts/Poppins/`) with Verdana and sans-serif fallbacks.
 - **Analytics:** Google Analytics (gtag.js, `G-2DFKNJYLV0`) on every page
 - **Hosting:** Netlify, with deploy previews.
@@ -49,9 +49,9 @@ There are no tests or lint commands. Check changes by loading the affected pages
 ### Project Structure
 
 - **index.html** - Home page: hero (`#section-1`), The Collection carousel (`#section-2`), a commented-out "Add your car" section (`#section-3`), and the Featured Car (`#section-4`)
-- **src/pages/the-collection.html** - Grid of every car (`ul#car-gallery` of `li.card`). Sold cars are listed with `class="card sold hidden"`. The Collection / Sold Cars tabs (`#sort-options`) are commented out, so sold cars are currently hidden.
-- **src/pages/contact.html** - Split card with a photo beside the inquiry panel ("For Inquiries" eyebrow, `h1`, call and email buttons, location) in `#section-1`, and a YouTube banner ("Socials" `.eyebrow.youtube` and `h2`) in `#section-2`
-- **src/pages/cars/<year>-<make>-<model>.html** - One static page per car, available and sold alike. A car keeps the same URL when it sells.
+- **collection/index.html** - Grid of every car (`ul#car-gallery` of `li.card`). Sold cars are listed with `class="card sold hidden"`. The Collection / Sold Cars tabs (`#sort-options`) are commented out, so sold cars are currently hidden.
+- **contact/index.html** - Split card with a photo beside the inquiry panel ("For Inquiries" eyebrow, `h1`, call and email buttons, location) in `#section-1`, and a YouTube banner ("Socials" `.eyebrow.youtube` and `h2`) in `#section-2`
+- **cars/<year>-<make>-<model>/index.html** - One static page per car, available and sold alike, at `/cars/<year>-<make>-<model>/`. A car keeps the same URL when it sells.
 - **src/js/header-footer.js** - Loaded on every page: mobile menu, light/dark theme toggle, and the footer year. Defines the shared `ROOT` and `BODY` constants that `car-page.js` also uses, so it must load before `car-page.js`.
 - **src/js/main-swiper.js** - The card carousel (`.slide-content`, with `#carousel-prev`/`#carousel-next`) used on the home page and the "More Cars" section of car pages
 - **src/js/car-page.js** - Car page gallery: main swiper (`.swiperContainer`, with `#gallery-prev`/`#gallery-next` arrows), thumbnail swiper (`.bottomSwiper`, with `#thumb-prev`/`#thumb-next`), and the full-screen image modal (`#modal`, `.modalSwiper` with pinch and double-tap zoom and `#modal-prev`/`#modal-next` arrows, opened by clicking the photo or `#gallery-fullscreen`, closed with `#close` or Escape)
@@ -61,7 +61,7 @@ There are no tests or lint commands. Check changes by loading the affected pages
 - **src/css/main-swiper.css** - Card carousel styles, including the per-car `.card:hover .<car-class>` name colors
 - **src/css/pages/*.css** - One stylesheet per page type (`home`, `the-collection`, `contact`, `car-page`, and an unused `add-your-car`)
 - **src/css/pages/cars/<short-name>.css** - Per-car accent color overrides for car pages
-- **_redirects** - Netlify 301 redirects from the old `/src/pages/cars/sold/` URLs to the current car pages
+- **_redirects** - Netlify 301 redirects from the old `/src/pages/...html` and `/src/pages/cars/sold/...html` URLs to the current pages, and from `/cars` to `/collection/`. Keep them, and add one whenever a page moves.
 - **robots.txt** and **sitemap.xml** - Allow all crawlers and list every page by its full `https://21classics.com` URL. Add new pages to the sitemap and update a page's `<lastmod>` when its content changes.
 - **images/<yy>-<short-name>/** - Photos for each car. `cover.jpg` is the card and first gallery image; others are named by view (`front-angle`, `rear-angle`, `side`, `interior`, `engine`, `dash`, ...) with a number suffix for extras (`interior1.jpg`). Also `images/logo.png` (logo and favicon), `images/cover-pic.webp` (home hero), and `images/collections/`.
 - **fonts/Poppins/** - Self-hosted Poppins font files and license
@@ -85,7 +85,7 @@ There are no tests or lint commands. Check changes by loading the affected pages
 - `toggleDarkMode(toggled)` sets every `THEME_COLORS` variable and swaps the sun and moon icons with inline transforms.
 
 **Car pages:**
-- Copy an existing car page and its stylesheet as the template (`1965-sunbeam-tiger.html` for available cars, `1949-cadillac-convertible.html` for sold cars).
+- Copy an existing car page and its stylesheet as the template (`cars/1965-sunbeam-tiger/` for available cars, `cars/1949-cadillac-convertible/` for sold cars).
 - `<head>`: meta description listing the car's features, a `preload` for the cover image, then `header-footer.css`, `main-swiper.css`, `car-page.css`, the car's stylesheet, and the Swiper CSS. Title format: `<Year Make Model> | 21 Classics`. Then the SEO tags: `og:image` is the cover image, and the JSON-LD has a `Car` (name, url, the meta description, every gallery image, `brand`, `model`, `vehicleModelDate`, and an `Offer` with `availability` `InStock` or `SoldOut`) and a `BreadcrumbList` (Home, The Collection, the car).
 - `#section-1`: the gallery. `#gallery-band.background-color` (the colored band behind the middle of the photo), then `#gallery-main` (`.swiperContainer` with a `.main-img` per slide, and the `#gallery-prev`, `#gallery-next`, and `#gallery-fullscreen` buttons), then the `.bottomSwiper` thumbnails (with `#thumb-prev` and `#thumb-next`), all in `.container`, with `#modal` after it (the `#close`, `#modal-prev`, and `#modal-next` buttons, then `.modalSwiper`, whose images are each wrapped in a `.swiper-zoom-container` for zooming). The same image list appears three times, in order: `.swiperContainer`, `.bottomSwiper`, and `.modalSwiper`. Keep all three in sync. Only the first main image is not lazy-loaded. Image `alt` is the car name plus what the photo shows (`1965 Sunbeam Tiger side view`, `... engine`); only `cover.jpg` uses the plain car name.
 - The main photo is sized from the screen height (`--gallery-reserve` in `car-page.css` is the room left for the header, thumbnails, and gaps) so the photo and thumbnails fit on the first screen, and is kept 4:3, the shape of the photos. Photos of another shape are cropped to fill it, so add new photos as 4:3.
@@ -100,7 +100,7 @@ There are no tests or lint commands. Check changes by loading the affected pages
 1. Add photos to `images/<yy>-<short-name>/` with a `cover.jpg`
 2. Add `--<short-name>-color` to `:root` in `global-style.css` (and to `THEME_COLORS` if it needs a dark-mode value, plus `--<short-name>-bar-color` if it's too dark for the card overlay)
 3. Add a `.<short-name> { --car-color: ... }` rule to `main-swiper.css` and `the-collection.css`
-4. Create the page in `src/pages/cars/` and its stylesheet in `src/css/pages/cars/` from the template, update its SEO tags and JSON-LD, and add it to `sitemap.xml`
+4. Create the page as `cars/<year>-<make>-<model>/index.html` and its stylesheet in `src/css/pages/cars/` from the template, update its SEO tags and JSON-LD, and add it to `sitemap.xml`
 5. Add a card to The Collection grid, the home carousel (available cars), and the "More Cars" carousel on the other available car pages
 6. When marking a car as sold, keep its page and stylesheet where they are (the URL must not change): change the `#car-title` eyebrow to "Sold", change the JSON-LD `availability` to `SoldOut`, replace the inquiry content of `#status-panel` with the sold content (copy it from a sold page), change its card in The Collection to `class="card sold hidden"` and move it to the sold cards, and remove it from the home and "More Cars" carousels
 
