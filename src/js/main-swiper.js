@@ -13,6 +13,10 @@ let swiper = new Swiper('.slide-content', {
         nextEl: CAROUSEL_NEXT,
         prevEl: CAROUSEL_PREV,
     },
+    a11y: {
+        prevSlideMessage: 'Previous cars',
+        nextSlideMessage: 'Next cars',
+    },
     breakpoints:{
         0: {
             slidesPerView: 1,

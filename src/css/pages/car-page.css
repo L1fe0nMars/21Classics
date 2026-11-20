@@ -145,13 +145,15 @@
     right: 0.5rem;
 }
 
+/* Overrides the browser's dialog sizing, margin, border, and padding so the photos fill the screen */
 #modal {
-    display: none !important;
-    position: fixed;
     width: 100%;
     height: 100%;
-    top: 0;
-    z-index: 10;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border: none;
     background-color: black;
 }
 

@@ -173,6 +173,10 @@ Carousel arrows (`#carousel-prev`, `#carousel-next`) sit in the heading row, not
 
 Pass the button elements to Swiper's `navigation` option, not class selectors. Swiper's `.swiper-button-disabled` fades a button and `.swiper-button-lock` hides it.
 
+### Skip link
+
+`a.skip-link` ("Skip to content") is the first element in `<body>` on every page and links to `<main id="main-content">`. It sits above the top of the page until it gets focus, then shows at the top left as a compact button: `--dark-mode` background, `--off-white` text, `--radius-control`.
+
 ### Eyebrow
 
 A small uppercase label with a short colored bar before it (`.eyebrow`). It labels a heading; it never replaces one. The bar uses `--car-color`, falling back to `--blue-nav`. `.eyebrow.youtube` gives it a YouTube red bar.
@@ -192,7 +196,7 @@ The car cards in carousels and The Collection grid. The rules exist in both `mai
 - A full-bleed photo, `30px` radius, `--shadow-card`.
 - A dark gradient from the bottom (`#000000c7` to transparent) under a white `.name`, dark in both themes.
 - A short accent bar above the name (`.name::before`) in the car's color, which widens on hover and focus.
-- Names are `h3` (carousels) or `h2` (The Collection) with `class="name <car-class>"` and `aria-hidden="true"`, since the image `alt` already names the car.
+- Names are `h3` (carousels) or `h2` (The Collection) with `class="name <car-class>"`. The card image has `alt=""`, since the heading already names the car and the link.
 
 ### Panel cards
 

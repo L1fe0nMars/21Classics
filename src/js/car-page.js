@@ -29,6 +29,10 @@ let bottomSwiper = new Swiper('.bottomSwiper', {
     },
     freeMode: true,
     watchSlidesProgress: true,
+    // The thumbnails are hidden from screen readers and the tab order, and Swiper's a11y would make their arrows focusable again
+    a11y: {
+        enabled: false,
+    },
 })
 
 let mainSwiper = new Swiper('.swiperContainer', {
@@ -40,6 +44,10 @@ let mainSwiper = new Swiper('.swiperContainer', {
     navigation: {
         nextEl: GALLERY_NEXT,
         prevEl: GALLERY_PREV,
+    },
+    a11y: {
+        prevSlideMessage: 'Previous photo',
+        nextSlideMessage: 'Next photo',
     },
     keyboard: {
         enabled: true,
@@ -53,6 +61,10 @@ let modalSwiper = new Swiper('.modalSwiper', {
     navigation: {
         nextEl: MODAL_NEXT,
         prevEl: MODAL_PREV,
+    },
+    a11y: {
+        prevSlideMessage: 'Previous photo',
+        nextSlideMessage: 'Next photo',
     },
     keyboard: {
         enabled: true,
@@ -83,27 +95,9 @@ function setNumVisibleSlides(expectedNum) {
  * @param {number} slideIndex The current slide
  */
 function openModal(slideIndex) {
-    MODAL.setAttribute('style', 'display: block !important');
+    MODAL.showModal();
     modalSwiper.slideToLoop(slideIndex);
     BODY.style.overflow = 'hidden';
-}
-
-/**
- * Closes the image modal
- */
-function closeModal() {
-    modalSwiper.zoom.out();
-    MODAL.setAttribute('style', 'display: none !important');
-    BODY.style.overflow = 'auto';
-}
-
-/**
- * Checks if the modal is open
- * 
- * @return {boolean} Whether the modal is open or not
- */
-function isModalOpen() {
-    return MODAL.style.display === 'block';
 }
 
 for (let i = 0; i < MAIN_IMG.length; i++) {
@@ -116,10 +110,10 @@ FULLSCREEN_BUTTON.addEventListener('click', () => {
     openModal(mainSwiper.realIndex);
 });
 
-CLOSE_BUTTON.addEventListener('click', closeModal);
+CLOSE_BUTTON.addEventListener('click', () => MODAL.close());
 
-document.addEventListener('keydown', (event) => {
-    if (isModalOpen() && event.key === 'Escape') {
-        closeModal();
-    }
+// Runs for the close button and for Escape, which the dialog handles itself
+MODAL.addEventListener('close', () => {
+    modalSwiper.zoom.out();
+    BODY.style.overflow = 'auto';
 });

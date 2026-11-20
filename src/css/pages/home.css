@@ -184,12 +184,6 @@
     color: var(--dark-mode);
 }
 
-#section-4 h2 {
-    display: inline-block;
-    margin: 1em auto;
-    font-weight: 800;
-}
-
 .featured-decoration {
     color: var(--tiger-color);
 }
@@ -235,7 +229,7 @@
     min-width: 0;
 }
 
-#featured-info h3 {
+#featured-info h2 {
     font-size: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
     font-weight: 800;
     line-height: 1.15;
@@ -308,10 +302,6 @@
 
     #hero-photo img {
         border-radius: 24px;
-    }
-
-    #section-4 h2 {
-        padding-top: 0;
     }
 
     #featured-card {
@@ -417,11 +407,5 @@
 
     .feature-list li {
         padding: 0.875em 0;
-    }
-
-    #section-4 h2 {
-        padding: 0;
-        padding-top: 0.5em;
-        margin-bottom: 1em;
     }
 }

@@ -140,6 +140,27 @@ h3 {
     outline-offset: 3px;
 }
 
+/* Kept above the top of the page until a keyboard user tabs to it */
+.skip-link {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding: 0 1.75rem;
+    border-radius: var(--radius-control);
+    font-weight: 700;
+    background-color: var(--dark-mode);
+    color: var(--off-white);
+    transform: translateY(-200%);
+}
+
+.skip-link:focus {
+    transform: none;
+}
+
 .eyebrow {
     margin: 0;
     display: flex;

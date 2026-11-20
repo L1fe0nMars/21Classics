@@ -41,7 +41,7 @@ header > a span {
     color: var(--dark-mode);
 }
 
-nav {
+#desktop-nav {
     height: 100%;
     width: 36em;
     display: flex;
@@ -226,7 +226,6 @@ footer::before,
     gap: 2.5em;
 }
 
-/* The size and centering reset the global nav rule, which is meant for the header */
 .footer-brand,
 .footer-column {
     height: auto;
